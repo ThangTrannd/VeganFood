@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Vegan Food</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="title_home">Recommended</string>
+    <string name="hello">Xin chào quý khách</string>
+    <string name="register">Register</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="RePassword">RePassword</string>
+</resources>
