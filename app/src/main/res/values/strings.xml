@@ -7,4 +7,14 @@
     <string name="username">Username</string>
     <string name="password">Password</string>
     <string name="RePassword">RePassword</string>
+    <string name="login">Login</string>
+    <string name="remember">Remember</string>
+    <string name="forgotPassword">Forgot Password?</string>
+    <string name="forgot">Forgot Password</string>
+    <string name="phone">Phone</string>
+    <string name="done">Done</string>
+    <string name="changepas">Change Password</string>
+    <string name="code_ver">Code Verification</string>
+    <string name="new_pas">New password</string>
+    <string name="enter_new">Enter new password</string>
 </resources>
