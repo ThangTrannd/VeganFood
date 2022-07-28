@@ -13,6 +13,7 @@ public interface APIInterface {
             "Accept: text/plain",
             "Content-Type: application/json-patch+json"
     })
-    @POST("/auth/register")
-    Call<Data> getData(@Body JsonObject jwt);
+    @POST()
+    Call<Data> postData(@Path("path") String path,@Body JsonObject jwt);
+
 }

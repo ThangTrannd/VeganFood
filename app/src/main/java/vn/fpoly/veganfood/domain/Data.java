@@ -37,4 +37,13 @@ public class Data<T> {
     public void setError(String error) {
         this.error = error;
     }
+
+    @Override
+    public String toString() {
+        return "Data{" +
+                "statusCode=" + statusCode +
+                ", message='" + message + '\'' +
+                ", error='" + error + '\'' +
+                '}';
+    }
 }

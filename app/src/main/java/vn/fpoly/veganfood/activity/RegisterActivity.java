@@ -35,43 +35,45 @@ import vn.fpoly.veganfood.domain.Data;
 import vn.fpoly.veganfood.domain.Jdt;
 
 public class RegisterActivity extends AppCompatActivity {
+
+    private EditText edtUserName;
+    private EditText edtPassword;
+    private EditText edtEmail;
+    private AppCompatButton btnResgister;
+
     String jwt = "";
-    private AppCompatImageView logo;
-    private EditText etUser;
-    private EditText etPass;
-    private EditText etRePass;
-    private AppCompatButton btnRes;
-    String content = "";
-
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
-        System.out.println("jwt"+generateJwt());
-        logo = findViewById(R.id.logo);
-        etUser = findViewById(R.id.etUser);
-        etPass = findViewById(R.id.etPass);
-        etRePass = findViewById(R.id.etRePass);
-        btnRes = findViewById(R.id.btnRes);
-        btnRes.setOnClickListener(new View.OnClickListener() {
+        initView();
+    }
+    private void initView(){
+        edtUserName = findViewById(R.id.edtUserName);
+        edtPassword = findViewById(R.id.edtPassword);
+        edtEmail = findViewById(R.id.edtEmail);
+        btnResgister = findViewById(R.id.btnResgister);
+        btnResgister.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 String a = generateJwt();
-                Retrofit retrofit = new Retrofit.Builder().baseUrl("https://dev-id.vplay.vn")
+                System.out.println(a);
+                Retrofit retrofit = new Retrofit.Builder().baseUrl(getString(R.string.domain))
                         .addConverterFactory(GsonConverterFactory.create()).build();
                 APIInterface APIInterface = retrofit.create(APIInterface.class);
                 // chuyển jwt thành 1 jsonobject
                 JsonObject jsonObject = new JsonObject();
                 jsonObject.addProperty("jwt", a);
+                System.out.println("jsonob"+jsonObject);
                 //truyền đường link vào api và lấy ra 1 chuỗi string
-                Call<Data> call = APIInterface.getData( jsonObject);
+                Call<Data> call = APIInterface.postData("/auth/register", jsonObject);
                 call.enqueue(new Callback<Data>() {
                     @Override
                     public void onResponse(Call<Data> call, Response<Data> response) {
-                        //content = response.body().getMessage();
-                        Toast.makeText(RegisterActivity.this, "abc", Toast.LENGTH_SHORT).show();
+                        String a = response.toString();
+                        System.out.println(a);
+
                     }
 
                     @Override
@@ -84,13 +86,15 @@ public class RegisterActivity extends AppCompatActivity {
     }
 
     private String generateJwt(){
+        String userName = edtUserName.getText().toString();
+        String passWord = edtPassword.getText().toString();
+        String email = edtEmail.getText().toString();
 
         Map<String, Object> clam = new HashMap();
-        clam.put("email", "thang123@gmail.com");
-        clam.put("password", "123456");
-        clam.put("userName", "thang123");
+        clam.put("email", email);
+        clam.put("password", passWord);
+        clam.put("userName", userName);
         Key key = Keys.secretKeyFor(SignatureAlgorithm.HS256);
-
         jwt = Jwts.builder().setHeaderParam("alg", "HS256").setHeaderParam("typ", "JWT").
                 setClaims(clam).signWith(key).compact();
         return jwt;

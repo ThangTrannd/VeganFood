@@ -88,12 +88,14 @@
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:src="@drawable/account_circle_48px"/>
+                android:layout_margin="5dp"
+                android:src="@drawable/account_circle_24px"/>
             <EditText
-                android:id="@+id/etUser"
+                android:id="@+id/etUserName"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:hint="@string/username"
+                android:layout_margin="5dp"
                 android:textSize="16sp"
                 android:background="@null"
                 android:textColor="@color/black"
@@ -111,12 +113,14 @@
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:src="@drawable/lock_48px"/>
+                android:layout_margin="5dp"
+                android:src="@drawable/lock_24px"/>
             <EditText
-                android:id="@+id/etPass"
+                android:id="@+id/etPassWord"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:hint="@string/password"
+                android:layout_margin="5dp"
                 android:textSize="16sp"
                 android:background="@null"
                 android:textColor="@color/black"
@@ -178,12 +182,14 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
+            android:layout_marginTop="10dp"
             app:layout_constraintStart_toStartOf="@id/constraint"
             app:layout_constraintEnd_toEndOf="@id/constraint"
             app:layout_constraintTop_toTopOf="@id/constraint">
             <View
                 android:layout_width="0dp"
                 android:layout_height="1dp"
+                android:layout_margin="5dp"
                 android:background="#CDCDCD"
                 android:layout_weight="1"
                 android:layout_gravity="center"
@@ -192,6 +198,7 @@
                 android:layout_width="30dp"
                 android:layout_height="wrap_content"
                 android:text="Or"
+                android:gravity="center"
                 android:textColor="#CDCDCD"
                 android:textSize="20dp"
                 />
@@ -199,16 +206,18 @@
                 android:layout_width="0dp"
                 android:layout_height="1dp"
                 android:layout_weight="1"
+                android:layout_margin="5dp"
                 android:background="#CDCDCD"
                 android:layout_gravity="center"
                 />
         </LinearLayout>
         <androidx.appcompat.widget.AppCompatImageView
             android:id="@+id/imgFb"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/facebook"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/fb"
             android:layout_gravity="start"
+            android:layout_marginTop="10dp"
             app:layout_constraintStart_toStartOf="@id/constraint"
             app:layout_constraintTop_toBottomOf="@id/view"
             app:layout_constraintEnd_toStartOf="@id/imgGg"
@@ -216,8 +225,9 @@
 
         <androidx.appcompat.widget.AppCompatImageView
             android:id="@+id/imgGg"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
             android:src="@drawable/gg"
             app:layout_constraintStart_toEndOf="@id/imgFb"
             app:layout_constraintEnd_toEndOf="@id/constraint"

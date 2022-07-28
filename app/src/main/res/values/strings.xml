@@ -6,7 +6,7 @@
     <string name="register">Register</string>
     <string name="username">Username</string>
     <string name="password">Password</string>
-    <string name="RePassword">RePassword</string>
+    <string name="email">Email</string>
     <string name="login">Login</string>
     <string name="remember">Remember</string>
     <string name="forgotPassword">Forgot Password?</string>
@@ -17,4 +17,5 @@
     <string name="code_ver">Code Verification</string>
     <string name="new_pas">New password</string>
     <string name="enter_new">Enter new password</string>
+    <string name="domain">https://polyhehehe.herokuapp.com</string>
 </resources>
