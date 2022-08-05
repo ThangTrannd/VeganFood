@@ -10,7 +10,7 @@
         android:title="Favourite"/>
     <item
         android:id="@+id/profile"
-        android:icon="@drawable/account_circle_48px"
+        android:icon="@drawable/lock"
         android:title="Profile"/>
     <item
         android:id="@+id/shopping"

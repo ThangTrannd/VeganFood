@@ -42,5 +42,7 @@ dependencies {
     runtimeOnly 'io.jsonwebtoken:jjwt-impl:0.11.3'
     runtimeOnly('io.jsonwebtoken:jjwt-orgjson:0.11.3') {
         exclude group: 'org.json', module: 'json' //provided by Android natively
+
+        implementation "com.airbnb.android:lottie:3.7.0"
     }
 }

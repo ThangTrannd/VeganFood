@@ -51,13 +51,17 @@
     <TextView
         android:id="@+id/title"
         android:layout_width="wrap_content"
-        android:layout_height="45dp"
+        android:layout_height="wrap_content"
         android:layout_below="@+id/logo"
         android:text="@string/register"
-        android:textColor="@color/black"
-        android:textSize="30sp"
-        android:textStyle="bold"
+        android:textColor="#2196F3"
+        android:textSize="55sp"
+        android:fontFamily="@font/lobster"
         android:layout_marginTop="5dp"
+        android:shadowColor="#FFE500"
+        android:shadowDx="0.0"
+        android:shadowDy="0.0"
+        android:shadowRadius="8"
         app:layout_constraintEnd_toEndOf="@id/guideline2"
         app:layout_constraintStart_toStartOf="@id/guideline1"
         app:layout_constraintTop_toBottomOf="@id/logo"
@@ -78,11 +82,13 @@
             android:padding="5dp"
             android:background="@drawable/round_bg"
             android:orientation="horizontal">
+
             <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
+                android:layout_width="@dimen/text_size_XXL"
+                android:layout_height="@dimen/text_size_XXL"
+                android:layout_gravity="center"
                 android:layout_margin="5dp"
-                android:src="@drawable/account_circle_24px"/>
+                android:src="@drawable/homan" />
             <EditText
                 android:id="@+id/edtUserName"
                 android:layout_width="match_parent"
@@ -104,10 +110,11 @@
             android:layout_marginTop="20dp"
             android:orientation="horizontal">
             <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
+                android:layout_width="@dimen/text_size_XXL"
+                android:layout_height="@dimen/text_size_XXL"
+                android:layout_gravity="center"
                 android:layout_margin="5dp"
-                android:src="@drawable/lock_24px"/>
+                android:src="@drawable/lock"/>
             <EditText
                 android:id="@+id/edtPassword"
                 android:layout_width="match_parent"
@@ -128,10 +135,11 @@
             android:background="@drawable/round_bg"
             android:orientation="horizontal">
             <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_margin="5dp"
-                android:src="@drawable/mail_24px"/>
+                android:layout_width="@dimen/text_size_XXL"
+                android:layout_height="@dimen/text_size_XXL"
+                android:layout_marginLeft="10dp"
+                android:layout_gravity="center"
+                android:src="@drawable/gmail"/>
             <EditText
                 android:id="@+id/edtEmail"
                 android:layout_width="match_parent"
@@ -140,7 +148,9 @@
                 android:layout_margin="5dp"
                 android:textSize="16sp"
                 android:background="@null"
+                android:paddingLeft="10dp"
                 android:textColor="@color/black"
+
                 />
         </LinearLayout>
         <androidx.appcompat.widget.AppCompatButton

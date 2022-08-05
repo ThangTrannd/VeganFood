@@ -56,13 +56,17 @@
     <TextView
         android:id="@+id/title"
         android:layout_width="wrap_content"
-        android:layout_height="45dp"
+        android:layout_height="wrap_content"
         android:layout_below="@+id/logo"
         android:text="@string/login"
-        android:textColor="@color/black"
-        android:textSize="30sp"
-        android:textStyle="bold"
+        android:textSize="55sp"
         android:layout_marginTop="5dp"
+        android:fontFamily="@font/lobster"
+        android:textColor="#2196F3"
+        android:shadowColor="#FFE500"
+        android:shadowDx="0.0"
+        android:shadowDy="0.0"
+        android:shadowRadius="8"
         app:layout_constraintEnd_toEndOf="@id/guideline2"
         app:layout_constraintStart_toStartOf="@id/guideline1"
         app:layout_constraintTop_toBottomOf="@id/logo"
@@ -74,99 +78,111 @@
         android:layout_height="0dp"
         android:orientation="vertical"
         android:weightSum="3.5"
-        app:layout_constraintStart_toStartOf="@id/guideline1"
-        app:layout_constraintEnd_toEndOf="@id/guideline2"
         app:layout_constraintBottom_toTopOf="@id/guideline4"
-        app:layout_constraintTop_toBottomOf="@id/guideline5">
+        app:layout_constraintEnd_toEndOf="@id/guideline2"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@id/guideline1"
+        app:layout_constraintTop_toBottomOf="@id/guideline5"
+        app:layout_constraintVertical_bias="0.0">
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="1"
-            android:padding="5dp"
             android:background="@drawable/round_bg"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:padding="5dp">
+
             <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
+                android:layout_width="16dp"
+                android:layout_height="20dp"
+                android:layout_gravity="center"
                 android:layout_margin="5dp"
-                android:src="@drawable/account_circle_24px"/>
+                android:src="@drawable/homan" />
+
             <EditText
                 android:id="@+id/etUserName"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:hint="@string/username"
                 android:layout_margin="5dp"
-                android:textSize="16sp"
                 android:background="@null"
+                android:hint="@string/username"
                 android:textColor="@color/black"
+                android:textSize="16sp"
 
                 />
         </LinearLayout>
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:background="@drawable/round_bg"
-            android:layout_weight="1"
-            android:padding="5dp"
             android:layout_marginTop="20dp"
-            android:orientation="horizontal">
+            android:layout_weight="1"
+            android:background="@drawable/round_bg"
+            android:orientation="horizontal"
+            android:padding="5dp">
+
             <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
+                android:layout_width="@dimen/text_size_XXL"
+                android:layout_height="@dimen/text_size_XXL"
+                android:layout_gravity="center"
                 android:layout_margin="5dp"
-                android:src="@drawable/lock_24px"/>
+                android:src="@drawable/lock" />
+
             <EditText
                 android:id="@+id/etPassWord"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:hint="@string/password"
                 android:layout_margin="5dp"
-                android:textSize="16sp"
                 android:background="@null"
+                android:hint="@string/password"
                 android:textColor="@color/black"
-                />
+                android:textSize="16sp" />
         </LinearLayout>
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="0.5"
             android:layout_marginTop="20dp"
-            android:padding="5dp"
-            android:orientation="horizontal">
+            android:layout_weight="0.5"
+            android:orientation="horizontal"
+            android:padding="5dp">
+
             <CheckBox
                 android:id="@+id/chkRemember"
                 android:layout_width="0dp"
-                android:layout_weight="1"
                 android:layout_height="match_parent"
                 android:layout_gravity="start|center"
-                android:text="@string/remember"
-               />
+                android:layout_weight="1"
+                android:text="@string/remember" />
+
             <TextView
                 android:id="@+id/tvPorgot"
                 android:layout_width="0dp"
-                android:layout_weight="1"
                 android:layout_height="match_parent"
-                android:text="@string/forgotPassword"
+                android:layout_weight="1"
                 android:gravity="end|center"
-                android:textColor="@color/black"
-                />
+                android:text="@string/forgotPassword"
+                android:textColor="@color/black" />
         </LinearLayout>
-        <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/btnRes"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1"
-            android:layout_marginTop="20dp"
-            android:background="@drawable/backgr_button"
-            android:text="@string/login"
-            android:paddingLeft="20dp"
-            android:paddingTop="10dp"
-            android:paddingBottom="10dp"
-            android:textSize="16sp"
-            android:textColor="@color/white"
-            />
-    </LinearLayout>
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnRes"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/backgr_button"
+                    android:text="@string/login"
+                    android:paddingLeft="20dp"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:textSize="16sp"
+                    android:textColor="@color/white"
+                    />
 
+
+
+    </LinearLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraint"
