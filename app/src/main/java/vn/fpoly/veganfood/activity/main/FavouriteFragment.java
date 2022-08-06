@@ -1,4 +1,4 @@
-package vn.fpoly.veganfood.activity;
+package vn.fpoly.veganfood.activity.main;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -11,17 +11,17 @@ import vn.fpoly.veganfood.R;
 
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link ShoppingFragment#newInstance} factory method to
+ * Use the {@link FavouriteFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class ShoppingFragment extends Fragment {
+public class FavouriteFragment extends Fragment {
 
-    public ShoppingFragment() {
+    public FavouriteFragment() {
         // Required empty public constructor
     }
 
-    public static ShoppingFragment newInstance(String param1, String param2) {
-        ShoppingFragment fragment = new ShoppingFragment();
+    public static FavouriteFragment newInstance(String param1, String param2) {
+        FavouriteFragment fragment = new FavouriteFragment();
         return fragment;
     }
 
@@ -34,6 +34,6 @@ public class ShoppingFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_shopping, container, false);
+        return inflater.inflate(R.layout.fragment_favourite, container, false);
     }
 }

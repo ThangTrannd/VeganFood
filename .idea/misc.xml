@@ -28,8 +28,14 @@
         <entry key="..\:/VeganFood/app/src/main/res/drawable/account_circle-24px.xml" value="0.1625" />
         <entry key="..\:/VeganFood/app/src/main/res/drawable/lock_24px.xml" value="0.1625" />
         <entry key="..\:/VeganFood/app/src/main/res/drawable/mail_24px.xml" value="0.1625" />
-        <entry key="..\:/VeganFood/app/src/main/res/layout/activity_login.xml" value="0.176" />
+        <entry key="..\:/VeganFood/app/src/main/res/layout/activity_change_pass.xml" value="0.136" />
+        <entry key="..\:/VeganFood/app/src/main/res/layout/activity_forgot_pass.xml" value="0.14222972972972972" />
+        <entry key="..\:/VeganFood/app/src/main/res/layout/activity_login.xml" value="0.264" />
         <entry key="..\:/VeganFood/app/src/main/res/layout/activity_register.xml" value="0.16799999999999998" />
+        <entry key="..\:/VeganFood/app/src/main/res/layout/activity_splash.xml" value="0.16041666666666668" />
+        <entry key="..\:/VeganFood/app/src/main/res/layout/item_product.xml" value="0.164453125" />
+        <entry key="..\:/VeganFood/app/src/main/res/layout/layout_change_pass.xml" value="0.164453125" />
+        <entry key="..\:/VeganFood/app/src/main/res/layout/layout_forgotpas.xml" value="0.164453125" />
       </map>
     </option>
   </component>

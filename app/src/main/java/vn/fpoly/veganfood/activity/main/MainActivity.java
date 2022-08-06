@@ -1,4 +1,4 @@
-package vn.fpoly.veganfood.activity;
+package vn.fpoly.veganfood.activity.main;
 
 import android.os.Bundle;
 import android.view.MenuItem;

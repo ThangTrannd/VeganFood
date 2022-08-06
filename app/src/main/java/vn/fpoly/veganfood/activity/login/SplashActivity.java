@@ -1,4 +1,4 @@
-package vn.fpoly.veganfood.activity;
+package vn.fpoly.veganfood.activity.login;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -32,8 +32,9 @@ public class SplashActivity extends AppCompatActivity {
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                Intent i = new Intent(getApplicationContext(),RegisterActivity.class);
+                Intent i = new Intent(getApplicationContext(),LoginActivity.class);
                 startActivity(i);
+                finish();
             }
         },5000);
     }
