@@ -3,17 +3,17 @@
     <item
         android:id="@+id/home"
         android:icon="@drawable/home_48px"
-        android:title="Home"/>
+        android:title="Trang chủ"/>
     <item
         android:id="@+id/favourite"
         android:icon="@drawable/favorite_48px"
-        android:title="Favourite"/>
+        android:title="Yêu thích"/>
     <item
         android:id="@+id/profile"
-        android:icon="@drawable/lock"
-        android:title="Profile"/>
+        android:icon="@drawable/profile_48px"
+        android:title="Hồ sơ"/>
     <item
         android:id="@+id/shopping"
         android:icon="@drawable/shopping_cart_48px"
-        android:title="Shopping"/>
+        android:title="Giỏ hàng"/>
 </menu>
