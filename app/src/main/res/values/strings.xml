@@ -3,19 +3,30 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="title_home">Recommended</string>
     <string name="hello">Xin chào quý khách</string>
-    <string name="register">Register</string>
-    <string name="username">Username</string>
-    <string name="password">Password</string>
+    <string name="register">Đăng ký</string>
+    <string name="username">Họ và tên</string>
+    <string name="password">Mật khẩu</string>
     <string name="email">Email</string>
-    <string name="login">Login</string>
-    <string name="remember">Remember</string>
-    <string name="forgotPassword">Forgot Password?</string>
-    <string name="forgot">Forgot Password</string>
-    <string name="phone">Phone</string>
-    <string name="done">Done</string>
-    <string name="changepas">Change Password</string>
-    <string name="code_ver">Code Verification</string>
-    <string name="new_pas">New password</string>
-    <string name="enter_new">Enter new password</string>
+    <string name="login">Đăng nhập</string>
+    <string name="remember">Ghi nhớ</string>
+    <string name="forgotPassword">Quên mật khẩu?</string>
+    <string name="forgot">Quên mật khẩu</string>
+    <string name="phone">Số điện thoại</string>
+    <string name="done">Xong</string>
+    <string name="changepas">Đổi mật khẩu</string>
+    <string name="code_ver">Mã xác minh</string>
+    <string name="new_pas">Mật khẩu mới</string>
+    <string name="enter_new">Nhập lại mật khẩu mới</string>
+    <string name="welcom_vegan">Chào mừng đến với VeganFood</string>
+    <string name="skip">Bỏ qua</string>
+    <string name="next">Tiếp</string>
+    <string name="nice_to_meet_you">Hân hạnh được gặp bạn,chúng tôi rất vui vì bạn ở đây,vì vậy hãy bắt đầu ngay bây giờ !</string>
+    <string name="shopping">Mua sắm trên VeganFood</string>
+    <string name="shopping_every">Mua sắm mọi lúc mọi nơi tiện,giao hàng nhanh chóng.</string>
+    <string name="quality">Chất lượng uy  nhanh chóng.Chỉ cần 3 bước đơn giản để có lối sống thời ,hãy tham gia ngay với VeganFood !</string>
+    <string name="start">Bắt đầu</string>
+    <string name="cate">Thể loại</string>
     <string name="domain">https://polyhehehe.herokuapp.com</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

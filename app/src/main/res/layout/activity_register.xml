@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/login"
     tools:context=".activity.login.RegisterActivity">
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline1"
@@ -54,11 +53,11 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/logo"
         android:text="@string/register"
-        android:textColor="#2196F3"
+        android:textColor="#68b510"
+        android:shadowColor="#E8FF00"
         android:textSize="55sp"
         android:fontFamily="@font/lobster"
         android:layout_marginTop="5dp"
-        android:shadowColor="#FFE500"
         android:shadowDx="0.0"
         android:shadowDy="0.0"
         android:shadowRadius="8"
@@ -85,7 +84,7 @@
 
             <ImageView
                 android:layout_width="@dimen/text_size_XXL"
-                android:layout_height="@dimen/text_size_XXL"
+                android:layout_height="15dp"
                 android:layout_gravity="center"
                 android:layout_margin="5dp"
                 android:src="@drawable/homan" />
@@ -109,22 +108,33 @@
             android:padding="5dp"
             android:layout_marginTop="20dp"
             android:orientation="horizontal">
+
             <ImageView
-                android:layout_width="@dimen/text_size_XXL"
-                android:layout_height="@dimen/text_size_XXL"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
                 android:layout_gravity="center"
                 android:layout_margin="5dp"
-                android:src="@drawable/lock"/>
+                android:src="@drawable/lock" />
             <EditText
                 android:id="@+id/edtPassword"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="match_parent"
+                android:layout_weight="1"
                 android:hint="@string/password"
+                android:inputType="textPassword"
                 android:layout_margin="5dp"
                 android:textSize="16sp"
                 android:background="@null"
                 android:textColor="@color/black"
                 />
+
+            <ImageView
+                android:id="@+id/show_pas"
+                android:layout_width="@dimen/text_size_XXL"
+                android:layout_height="@dimen/text_size_XXL"
+                android:layout_gravity="center"
+                android:layout_margin="3dp"
+                android:src="@drawable/hide"/>
         </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
@@ -149,24 +159,25 @@
                 android:textSize="16sp"
                 android:background="@null"
                 android:paddingLeft="10dp"
+                android:inputType="textEmailAddress"
                 android:textColor="@color/black"
 
                 />
         </LinearLayout>
+
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/btnResgister"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="1"
             android:layout_marginTop="20dp"
+            android:layout_weight="1"
             android:background="@drawable/backgr_button"
-            android:text="@string/register"
             android:paddingLeft="20dp"
             android:paddingTop="10dp"
             android:paddingBottom="10dp"
-            android:textSize="16sp"
+            android:text="@string/register"
             android:textColor="@color/white"
-            />
+            android:textSize="16sp" />
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

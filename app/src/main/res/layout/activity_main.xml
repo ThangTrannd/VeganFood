@@ -24,6 +24,8 @@
         app:menu="@menu/menubottom"
         android:layout_marginBottom="20dp"
         android:layout_marginLeft="10dp"
+        app:itemTextColor="#68b510"
+        app:itemIconTint="#68b510"
         android:layout_marginRight="10dp"
         android:background="@drawable/background_bottom_nav"
         app:layout_constraintStart_toStartOf="parent"

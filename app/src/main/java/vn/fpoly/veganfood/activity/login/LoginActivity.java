@@ -2,9 +2,12 @@ package vn.fpoly.veganfood.activity.login;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.method.HideReturnsTransformationMethod;
+import android.text.method.PasswordTransformationMethod;
 import android.view.View;
 import android.widget.CheckBox;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -38,6 +41,7 @@ public class LoginActivity extends AppCompatActivity {
     private AppCompatImageView imgFb;
     private AppCompatImageView imgGg;
     private String access_token;
+    private ImageView show_pass;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -53,6 +57,23 @@ public class LoginActivity extends AppCompatActivity {
         btnLogin = findViewById(R.id.btnLogin);
         imgFb = findViewById(R.id.imgFb);
         imgGg = findViewById(R.id.imgGg);
+        show_pass = findViewById(R.id.show_pass);
+
+        show_pass.setImageResource(R.drawable.hide);
+        show_pass.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if(etPassWord.getTransformationMethod().equals(HideReturnsTransformationMethod.getInstance())) {
+                    //if pass is visible then hide it
+                    etPassWord.setTransformationMethod(PasswordTransformationMethod.getInstance());
+                    //change icon
+                    show_pass.setImageResource(R.drawable.hide);
+                } else {
+                    etPassWord.setTransformationMethod(HideReturnsTransformationMethod.getInstance());
+                    show_pass.setImageResource(R.drawable.view);
+                }
+            }
+        });
 
         tvForgot.setOnClickListener(new View.OnClickListener() {
             @Override
