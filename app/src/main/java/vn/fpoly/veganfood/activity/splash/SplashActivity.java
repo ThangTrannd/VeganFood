@@ -1,4 +1,4 @@
-package vn.fpoly.veganfood.activity.login;
+package vn.fpoly.veganfood.activity.splash;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -11,6 +11,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.airbnb.lottie.LottieAnimationView;
 
 import vn.fpoly.veganfood.R;
+import vn.fpoly.veganfood.activity.login.LoginActivity;
 
 public class SplashActivity extends AppCompatActivity {
     TextView tvHello;
@@ -27,12 +28,12 @@ public class SplashActivity extends AppCompatActivity {
 
         tvHello.animate().translationY(-400).setDuration(2700).setStartDelay(0);
         lottie.animate().translationX(2000).setDuration(2000).setStartDelay(2900);
-        img_Logo.animate().translationY(400).setDuration(2000).setStartDelay(2900);
+//        img_Logo.animate().translationY(400).setDuration(2000).setStartDelay(2900);
 
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                Intent i = new Intent(getApplicationContext(),LoginActivity.class);
+                Intent i = new Intent(getApplicationContext(), LoginActivity.class);
                 startActivity(i);
                 finish();
             }

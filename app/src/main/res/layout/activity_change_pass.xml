@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/background1"
     tools:context=".activity.login.ChangePass">
 
     <androidx.constraintlayout.widget.Guideline
@@ -58,9 +57,9 @@
         android:layout_below="@+id/img_Logo"
         android:layout_marginTop="110dp"
         android:text="@string/changepas"
-        android:textColor="#2196F3"
+        android:textColor="#68b510"
+        android:shadowColor="#E8FF00"
         android:fontFamily="@font/lobster"
-        android:shadowColor="#FFE500"
         android:shadowDx="0.0"
         android:shadowDy="0.0"
         android:shadowRadius="8"
@@ -126,14 +125,24 @@
                 android:src="@drawable/lock"/>
             <EditText
                 android:id="@+id/etNew"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="match_parent"
+                android:layout_weight="1"
                 android:hint="@string/new_pas"
                 android:layout_margin="5dp"
                 android:textSize="16sp"
                 android:background="@null"
                 android:textColor="@color/black"
                 />
+
+            <ImageView
+                android:id="@+id/password_show_hide"
+                android:layout_width="@dimen/text_size_XXL"
+                android:layout_height="@dimen/text_size_XXL"
+                android:layout_gravity="center"
+                android:layout_margin="3dp"
+                android:src="@drawable/hide"/>
+
         </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
@@ -151,8 +160,9 @@
                 android:src="@drawable/lock"/>
             <EditText
                 android:id="@+id/etEnter"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="match_parent"
+                android:layout_weight="1"
                 android:hint="@string/enter_new"
                 android:layout_margin="5dp"
                 android:textSize="16sp"
@@ -161,6 +171,14 @@
                 android:textColor="@color/black"
 
                 />
+
+            <ImageView
+                android:id="@+id/password_show"
+                android:layout_width="@dimen/text_size_XXL"
+                android:layout_height="@dimen/text_size_XXL"
+                android:layout_gravity="center"
+                android:layout_margin="3dp"
+                android:src="@drawable/hide"/>
         </LinearLayout>
     </LinearLayout>
 

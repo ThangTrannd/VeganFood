@@ -10,31 +10,39 @@
     <androidx.appcompat.widget.LinearLayoutCompat
         android:id="@+id/linear"
         android:layout_width="0dp"
-        android:layout_margin="8dp"
         android:layout_height="?attr/actionBarSize"
-        app:layout_constraintStart_toStartOf="parent"
+        android:layout_margin="8dp"
+        android:layout_marginTop="4dp"
+        android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:orientation="horizontal">
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
         <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivMenu"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:src="@drawable/menu_24px"
-            android:id="@+id/ivMenu"/>
+            android:tint="#68b510"
+            />
+
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/tvTitle"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="1"
+            android:gravity="center"
             android:text="Products"
-            android:textStyle="bold"
             android:textSize="@dimen/text_size_XXL"
-            android:gravity="center"/>
+            android:textStyle="bold"
+            android:textColor="#68b510" />
+
         <androidx.appcompat.widget.AppCompatImageView
             android:id="@+id/ivNotify"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:src="@drawable/notifications_24px"/>
+            android:tint="#68b510"
+            android:src="@drawable/notifications_24px" />
     </androidx.appcompat.widget.LinearLayoutCompat>
 
     <FrameLayout
@@ -54,6 +62,8 @@
         app:menu="@menu/menubottom"
         android:layout_marginBottom="20dp"
         android:layout_marginLeft="10dp"
+        app:itemTextColor="#68b510"
+        app:itemIconTint="#68b510"
         android:layout_marginRight="10dp"
         android:background="@drawable/background_bottom_nav"
         app:layout_constraintStart_toStartOf="parent"

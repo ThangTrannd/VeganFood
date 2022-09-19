@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bacground"
     tools:context=".activity.login.LoginActivity">
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline1"
@@ -62,8 +61,8 @@
         android:textSize="55sp"
         android:layout_marginTop="5dp"
         android:fontFamily="@font/lobster"
-        android:textColor="#2196F3"
-        android:shadowColor="#FFE500"
+        android:textColor="#68b510"
+        android:shadowColor="#E8FF00"
         android:shadowDx="0.0"
         android:shadowDy="0.0"
         android:shadowRadius="8"
@@ -130,14 +129,27 @@
                 android:src="@drawable/lock" />
 
             <EditText
+
                 android:id="@+id/etPassWord"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="match_parent"
+                android:layout_weight="1"
                 android:layout_margin="5dp"
                 android:background="@null"
+                android:inputType="textPassword"
                 android:hint="@string/password"
+                app:passwordToggleEnabled="true"
                 android:textColor="@color/black"
                 android:textSize="16sp" />
+
+            <ImageView
+                android:id="@+id/show_pass"
+                android:layout_width="@dimen/text_size_XXL"
+                android:layout_height="20dp"
+                android:layout_gravity="center"
+                android:layout_margin="3dp"
+                android:src="@drawable/hide" />
+
         </LinearLayout>
 
         <LinearLayout
@@ -164,20 +176,20 @@
                 android:text="@string/forgotPassword"
                 android:textColor="@color/black" />
         </LinearLayout>
-                <androidx.appcompat.widget.AppCompatButton
-                    android:id="@+id/btnLogin"
-                    android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_weight="1"
-                    android:layout_marginTop="20dp"
-                    android:background="@drawable/backgr_button"
-                    android:text="@string/login"
-                    android:paddingLeft="20dp"
-                    android:paddingTop="10dp"
-                    android:paddingBottom="10dp"
-                    android:textSize="16sp"
-                    android:textColor="@color/white"
-                    />
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnLogin"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/backgr_button"
+            android:text="@string/login"
+            android:paddingLeft="20dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:textSize="16sp"
+            android:textColor="@color/white"
+            />
     </LinearLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
