@@ -1,15 +1,12 @@
 package vn.fpoly.veganfood.activity.splash;
 
 import androidx.annotation.NonNull;
-import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentActivity;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentStatePagerAdapter;
-import androidx.viewpager2.adapter.FragmentStateAdapter;
 
-import vn.fpoly.veganfood.fragment.BlankFragment;
-import vn.fpoly.veganfood.fragment.OnBoardingFragment;
-import vn.fpoly.veganfood.fragment.OnboardingFragment1;
+import vn.fpoly.veganfood.fragment.StartFragment;
+import vn.fpoly.veganfood.fragment.MidleFragment;
+import vn.fpoly.veganfood.fragment.EndFragment;
 
 public class ViewPagerAdapter extends FragmentStatePagerAdapter{
     public ViewPagerAdapter(@NonNull FragmentManager fm, int behaviorResumeOnlyCurrentFragment) {
@@ -18,16 +15,14 @@ public class ViewPagerAdapter extends FragmentStatePagerAdapter{
 
     @NonNull
     @Override
-    public Fragment getItem(int position) {
+    public androidx.fragment.app.Fragment getItem(int position) {
         switch (position) {
-            case 0:
-                return new BlankFragment();
             case 1:
-                return new OnBoardingFragment();
+                return new MidleFragment();
             case 2:
-                return new OnboardingFragment1();
+                return new EndFragment();
             default:
-                return new BlankFragment();
+                return new StartFragment();
         }
     }
 
@@ -36,11 +31,4 @@ public class ViewPagerAdapter extends FragmentStatePagerAdapter{
         return 3;
     }
 
-
-
-//
-//    @Override
-//    public int getItemCount() {
-//        return 2;
-//    }
 }

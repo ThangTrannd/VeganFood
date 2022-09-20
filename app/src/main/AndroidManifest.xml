@@ -16,10 +16,10 @@
         android:theme="@style/Theme.VeganFood"
         tools:targetApi="31">
         <activity
-            android:name=".CategoryActivity"
+            android:name=".activity.login.CategoryActivity"
             android:exported="false" />
         <activity
-            android:name=".activity.splash.SplashActivity1"
+            android:name=".activity.splash.SplashNewBie"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -41,7 +41,9 @@
             android:exported="true" />
         <activity
             android:name=".activity.splash.SplashActivity"
-            android:exported="true" />
+            android:exported="true" >
+
+        </activity>
         <activity
             android:name=".activity.main.MainActivity"
             android:exported="true" />
