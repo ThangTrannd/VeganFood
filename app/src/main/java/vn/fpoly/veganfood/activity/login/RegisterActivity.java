@@ -2,12 +2,15 @@ package vn.fpoly.veganfood.activity.login;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.AppCompatButton;
+
+import com.google.gson.JsonObject;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -18,6 +21,7 @@ import vn.fpoly.veganfood.R;
 import vn.fpoly.veganfood.activity.main.MainActivity;
 import vn.fpoly.veganfood.domain.APIInterface;
 import vn.fpoly.veganfood.model.User;
+import vn.fpoly.veganfood.model.login.LoginResponce;
 
 public class RegisterActivity extends AppCompatActivity {
 
@@ -25,8 +29,6 @@ public class RegisterActivity extends AppCompatActivity {
     private EditText edtPassword;
     private EditText edtEmail;
     private AppCompatButton btnResgister;
-
-    String jwt = "";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,12 +44,31 @@ public class RegisterActivity extends AppCompatActivity {
         btnResgister.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Retrofit retrofit = new Retrofit.Builder().baseUrl(getString(R.string.domain))
+                Retrofit retrofit = new Retrofit.Builder().baseUrl("https://demofoods.herokuapp.com")
                         .addConverterFactory(GsonConverterFactory.create()).build();
-                APIInterface APIInterface = retrofit.create(APIInterface.class);
-                String email = edtEmail.getText().toString();
-                String passWord = edtPassword.getText().toString();
-                String userName = edtUserName.getText().toString();
+                APIInterface apiInterface = retrofit.create(APIInterface.class);
+                JsonObject jsonObject = new JsonObject();
+                jsonObject.addProperty("username", userName);
+                jsonObject.addProperty("password", passWord);
+                System.out.println(jsonObject);
+                Call<LoginResponce> call = apiInterface.login(jsonObject);
+                call.enqueue(new Callback<LoginResponce>() {
+                    @Override
+                    public void onResponse(Call<LoginResponce> call, Response<LoginResponce> response) {
+                        System.out.println(response);
+                        if (response.code() == 200){
+                            startActivity(new Intent(LoginActivity.this, MainActivity.class));
+                        }
+                        else{
+                            Toast.makeText(LoginActivity.this, "Bạn nhập sai tài khoản hoặc mật khẩu ", Toast.LENGTH_SHORT).show();
+                        }
+                    }
+
+                    @Override
+                    public void onFailure(Call<LoginResponce> call, Throwable t) {
+                        Log.e("Thangtran",t.toString());
+                    }
+                });
 
                 if (userName.isEmpty())
                     Toast.makeText(RegisterActivity.this, "Bạn cần nhập đầy đủ username", Toast.LENGTH_SHORT).show();
@@ -56,19 +77,6 @@ public class RegisterActivity extends AppCompatActivity {
                 else{
                     Toast.makeText(RegisterActivity.this, "success", Toast.LENGTH_SHORT).show();
                     startActivity(new Intent(RegisterActivity.this, LoginActivity.class));
-//                    Call<User> call = APIInterface.register(email,passWord,userName);
-//                    call.enqueue(new Callback<User>() {
-//                        @Override
-//                        public void onResponse(Call<User> call, Response<User> response) {
-//                            Toast.makeText(RegisterActivity.this, "Đăng kí thành công", Toast.LENGTH_SHORT).show();
-//                            startActivity(new Intent(RegisterActivity.this, LoginActivity.class));
-//                        }
-//
-//                        @Override
-//                        public void onFailure(Call<User> call, Throwable t) {
-//                            Toast.makeText(RegisterActivity.this, "Error", Toast.LENGTH_SHORT).show();
-//                        }
-//                    });
                 }
             }
         });
