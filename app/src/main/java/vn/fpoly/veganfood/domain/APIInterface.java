@@ -10,17 +10,22 @@ import retrofit2.http.Headers;
 import retrofit2.http.POST;
 import retrofit2.http.Path;
 import vn.fpoly.veganfood.model.User;
+import vn.fpoly.veganfood.model.login.LoginData;
+import vn.fpoly.veganfood.model.login.LoginResponse;
 
 public interface APIInterface {
 
-    @FormUrlEncoded
-    @POST("/auth/register")
-    Call<User> register(
-            @Field("email") String email,
-            @Field("password") String password,
-            @Field("userName") String userName
+    @Headers({
+            "Accept: text/plain",
+            "Content-Type: application/json-patch+json"
+    })
+
+    @POST("/users/login")
+    Call<LoginResponse> login(
+            @Body LoginData loginData
     );
-    Call<User> login(
+
+    Call<User> re(
             @Field("access_token") String access_token
     );
 

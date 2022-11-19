@@ -14,6 +14,8 @@ import androidx.fragment.app.Fragment;
 
 import vn.fpoly.veganfood.R;
 import vn.fpoly.veganfood.activity.profile.AboutUsFragment;
+import vn.fpoly.veganfood.activity.profile.LogoutFragment;
+import vn.fpoly.veganfood.activity.profile.SignOutFragment;
 import vn.fpoly.veganfood.activity.profile.UserInfoFragment;
 
 /**
@@ -60,6 +62,8 @@ public class ProfileFragment extends Fragment {
         signout = view.findViewById(R.id.signout);
         AboutUsFragment aboutUsFragment = new AboutUsFragment();
         UserInfoFragment userInfoFragment = new UserInfoFragment();
+        SignOutFragment signOutFragment = new SignOutFragment();
+        LogoutFragment logoutFragment = new LogoutFragment();
         ivAvatar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -93,13 +97,13 @@ public class ProfileFragment extends Fragment {
         logout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                getActivity().getSupportFragmentManager().beginTransaction().add(R.id.container,logoutFragment).commit();
             }
         });
         signout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                getActivity().getSupportFragmentManager().beginTransaction().add(R.id.container,signOutFragment).commit();
             }
         });
     }

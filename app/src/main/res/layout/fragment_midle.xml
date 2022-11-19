@@ -40,8 +40,4 @@
             android:text="@string/shopping_every" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-
-
-
-
 </androidx.constraintlayout.widget.ConstraintLayout>

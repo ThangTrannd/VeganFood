@@ -1,5 +1,7 @@
 package vn.fpoly.veganfood.activity.splash;
 
+import android.widget.TextView;
+
 import androidx.annotation.NonNull;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentStatePagerAdapter;
