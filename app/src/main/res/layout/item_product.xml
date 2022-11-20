@@ -9,7 +9,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:src="@mipmap/ic_launcher"
+        android:src="@drawable/img"
         android:id="@+id/ivProduct"/>
     <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/ivFavourite"
@@ -26,14 +26,44 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/ivProduct"
         android:textStyle="bold"
+        android:text="@string/tv1"
+        android:layout_marginLeft="5dp"
+        android:textColor="@color/black"
         android:textSize="@dimen/text_size_XXL"
         android:layout_marginTop="8dp"/>
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvGR"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvTitle"
+        android:text="200gr"
+        android:textSize="@dimen/text_size_XXL"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="8dp"/>
+
+
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/tvPrice"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tvTitle"
-        android:textSize="@dimen/text_size_XXL"
+        app:layout_constraintTop_toBottomOf="@id/tvGR"
+        android:text="@string/tv4"
+        android:layout_marginLeft="10dp"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:textSize="@dimen/text_size_XXXL"
         android:layout_marginTop="8dp"/>
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivButton_add"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/button_add"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvGR"
+       android:layout_margin="20dp"
+      />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
