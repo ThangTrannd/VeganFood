@@ -1,6 +1,7 @@
 package vn.fpoly.veganfood.activity.login;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.text.method.HideReturnsTransformationMethod;
 import android.text.method.PasswordTransformationMethod;
@@ -15,24 +16,19 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.AppCompatButton;
 import androidx.appcompat.widget.AppCompatImageView;
 
-import com.google.gson.JsonObject;
-
-import java.security.Key;
-import java.util.HashMap;
-import java.util.Map;
-
-import io.jsonwebtoken.Jwts;
-import io.jsonwebtoken.SignatureAlgorithm;
-import io.jsonwebtoken.security.Keys;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
+import retrofit2.Retrofit;
+import retrofit2.converter.gson.GsonConverterFactory;
 import vn.fpoly.veganfood.R;
 import vn.fpoly.veganfood.activity.main.MainActivity;
 import vn.fpoly.veganfood.domain.APIInterface;
-import vn.fpoly.veganfood.model.User;
+import vn.fpoly.veganfood.model.login.LoginData;
+import vn.fpoly.veganfood.model.login.LoginResponse;
 
 public class LoginActivity extends AppCompatActivity {
+
     private EditText etUserName;
     private EditText etPassWord;
     private CheckBox chkRemember;
@@ -40,8 +36,9 @@ public class LoginActivity extends AppCompatActivity {
     private AppCompatButton btnLogin;
     private AppCompatImageView imgFb;
     private AppCompatImageView imgGg;
-    private String access_token;
     private ImageView show_pass;
+    SharedPreferences shaPref;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -101,46 +98,29 @@ public class LoginActivity extends AppCompatActivity {
                     Toast.makeText(LoginActivity.this, "Bạn cần nhập đầy đủ password", Toast.LENGTH_SHORT).show();
                 }
                 else{
-                    startActivity(new Intent(LoginActivity.this, MainActivity.class));
-//                JsonObject jsonObject = new JsonObject();
-//                jsonObject.addProperty("access_token", generateJwt());
-//                System.out.println("access_token :"+jsonObject);
-//                Call<User> call = APIInterface.login();
-//                call.enqueue(new Callback<User>() {
-//                    @Override
-//                    public void onResponse(Call<User> call, Response<User> response) {
-//                        Toast.makeText(LoginActivity.this, "Đăng nhập thành công", Toast.LENGTH_SHORT).show();
-//
-//                    }
-//
-//                    @Override
-//                    public void onFailure(Call<User> call, Throwable t) {
-//                        Toast.makeText(LoginActivity.this, "Error", Toast.LENGTH_SHORT).show();
-//                    }
-//                });
+                    Retrofit retrofit = new Retrofit.Builder().baseUrl("https://demofoods.herokuapp.com")
+                            .addConverterFactory(GsonConverterFactory.create()).build();
+                    APIInterface jsonHolderApi = retrofit.create(APIInterface.class);
+                    Call<LoginResponse> call = jsonHolderApi.login( new LoginData(userName,passWord));
+                    call.enqueue(new Callback<LoginResponse>() {
+                        @Override
+                        public void onResponse(Call<LoginResponse> call, Response<LoginResponse> response) {
+                            System.out.println("Thắng : " +response);
+                            if (response.body().getToken() != null){
+                                shaPref.edit().putString(String.valueOf(R.string.token),response.body().getToken());
+                                startActivity(new Intent(LoginActivity.this, MainActivity.class));
+                            }
+                        }
+
+                        @Override
+                        public void onFailure(Call<LoginResponse> call, Throwable t) {
+                            System.out.println(t);
+                        }
+                    });
                 }
-
-
-
-
 
             }
         });
-
-    }
-
-    private String generateJwt() {
-
-        String passWord = etPassWord.getText().toString();
-        String userName = etUserName.getText().toString();
-
-        Map<String, Object> clam = new HashMap<>();
-        clam.put("password", passWord);
-        clam.put("userName", userName);
-        Key key = Keys.secretKeyFor(SignatureAlgorithm.HS256);
-        access_token = Jwts.builder().setHeaderParam("alg", "HS256").setHeaderParam("typ", "JWT").
-                setClaims(clam).signWith(key).compact();
-        return access_token;
 
     }
 

@@ -26,7 +26,7 @@
     <string name="quality">Chất lượng uy  nhanh chóng.Chỉ cần 3 bước đơn giản để có lối sống thời ,hãy tham gia ngay với VeganFood !</string>
     <string name="start">Bắt đầu</string>
     <string name="cate">Thể loại</string>
-    <string name="domain">https://polyhehehe.herokuapp.com</string>
+
     <string name="tv1">Bánh bao chay thực dưỡng</string>
     <string name="tv2">20.000d/250gr</string>
     <string name ="tv3">Bánh bao thực gáo lứt tốt cho sức khoẻ, giàu chất dinh dưỡng.  Với nguyên liệu làm vỏ bánh chủ yếu là gạo lứt kết hợp với nhân rau củ chứa nhiều vitamin nên rất tốt cho sức khoẻ. Vỏ bánh mềm,min.</string>
@@ -44,6 +44,9 @@ Thực phẩm chay VeganFood là một trong những địa chỉ đi đầu v�
      <string name="tv9" >        Copyright © 2022 Bản quyền thuộc về Nhà hàng chay VeganFood
                               Số 20 Trinh Van Bo , Q Nam Từ Liêm - HN
                                     Design by ICSC Corporation</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="tv10">Lựa chọn hình thức thanh toán</string>
+
+    <string name="domain">https://demofoods.herokuapp.com</string>
+    <string name="token">token</string>
+
 </resources>
