@@ -24,7 +24,7 @@ public interface APIInterface {
             @Body User user
     );
 
-    @POST("/auth/login")
+    @POST("/users/login")
     Call<LoginResponce> login(
             @Body JsonObject jsonObject
     );

@@ -106,7 +106,7 @@ public class LoginActivity extends AppCompatActivity {
                 else if (passWord.isEmpty()) {
                     Toast.makeText(LoginActivity.this, "Bạn cần nhập đầy đủ password", Toast.LENGTH_SHORT).show();
                 } else {
-                    Retrofit retrofit = new Retrofit.Builder().baseUrl("https://demofoods.herokuapp.com")
+                    Retrofit retrofit = new Retrofit.Builder().baseUrl("  ")
                             .addConverterFactory(GsonConverterFactory.create()).build();
                     APIInterface apiInterface = retrofit.create(APIInterface.class);
                     JsonObject jsonObject = new JsonObject();
@@ -117,7 +117,7 @@ public class LoginActivity extends AppCompatActivity {
                     call.enqueue(new Callback<LoginResponce>() {
                         @Override
                         public void onResponse(Call<LoginResponce> call, Response<LoginResponce> response) {
-                            System.out.println(response);
+                            System.out.println(response.body());
                             if (response.code() == 200){
                                 startActivity(new Intent(LoginActivity.this, MainActivity.class));
                             }

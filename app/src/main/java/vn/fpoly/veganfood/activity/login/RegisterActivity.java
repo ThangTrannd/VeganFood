@@ -44,40 +44,41 @@ public class RegisterActivity extends AppCompatActivity {
         btnResgister.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Retrofit retrofit = new Retrofit.Builder().baseUrl("https://demofoods.herokuapp.com")
-                        .addConverterFactory(GsonConverterFactory.create()).build();
-                APIInterface apiInterface = retrofit.create(APIInterface.class);
-                JsonObject jsonObject = new JsonObject();
-                jsonObject.addProperty("username", userName);
-                jsonObject.addProperty("password", passWord);
-                System.out.println(jsonObject);
-                Call<LoginResponce> call = apiInterface.login(jsonObject);
-                call.enqueue(new Callback<LoginResponce>() {
-                    @Override
-                    public void onResponse(Call<LoginResponce> call, Response<LoginResponce> response) {
-                        System.out.println(response);
-                        if (response.code() == 200){
-                            startActivity(new Intent(LoginActivity.this, MainActivity.class));
-                        }
-                        else{
-                            Toast.makeText(LoginActivity.this, "Bạn nhập sai tài khoản hoặc mật khẩu ", Toast.LENGTH_SHORT).show();
-                        }
-                    }
-
-                    @Override
-                    public void onFailure(Call<LoginResponce> call, Throwable t) {
-                        Log.e("Thangtran",t.toString());
-                    }
-                });
-
-                if (userName.isEmpty())
-                    Toast.makeText(RegisterActivity.this, "Bạn cần nhập đầy đủ username", Toast.LENGTH_SHORT).show();
-                else if (passWord.isEmpty())
-                    Toast.makeText(RegisterActivity.this, "Bạn cần nhập đầy đủ password", Toast.LENGTH_SHORT).show();
-                else{
-                    Toast.makeText(RegisterActivity.this, "success", Toast.LENGTH_SHORT).show();
-                    startActivity(new Intent(RegisterActivity.this, LoginActivity.class));
-                }
+//                Retrofit retrofit = new Retrofit.Builder().baseUrl("https://demofoods.herokuapp.com")
+//                        .addConverterFactory(GsonConverterFactory.create()).build();
+//                APIInterface apiInterface = retrofit.create(APIInterface.class);
+//                JsonObject jsonObject = new JsonObject();
+//                jsonObject.addProperty("username", userName);
+//                jsonObject.addProperty("password", passWord);
+//                System.out.println(jsonObject);
+//                Call<LoginResponce> call = apiInterface.login(jsonObject);
+//                call.enqueue(new Callback<LoginResponce>() {
+//                    @Override
+//                    public void onResponse(Call<LoginResponce> call, Response<LoginResponce> response) {
+//                        System.out.println(response);
+//                        if (response.code() == 200){
+//                            startActivity(new Intent(LoginActivity.this, MainActivity.class));
+//                        }
+//                        else{
+//                            Toast.makeText(LoginActivity.this, "Bạn nhập sai tài khoản hoặc mật khẩu ", Toast.LENGTH_SHORT).show();
+//                        }
+//                    }
+//
+//                    @Override
+//                    public void onFailure(Call<LoginResponce> call, Throwable t) {
+//                        Log.e("Thangtran",t.toString());
+//                    }
+//                });
+//
+//                if (userName.isEmpty())
+//                    Toast.makeText(RegisterActivity.this, "Bạn cần nhập đầy đủ username", Toast.LENGTH_SHORT).show();
+//                else if (passWord.isEmpty())
+//                    Toast.makeText(RegisterActivity.this, "Bạn cần nhập đầy đủ password", Toast.LENGTH_SHORT).show();
+//                else{
+//                    Toast.makeText(RegisterActivity.this, "success", Toast.LENGTH_SHORT).show();
+//                    startActivity(new Intent(RegisterActivity.this, LoginActivity.class));
+//                }
+//            }
             }
         });
     }
