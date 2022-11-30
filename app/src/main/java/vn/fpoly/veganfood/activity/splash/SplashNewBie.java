@@ -13,6 +13,7 @@ import android.widget.TextView;
 import me.relex.circleindicator.CircleIndicator;
 import vn.fpoly.veganfood.R;
 import vn.fpoly.veganfood.activity.login.LoginActivity;
+import vn.fpoly.veganfood.activity.main.HomeFragment;
 import vn.fpoly.veganfood.activity.main.MainActivity;
 
 public class SplashNewBie extends AppCompatActivity {
@@ -59,7 +60,8 @@ public class SplashNewBie extends AppCompatActivity {
                     viewPager.setCurrentItem(viewPager.getCurrentItem() + 1);
                 }
                 else{
-                    startActivity(new Intent(getApplicationContext(), LoginActivity.class));
+                    startActivity(new Intent(getApplicationContext(), MainActivity.class
+                    ));
                     finish();
                 }
             }

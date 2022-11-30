@@ -26,8 +26,27 @@
     <string name="quality">Chất lượng uy  nhanh chóng.Chỉ cần 3 bước đơn giản để có lối sống thời ,hãy tham gia ngay với VeganFood !</string>
     <string name="start">Bắt đầu</string>
     <string name="cate">Thể loại</string>
+
+    <string name="tv1">Bánh bao chay thực dưỡng</string>
+    <string name="tv2">20.000d/250gr</string>
+    <string name ="tv3">Bánh bao thực gáo lứt tốt cho sức khoẻ, giàu chất dinh dưỡng.  Với nguyên liệu làm vỏ bánh chủ yếu là gạo lứt kết hợp với nhân rau củ chứa nhiều vitamin nên rất tốt cho sức khoẻ. Vỏ bánh mềm,min.</string>
+    <string name="buy_now">Mua ngay</string>
+    <string name="tv4">20.000đ</string>
+    <string name="all">Tất cả</string>
+    <string name="endow">Ưu đãi dành cho bạn</string>
+    <string name="endow1">Ưu đãi phổ biến</string>
+    <string name="tv5">Ngày nay thói quen ăn chay  đã dần trở nên phổ biến đối với tất cả mọi người.</string>
+    <string name="tv6">Tọa lạc ngay trung tâm HN nhưng VeganFood lại có một không gian thanh tịnh và yên bình. Bàn ghế gỗ sạch sẽ...</string>
+    <string name="tv7">Đến với  VeganFood bạn sẽ có dịp thưởng thức hơn 100 món ăn chay với nhiều tên rất “mặn mà” như: lẩu thái...</string>
+    <string name="tv8">Điểm nổi bật
+Thực phẩm chay VeganFood là một trong những địa chỉ đi đầu về Top 5 website mua bán thực phẩm chay online. Chỉ cần bạn có thiết bị kết nối internet, thì những lúc bận rộn bạn cũng có thể lựa chọn cho gia đình mình những thực phẩm chay ngon, đảm bảo chất lượng..
+</string>
+     <string name="tv9" >        Copyright © 2022 Bản quyền thuộc về Nhà hàng chay VeganFood
+                              Số 20 Trinh Van Bo , Q Nam Từ Liêm - HN
+                                    Design by ICSC Corporation</string>
+    <string name="tv10">Lựa chọn hình thức thanh toán</string>
+
     <string name="domain">https://demofoods.herokuapp.com</string>
     <string name="token">token</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+
 </resources>
