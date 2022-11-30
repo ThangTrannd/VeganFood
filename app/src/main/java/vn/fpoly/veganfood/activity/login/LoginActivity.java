@@ -5,6 +5,7 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.text.method.HideReturnsTransformationMethod;
 import android.text.method.PasswordTransformationMethod;
+import android.util.Log;
 import android.view.View;
 import android.widget.CheckBox;
 import android.widget.EditText;
@@ -24,15 +25,14 @@ import retrofit2.converter.gson.GsonConverterFactory;
 import vn.fpoly.veganfood.R;
 import vn.fpoly.veganfood.activity.main.MainActivity;
 import vn.fpoly.veganfood.domain.APIInterface;
-import vn.fpoly.veganfood.model.login.LoginData;
-import vn.fpoly.veganfood.model.login.LoginResponse;
-
+import vn.fpoly.veganfood.model.User;
+import vn.fpoly.veganfood.model.login.LoginResponce;
 public class LoginActivity extends AppCompatActivity {
 
     private EditText etUserName;
     private EditText etPassWord;
     private CheckBox chkRemember;
-    private TextView tvForgot,tvRegister;
+    private TextView tvForgot, tvRegister;
     private AppCompatButton btnLogin;
     private AppCompatImageView imgFb;
     private AppCompatImageView imgGg;
@@ -45,7 +45,8 @@ public class LoginActivity extends AppCompatActivity {
         setContentView(R.layout.activity_login);
         initView();
     }
-    private void initView(){
+
+    private void initView() {
         etUserName = findViewById(R.id.etUserName);
         etPassWord = findViewById(R.id.etPassWord);
         chkRemember = findViewById(R.id.chkRemember);
@@ -60,7 +61,7 @@ public class LoginActivity extends AppCompatActivity {
         show_pass.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if(etPassWord.getTransformationMethod().equals(HideReturnsTransformationMethod.getInstance())) {
+                if (etPassWord.getTransformationMethod().equals(HideReturnsTransformationMethod.getInstance())) {
                     //if pass is visible then hide it
                     etPassWord.setTransformationMethod(PasswordTransformationMethod.getInstance());
                     //change icon
@@ -75,13 +76,13 @@ public class LoginActivity extends AppCompatActivity {
         tvForgot.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(LoginActivity.this,ForgotPass.class));
+                startActivity(new Intent(LoginActivity.this, ForgotPass.class));
             }
         });
         tvRegister.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(LoginActivity.this,RegisterActivity.class));
+                startActivity(new Intent(LoginActivity.this, RegisterActivity.class));
             }
         });
         btnLogin.setOnClickListener(new View.OnClickListener() {
@@ -96,6 +97,32 @@ public class LoginActivity extends AppCompatActivity {
                             Toast.LENGTH_SHORT).show();
                 else if (passWord.isEmpty()) {
                     Toast.makeText(LoginActivity.this, "Bạn cần nhập đầy đủ password", Toast.LENGTH_SHORT).show();
+                } else {
+                    Retrofit retrofit = new Retrofit.Builder().baseUrl("  ")
+                            .addConverterFactory(GsonConverterFactory.create()).build();
+                    APIInterface apiInterface = retrofit.create(APIInterface.class);
+                    JsonObject jsonObject = new JsonObject();
+                    jsonObject.addProperty("username", userName);
+                    jsonObject.addProperty("password", passWord);
+                    System.out.println(jsonObject);
+                    Call<LoginResponce> call = apiInterface.login(jsonObject);
+                    call.enqueue(new Callback<LoginResponce>() {
+                        @Override
+                        public void onResponse(Call<LoginResponce> call, Response<LoginResponce> response) {
+                            System.out.println(response.body());
+                            if (response.code() == 200){
+                                startActivity(new Intent(LoginActivity.this, MainActivity.class));
+                            }
+                            else{
+                                Toast.makeText(LoginActivity.this, "Bạn nhập sai tài khoản hoặc mật khẩu ", Toast.LENGTH_SHORT).show();
+                            }
+                        }
+
+                        @Override
+                        public void onFailure(Call<LoginResponce> call, Throwable t) {
+                            Log.e("Thangtran",t.toString());
+                        }
+                    });
                 }
                 else{
                     Retrofit retrofit = new Retrofit.Builder().baseUrl("https://demofoods.herokuapp.com")
@@ -123,6 +150,4 @@ public class LoginActivity extends AppCompatActivity {
         });
 
     }
-
-
 }
