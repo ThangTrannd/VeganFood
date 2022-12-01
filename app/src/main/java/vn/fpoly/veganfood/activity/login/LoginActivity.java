@@ -1,5 +1,6 @@
 package vn.fpoly.veganfood.activity.login;
 
+import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
@@ -17,6 +18,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.AppCompatButton;
 import androidx.appcompat.widget.AppCompatImageView;
 
+import com.google.gson.JsonObject;
+
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -26,7 +29,10 @@ import vn.fpoly.veganfood.R;
 import vn.fpoly.veganfood.activity.main.MainActivity;
 import vn.fpoly.veganfood.domain.APIInterface;
 import vn.fpoly.veganfood.model.User;
+import vn.fpoly.veganfood.model.login.LoginData;
 import vn.fpoly.veganfood.model.login.LoginResponce;
+import vn.fpoly.veganfood.model.login.LoginResponse;
+
 public class LoginActivity extends AppCompatActivity {
 
     private EditText etUserName;
@@ -43,6 +49,8 @@ public class LoginActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+        shaPref = getApplicationContext().getSharedPreferences("Sharef", Context.MODE_PRIVATE);
+
         initView();
     }
 
@@ -97,46 +105,29 @@ public class LoginActivity extends AppCompatActivity {
                             Toast.LENGTH_SHORT).show();
                 else if (passWord.isEmpty()) {
                     Toast.makeText(LoginActivity.this, "Bạn cần nhập đầy đủ password", Toast.LENGTH_SHORT).show();
-                } else {
-                    Retrofit retrofit = new Retrofit.Builder().baseUrl("  ")
-                            .addConverterFactory(GsonConverterFactory.create()).build();
-                    APIInterface apiInterface = retrofit.create(APIInterface.class);
-                    JsonObject jsonObject = new JsonObject();
-                    jsonObject.addProperty("username", userName);
-                    jsonObject.addProperty("password", passWord);
-                    System.out.println(jsonObject);
-                    Call<LoginResponce> call = apiInterface.login(jsonObject);
-                    call.enqueue(new Callback<LoginResponce>() {
-                        @Override
-                        public void onResponse(Call<LoginResponce> call, Response<LoginResponce> response) {
-                            System.out.println(response.body());
-                            if (response.code() == 200){
-                                startActivity(new Intent(LoginActivity.this, MainActivity.class));
-                            }
-                            else{
-                                Toast.makeText(LoginActivity.this, "Bạn nhập sai tài khoản hoặc mật khẩu ", Toast.LENGTH_SHORT).show();
-                            }
-                        }
-
-                        @Override
-                        public void onFailure(Call<LoginResponce> call, Throwable t) {
-                            Log.e("Thangtran",t.toString());
-                        }
-                    });
                 }
                 else{
                     Retrofit retrofit = new Retrofit.Builder().baseUrl("https://demofoods.herokuapp.com")
                             .addConverterFactory(GsonConverterFactory.create()).build();
                     APIInterface jsonHolderApi = retrofit.create(APIInterface.class);
-                    Call<LoginResponse> call = jsonHolderApi.login( new LoginData(userName,passWord));
+                    JsonObject jsonObject = new JsonObject();
+                    jsonObject.addProperty("username", userName);
+                    jsonObject.addProperty("password", passWord);
+                    Call<LoginResponse> call = jsonHolderApi.login(jsonObject);
                     call.enqueue(new Callback<LoginResponse>() {
                         @Override
                         public void onResponse(Call<LoginResponse> call, Response<LoginResponse> response) {
-                            System.out.println("Thắng : " +response);
-                            if (response.body().getToken() != null){
-                                shaPref.edit().putString(String.valueOf(R.string.token),response.body().getToken());
-                                startActivity(new Intent(LoginActivity.this, MainActivity.class));
+                            if (response.code() == 200){
+                                if (response.body().getToken() != null){
+                                    shaPref.edit().putString(String.valueOf(R.string.token),response.body().getToken());
+                                    startActivity(new Intent(LoginActivity.this, MainActivity.class));
+                                    finish();
+                                }
                             }
+                            else {
+                                Toast.makeText(LoginActivity.this, "Bạn nhập sai tài khoản và mật khẩu", Toast.LENGTH_SHORT).show();
+                            }
+
                         }
 
                         @Override

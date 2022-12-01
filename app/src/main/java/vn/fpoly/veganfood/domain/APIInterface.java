@@ -4,14 +4,10 @@ import com.google.gson.JsonObject;
 
 import retrofit2.Call;
 import retrofit2.http.Body;
-import retrofit2.http.Field;
-import retrofit2.http.FormUrlEncoded;
-import retrofit2.http.Header;
 import retrofit2.http.Headers;
 import retrofit2.http.POST;
-import retrofit2.http.Path;
 import vn.fpoly.veganfood.model.User;
-import vn.fpoly.veganfood.model.login.LoginResponce;
+import vn.fpoly.veganfood.model.login.LoginResponse;
 
 public interface APIInterface {
 
@@ -20,14 +16,14 @@ public interface APIInterface {
             "Content-Type: application/json-patch+json"
     })
 
-    @POST("/auth/register")
+    @POST("/users/register")
     Call<User> register(
-            @Body User user
+            @Body JsonObject jwt
     );
 
     @POST("/users/login")
-    Call<LoginResponce> login(
-            @Body JsonObject jsonObject
+    Call<LoginResponse> login(
+            @Body JsonObject jwt
     );
 
 }
