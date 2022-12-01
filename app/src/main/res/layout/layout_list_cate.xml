@@ -19,13 +19,13 @@
 
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/tvCate"
-            android:gravity="center"
-            android:textColor="@color/black"
-            android:textSize="20sp"
-            android:textStyle="bold"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Thể loại"/>
+            android:gravity="center"
+            android:text="Thể loại"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold" />
         
 
         <ImageView
