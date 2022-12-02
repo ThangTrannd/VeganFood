@@ -40,6 +40,12 @@
         app:layout_constraintVertical_bias="0.0"
         tools:layout_editor_absoluteX="-16dp">
 
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            >
+
         <TextView
             android:id="@+id/tv_about_us"
             android:layout_width="match_parent"
@@ -48,6 +54,65 @@
             android:layout_margin="20dp"
             android:textColor="@color/black"/>
 
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv_sp"
+                android:layout_width="250dp"
+                android:layout_height="150dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/img"
+                android:layout_marginLeft="70dp"
+                android:layout_below="@id/tv_about_us"/>
+            <TextView
+                android:id="@+id/tv_gt"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/tv6"
+                android:layout_margin="20dp"
+                android:textColor="@color/black"
+                android:layout_below="@id/iv_sp"/>
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv_sp1"
+                android:layout_width="250dp"
+                android:layout_height="150dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/img_4"
+                android:layout_marginLeft="70dp"
+                android:layout_below="@id/tv_gt"/>
+            <TextView
+                android:id="@+id/tv_gt2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/tv7"
+                android:layout_margin="20dp"
+                android:textColor="@color/black"
+                android:layout_below="@id/iv_sp1"/>
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv_sp2"
+                android:layout_width="250dp"
+                android:layout_height="150dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/img_5"
+                android:layout_marginLeft="70dp"
+                android:layout_below="@id/tv_gt2"/>
+            <TextView
+                android:id="@+id/tv_gt3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/tv8"
+                android:layout_margin="20dp"
+                android:textColor="@color/black"
+                android:layout_below="@id/iv_sp2"/>
+            <TextView
+                android:id="@+id/tv_gt4"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/tv9"
+                android:layout_margin="20dp"
+                android:textColor="@color/black"
+                android:layout_below="@id/tv_gt3"/>
+
+        </RelativeLayout>
     </ScrollView>
 
 

@@ -13,28 +13,30 @@ import java.util.List;
 
 import vn.fpoly.veganfood.R;
 
-public class itemAdapter extends RecyclerView.Adapter<itemAdapter.ItemViewHodel>{
-    private List<Item> mListItem;
+public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.ItemViewHodel>{
+    private List<Product> mListItem;
 
-    public itemAdapter(List<Item> mListItem) {
+    public ProductAdapter(List<Product> mListItem) {
         this.mListItem = mListItem;
     }
     @NonNull
     @Override
     public ItemViewHodel onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_product,parent, false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.list_product,parent, false);
         return new ItemViewHodel(view);
     }
 
     @Override
     public void onBindViewHolder(@NonNull ItemViewHodel holder, int position) {
-        Item item = mListItem.get(position);
-        if(item == null) {
+        Product product = mListItem.get(position);
+        if(product == null) {
             return;
         }
 
-        holder.img.setImageResource(item.getImage());
-        holder.tv.setText(item.getName());
+        holder.img.setImageResource(product.getImage());
+        holder.name.setText("Name :"+product.getName());
+        holder.gam.setText("Gam :"+product.getGam());
+        holder.price.setText("Price :"+product.getPrice());
     }
 
     @Override
@@ -47,13 +49,16 @@ public class itemAdapter extends RecyclerView.Adapter<itemAdapter.ItemViewHodel>
 
     public class ItemViewHodel extends RecyclerView.ViewHolder {
         private ImageView img;
-        private TextView tv;
+        private TextView name;
+        private TextView gam;
+        private TextView price;
 
         public ItemViewHodel(@NonNull View itemView) {
             super(itemView);
-
-            img = itemView.findViewById(R.id.ivProduct);
-            tv = itemView.findViewById(R.id.tvTitle);
+            img = itemView.findViewById(R.id.image);
+            name = itemView.findViewById(R.id.name);
+            gam = itemView.findViewById(R.id.gam);
+            price = itemView.findViewById(R.id.price);
         }
     }
 }

@@ -1,0 +1,391 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipToOutline="true"
+    android:background="@color/white"
+    tools:context=".activity.login.ProductFilterActivity">
+
+    <TextView
+        android:textStyle="bold"
+        android:id="@+id/tv1"
+        android:layout_width="101dp"
+        android:layout_height="18dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="132dp"
+        android:layout_marginTop="20dp"
+        android:gravity="center_horizontal|center_vertical"
+        android:lineSpacingExtra="-5sp"
+        android:text="Lọc thể loại"
+        android:textColor="@color/black" />
+
+    <View
+        android:id="@+id/view1"
+        android:layout_width="15.71dp"
+        android:layout_height="15.53dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="25.01dp"
+        android:layout_marginTop="20.06dp"
+        android:background="#00000000" />
+
+    <Button
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="5dp"
+        android:backgroundTint="@color/white"
+        android:drawableLeft="@drawable/ic_baseline_arrow_back_24" />
+
+    <RelativeLayout
+
+        android:id="@+id/bottom_bar"
+        android:layout_width="414dp"
+        android:layout_height="867dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="50dp"
+        android:background="#F2F3F2"
+        android:clipToOutline="true">
+
+        <TextView
+
+            android:id="@+id/category"
+            android:layout_width="84dp"
+            android:layout_height="28dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="21.74dp"
+            android:layout_marginTop="20dp"
+            android:gravity="center_horizontal|top"
+            android:text="Thể loại"
+            android:textColor="@color/black"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/raucuqua_"
+            android:layout_width="79dp"
+            android:layout_height="18dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="55.74dp"
+            android:layout_marginTop="50dp"
+            android:gravity="center_horizontal|top"
+            android:text="Rau củ quả"
+            android:textColor="#3FC979"
+            android:textStyle="bold" />
+
+        <androidx.appcompat.widget.AppCompatCheckBox
+            android:id="@+id/view2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            />
+
+        <!--        <View-->
+        <!--            android:id="@+id/view3"-->
+        <!--            android:layout_width="20.93dp"-->
+        <!--            android:layout_height="20.8dp"-->
+        <!--            android:layout_alignParentLeft="true"-->
+        <!--            android:layout_alignParentTop="true"-->
+        <!--            android:layout_marginLeft="25dp"-->
+        <!--            android:layout_marginTop="50dp"-->
+        <!--            android:background="@drawable/done" />-->
+
+        <TextView
+            android:id="@+id/douong"
+            android:layout_width="58dp"
+            android:layout_height="18dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="58.74dp"
+            android:layout_marginTop="80dp"
+            android:gravity="top"
+            android:text="Đồ uống"
+            android:textColor="@color/black"
+            android:textStyle="bold" />
+
+        <View
+            android:id="@+id/view4"
+            android:layout_width="24.07dp"
+            android:layout_height="24.07dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="25.01dp"
+            android:layout_marginTop="80dp"
+            android:background="#EEEEEE" />
+
+        <TextView
+            android:id="@+id/tvdoanvat"
+            android:layout_width="66dp"
+            android:layout_height="18dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="57.74dp"
+            android:layout_marginTop="110dp"
+            android:gravity="top"
+            android:text="Đồ ăn vặt"
+            android:textColor="@color/black"
+            android:textStyle="bold" />
+
+        <View
+            android:id="@+id/view5"
+            android:layout_width="24.07dp"
+            android:layout_height="24.07dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="25.01dp"
+            android:layout_marginTop="110dp"
+            android:background="#EEEEEE" />
+
+        <TextView
+            android:id="@+id/tvthucpham"
+            android:layout_width="110dp"
+            android:layout_height="18dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="57.74dp"
+            android:layout_marginTop="140dp"
+            android:gravity="top"
+            android:text="Thực phẩm khô"
+            android:textColor="@color/black"
+            android:textStyle="bold" />
+
+        <View
+            android:id="@+id/view7"
+            android:layout_width="24.07dp"
+            android:layout_height="24.07dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="25.01dp"
+            android:layout_marginTop="140dp"
+            android:background="#EEEEEE" />
+
+        <TextView
+            android:id="@+id/nhacungcap"
+            android:layout_width="141dp"
+            android:layout_height="28dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="9dp"
+            android:layout_marginTop="180dp"
+            android:gravity="center_horizontal|top"
+            android:text="Nhà cung cấp"
+            android:textColor="@color/black"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvcongty"
+            android:layout_width="219dp"
+            android:layout_height="18dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="60.74dp"
+            android:layout_marginTop="210dp"
+            android:gravity="top"
+            android:text="Công Ty TNHH MTV Dũng Đại"
+            android:textColor="#3FC979"
+            android:textStyle="bold" />
+
+        <View
+            android:id="@+id/view8"
+            android:layout_width="24.07dp"
+            android:layout_height="24.07dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="25.01dp"
+            android:layout_marginTop="210dp"
+            android:background="#68B510" />
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="20.93dp"
+            android:layout_height="20.8dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="27dp"
+            android:layout_marginTop="210dp"
+            android:background="@drawable/done" />
+
+        <TextView
+            android:id="@+id/tvcongty2"
+            android:layout_width="304dp"
+            android:layout_height="18dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="60dp"
+            android:layout_marginTop="240dp"
+            android:gravity="top"
+            android:text="Công ty TNHH Thực phẩm Đại Bình Dương"
+            android:textColor="@color/black"
+            android:textStyle="bold" />
+
+        <View
+            android:id="@+id/view9"
+            android:layout_width="24.07dp"
+            android:layout_height="24.07dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="26dp"
+            android:layout_marginTop="240dp"
+            android:background="#EEEEEE" />
+
+        <TextView
+            android:id="@+id/tvcongty3"
+            android:layout_width="254dp"
+            android:layout_height="18dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="60dp"
+            android:layout_marginTop="270dp"
+            android:gravity="top"
+            android:text="Công ty TNHH thực phẩm Bông Mai"
+            android:textColor="@color/black"
+            android:textStyle="bold" />
+
+        <View
+            android:id="@+id/view10"
+            android:layout_width="24.07dp"
+            android:layout_height="24.07dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="25.01dp"
+            android:layout_marginTop="270dp"
+            android:background="#EEEEEE" />
+
+        <TextView
+            android:id="@+id/price"
+            android:layout_width="83dp"
+            android:layout_height="28dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="9dp"
+            android:layout_marginTop="310dp"
+            android:gravity="center_horizontal|top"
+            android:text="Gía tiền"
+            android:textColor="@color/black"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/price2"
+            android:layout_width="109dp"
+            android:layout_height="18dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="54.73dp"
+            android:layout_marginTop="340dp"
+            android:gravity="top"
+            android:text="20 đến 60 nghìn"
+            android:textColor="@color/black"
+            android:textStyle="bold" />
+
+        <View
+            android:id="@+id/vỉew10"
+            android:layout_width="24.07dp"
+            android:layout_height="24.07dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="22dp"
+            android:layout_marginTop="340dp"
+            android:background="#EEEEEE" />
+
+        <TextView
+            android:id="@+id/price3"
+            android:layout_width="109dp"
+            android:layout_height="18dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="52.73dp"
+            android:layout_marginTop="370dp"
+            android:gravity="top"
+            android:text="60 đến 80 nghìn"
+            android:textColor="#3FC979"
+            android:textStyle="bold" />
+
+        <View
+            android:id="@+id/view11"
+            android:layout_width="24.07dp"
+            android:layout_height="24.07dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="22dp"
+            android:layout_marginTop="370dp"
+            android:background="#68B510" />
+
+        <View
+            android:id="@+id/view13"
+            android:layout_width="20.93dp"
+            android:layout_height="20.8dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="24dp"
+            android:layout_marginTop="370dp"
+            android:background="@drawable/done" />
+
+        <TextView
+            android:id="@+id/price4"
+            android:layout_width="131dp"
+            android:layout_height="18dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="54.73dp"
+            android:layout_marginTop="400dp"
+            android:gravity="top"
+            android:text="Lớn hơn 100 nghìn "
+            android:textColor="@color/black"
+            android:textStyle="bold" />
+
+        <View
+            android:id="@+id/view12"
+            android:layout_width="24.07dp"
+            android:layout_height="24.07dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="22dp"
+            android:layout_marginTop="400dp"
+            android:background="#EEEEEE" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnDone"
+            android:layout_width="330dp"
+            android:layout_height="50dp"
+            android:layout_below="@+id/view12"
+            android:layout_margin="40dp"
+
+            android:layout_marginTop="180dp"
+            android:background="@drawable/backgr_button"
+            android:text="Áp dụng bộ lọc"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+
+        <!--        <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+        <!--            android:id="@+id/button"-->
+        <!--            android:layout_width="364dp"-->
+        <!--            android:layout_height="67dp"-->
+        <!--            android:layout_alignParentTop="true"-->
+        <!--            android:layout_marginLeft="25dp"-->
+        <!--            android:layout_marginTop="450dp"-->
+        <!--            android:background="#68B510"-->
+        <!--            android:gravity="center">-->
+
+        <!--            <TextView-->
+        <!--                android:id="@+id/loc"-->
+        <!--                android:layout_width="wrap_content"-->
+        <!--                android:layout_height="wrap_content"-->
+        <!--                android:layout_alignParentTop="true"-->
+        <!--                android:gravity="center"-->
+        <!--                android:lineSpacingExtra="-3sp"-->
+        <!--                android:text="Áp dụng bộ lọc"-->
+        <!--                android:textColor="@color/white"-->
+        <!--                android:textSize="22sp"-->
+        <!--                android:textStyle="bold" />-->
+        <!--        </RelativeLayout>-->
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

@@ -1,5 +1,6 @@
 package vn.fpoly.veganfood.activity.main;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -13,6 +14,9 @@ import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.fragment.app.Fragment;
 
 import vn.fpoly.veganfood.R;
+import vn.fpoly.veganfood.activity.login.CategoryActivity;
+import vn.fpoly.veganfood.activity.login.OrdelActivity;
+import vn.fpoly.veganfood.activity.login.ResetPassActivity;
 import vn.fpoly.veganfood.activity.profile.AboutUsFragment;
 import vn.fpoly.veganfood.activity.profile.LogoutFragment;
 import vn.fpoly.veganfood.activity.profile.SignOutFragment;
@@ -79,7 +83,7 @@ public class ProfileFragment extends Fragment {
         change_pass.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                startActivity(new Intent(getContext(), ResetPassActivity.class));
             }
         });
         about_us.setOnClickListener(new View.OnClickListener() {
@@ -91,7 +95,7 @@ public class ProfileFragment extends Fragment {
         history.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                startActivity(new Intent(getContext(), OrdelActivity.class));
             }
         });
         logout.setOnClickListener(new View.OnClickListener() {

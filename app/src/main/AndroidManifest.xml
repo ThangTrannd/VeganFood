@@ -16,13 +16,35 @@
         android:theme="@style/Theme.VeganFood"
         tools:targetApi="31">
         <activity
+            android:name=".activity.login.ProductFilterActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.login.InformationLineActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.login.OrdelActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.login.CartStatusActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.login.ResetPassActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.login.ProductDetailActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.login.ProductActivity"
+            android:exported="false" />
+        <activity
             android:name=".activity.login.CategoryActivity"
             android:exported="false" />
         <activity
+            android:name=".activity.notify.NotifyActivity"
+            android:exported="false" />
+        <activity
             android:name=".activity.splash.SplashNewBie"
-            android:exported="true">
-
-        </activity>
+            android:exported="true" />
         <activity
             android:name=".activity.login.ChangePass"
             android:exported="false" />
@@ -34,12 +56,10 @@
             android:exported="true" />
         <activity
             android:name=".activity.login.LoginActivity"
-            android:exported="true" >
-
-        </activity>
+            android:exported="true" />
         <activity
             android:name=".activity.splash.SplashActivity"
-            android:exported="true" >
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
