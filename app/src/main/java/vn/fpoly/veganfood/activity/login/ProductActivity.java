@@ -10,12 +10,12 @@ import android.widget.ImageView;
 import vn.fpoly.veganfood.R;
 import vn.fpoly.veganfood.activity.main.MainActivity;
 
-public class CategoryActivity extends AppCompatActivity {
-   private ImageView ivBack;
+public class ProductActivity extends AppCompatActivity {
+    private ImageView ivBack;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.layout_list_cate);
+        setContentView(R.layout.layout_list_product);
 
         ivBack = findViewById(R.id.ivBack);
         initListener();
@@ -25,7 +25,7 @@ public class CategoryActivity extends AppCompatActivity {
         ivBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(CategoryActivity.this, MainActivity.class));
+                startActivity(new Intent(ProductActivity.this, MainActivity.class));
                 finish();
             }
         });

@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.login.CartStatusActivity"
+    android:orientation="vertical"
+    android:background="@drawable/bgr_cart">
+
+
+    <ImageView
+        android:layout_marginTop="50dp"
+        android:id="@+id/logo"
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.547"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.197"
+        app:srcCompat="@drawable/done" />
+
+    <TextView
+        android:layout_marginLeft="10dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="100dp"
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Đơn hàng của bạn đã được \n\t\t\t\t\t\t\t\t\t\tchấp nhận"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.333"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/logo"
+        app:layout_constraintVertical_bias="0.111" />
+
+    <TextView
+        android:layout_gravity="center"
+        android:layout_marginTop="30dp"
+        android:id="@+id/textView2"
+        android:gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=" Các mặt hàng của bạn đã được làm sạch và \n\t\t\t\t\t\t\t\t\t\t\tđang được xử lý.\n Nhân viên cửa hàng sẽ liên hệ bạn trong ít phút..."
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintVertical_bias="0.177" />
+
+    <Button
+        android:layout_marginTop="30dp"
+        android:layout_gravity="center"
+        android:id="@+id/btnbutton"
+        android:backgroundTint="#4CAF50"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Theo dõi đơn hàng"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2"
+        app:layout_constraintVertical_bias="0.372" />
+
+    <TextView
+        android:layout_marginTop="30dp"
+        android:layout_gravity="center"
+        android:id="@+id/tv_Undo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Trở về màn hình chính"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="628dp" />
+
+</LinearLayout>

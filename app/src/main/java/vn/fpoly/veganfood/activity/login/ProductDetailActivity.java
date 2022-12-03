@@ -4,31 +4,24 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.ImageView;
 
 import vn.fpoly.veganfood.R;
 import vn.fpoly.veganfood.activity.main.MainActivity;
 
-public class CategoryActivity extends AppCompatActivity {
-   private ImageView ivBack;
+public class ProductDetailActivity extends AppCompatActivity {
+    private ImageView ivBack;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.layout_list_cate);
+        setContentView(R.layout.layout_product_details);
 
         ivBack = findViewById(R.id.ivBack);
         initListener();
     }
 
-    private void initListener(){
-        ivBack.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(new Intent(CategoryActivity.this, MainActivity.class));
-                finish();
-            }
-        });
+    private void initListener() {
+        startActivity(new Intent(ProductDetailActivity.this, MainActivity.class));
+        finish();
     }
-
 }
