@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activity.login.ChangePass">
+    tools:context=".activity.login.ActivityUpdatePass">
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline1"

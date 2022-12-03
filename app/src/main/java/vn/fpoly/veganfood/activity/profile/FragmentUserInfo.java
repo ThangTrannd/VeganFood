@@ -16,20 +16,20 @@ import vn.fpoly.veganfood.R;
 
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link UserInfoFragment#newInstance} factory method to
+ * Use the {@link FragmentUserInfo#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class UserInfoFragment extends Fragment {
+public class FragmentUserInfo extends Fragment {
 
     private AppCompatImageView ivBack,ivAvatarUser;
     private EditText tvUsername,tvPhone,tvEmail;
     private Button btnSave;
-    public UserInfoFragment() {
+    public FragmentUserInfo() {
         // Required empty public constructor
     }
 
-    public static UserInfoFragment newInstance(String param1, String param2) {
-        UserInfoFragment fragment = new UserInfoFragment();
+    public static FragmentUserInfo newInstance(String param1, String param2) {
+        FragmentUserInfo fragment = new FragmentUserInfo();
         return fragment;
     }
 
@@ -55,17 +55,17 @@ public class UserInfoFragment extends Fragment {
         tvPhone = view.findViewById(R.id.tv_phone);
         tvEmail = view.findViewById(R.id.tv_email);
         btnSave = view.findViewById(R.id.btnSave);
-        ProfileFragment profileFragment = new ProfileFragment();
+        FragmentProfile fragmentProfile = new FragmentProfile();
         ivBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.container,profileFragment).commit();
+                getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.container, fragmentProfile).commit();
             }
         });
         btnSave.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.container,profileFragment).commit();
+                getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.container, fragmentProfile).commit();
             }
         });
     }
