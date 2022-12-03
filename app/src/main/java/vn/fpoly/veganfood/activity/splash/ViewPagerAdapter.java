@@ -1,14 +1,12 @@
 package vn.fpoly.veganfood.activity.splash;
 
-import android.widget.TextView;
-
 import androidx.annotation.NonNull;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentStatePagerAdapter;
 
-import vn.fpoly.veganfood.fragment.StartFragment;
-import vn.fpoly.veganfood.fragment.MidleFragment;
-import vn.fpoly.veganfood.fragment.EndFragment;
+import vn.fpoly.veganfood.activity.splash.fragment.StartFragment;
+import vn.fpoly.veganfood.activity.splash.fragment.MidleFragment;
+import vn.fpoly.veganfood.activity.splash.fragment.EndFragment;
 
 public class ViewPagerAdapter extends FragmentStatePagerAdapter{
     public ViewPagerAdapter(@NonNull FragmentManager fm, int behaviorResumeOnlyCurrentFragment) {

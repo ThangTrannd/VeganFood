@@ -7,16 +7,14 @@ import androidx.viewpager.widget.ViewPager;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import me.relex.circleindicator.CircleIndicator;
 import vn.fpoly.veganfood.R;
 import vn.fpoly.veganfood.activity.login.LoginActivity;
-import vn.fpoly.veganfood.activity.main.HomeFragment;
 import vn.fpoly.veganfood.activity.main.MainActivity;
 
-public class SplashNewBie extends AppCompatActivity {
+public class ActivitySplashNewBie extends AppCompatActivity {
     private TextView tv_next;
     private ViewPager viewPager;
     private CircleIndicator circleIndicator;
@@ -58,8 +56,7 @@ public class SplashNewBie extends AppCompatActivity {
             public void onClick(View view) {
                 if (viewPager.getCurrentItem() < 2) {
                     viewPager.setCurrentItem(viewPager.getCurrentItem() + 1);
-                }
-                else{
+                } else {
                     startActivity(new Intent(getApplicationContext(), MainActivity.class
                     ));
                     finish();

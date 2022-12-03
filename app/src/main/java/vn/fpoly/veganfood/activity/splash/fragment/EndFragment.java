@@ -1,4 +1,4 @@
-package vn.fpoly.veganfood.fragment;
+package vn.fpoly.veganfood.activity.splash.fragment;
 
 import android.content.Intent;
 import android.os.Bundle;

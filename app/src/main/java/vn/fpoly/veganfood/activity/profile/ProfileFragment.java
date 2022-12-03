@@ -1,4 +1,4 @@
-package vn.fpoly.veganfood.activity.main;
+package vn.fpoly.veganfood.activity.profile;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -17,10 +17,6 @@ import vn.fpoly.veganfood.R;
 import vn.fpoly.veganfood.activity.login.CategoryActivity;
 import vn.fpoly.veganfood.activity.login.OrdelActivity;
 import vn.fpoly.veganfood.activity.login.ResetPassActivity;
-import vn.fpoly.veganfood.activity.profile.AboutUsFragment;
-import vn.fpoly.veganfood.activity.profile.LogoutFragment;
-import vn.fpoly.veganfood.activity.profile.SignOutFragment;
-import vn.fpoly.veganfood.activity.profile.UserInfoFragment;
 
 /**
  * A simple {@link Fragment} subclass.

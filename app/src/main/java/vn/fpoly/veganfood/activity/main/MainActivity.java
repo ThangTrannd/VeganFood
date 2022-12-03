@@ -3,20 +3,18 @@ package vn.fpoly.veganfood.activity.main;
 import android.os.Build;
 import android.os.Bundle;
 import android.view.MenuItem;
-import android.view.View;
-import android.view.Window;
-import android.view.WindowManager;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.AppCompatImageView;
-import androidx.appcompat.widget.AppCompatTextView;
-import androidx.core.content.ContextCompat;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
 
 import vn.fpoly.veganfood.R;
+import vn.fpoly.veganfood.activity.favourite.FavouriteFragment;
+import vn.fpoly.veganfood.activity.home.HomeFragment;
+import vn.fpoly.veganfood.activity.profile.ProfileFragment;
+import vn.fpoly.veganfood.activity.shoppingcard.ShoppingFragment;
 
 public class MainActivity extends AppCompatActivity{
     private BottomNavigationView bottomNav;

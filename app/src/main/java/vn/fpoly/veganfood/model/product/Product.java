@@ -1,4 +1,4 @@
-package vn.fpoly.veganfood.adapter;
+package vn.fpoly.veganfood.model.product;
 
 public class Product {
     private int image;

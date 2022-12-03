@@ -11,9 +11,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.airbnb.lottie.LottieAnimationView;
 
 import vn.fpoly.veganfood.R;
-import vn.fpoly.veganfood.activity.login.LoginActivity;
 
-public class SplashActivity extends AppCompatActivity {
+public class ActivitySplash extends AppCompatActivity {
     TextView tvHello;
     LottieAnimationView lottie;
     ImageView img_Logo;
@@ -33,7 +32,7 @@ public class SplashActivity extends AppCompatActivity {
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                startActivity(new Intent(getApplicationContext(), SplashNewBie.class));
+                startActivity(new Intent(getApplicationContext(), ActivitySplashNewBie.class));
                 finish();
             }
         },5000);

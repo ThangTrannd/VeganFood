@@ -1,4 +1,4 @@
-package vn.fpoly.veganfood.activity.main;
+package vn.fpoly.veganfood.activity.favourite;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
