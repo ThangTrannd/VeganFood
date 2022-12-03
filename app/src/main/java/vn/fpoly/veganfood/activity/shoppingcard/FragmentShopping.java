@@ -11,17 +11,17 @@ import vn.fpoly.veganfood.R;
 
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link ShoppingFragment#newInstance} factory method to
+ * Use the {@link FragmentShopping#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class ShoppingFragment extends Fragment {
+public class FragmentShopping extends Fragment {
 
-    public ShoppingFragment() {
+    public FragmentShopping() {
         // Required empty public constructor
     }
 
-    public static ShoppingFragment newInstance(String param1, String param2) {
-        ShoppingFragment fragment = new ShoppingFragment();
+    public static FragmentShopping newInstance(String param1, String param2) {
+        FragmentShopping fragment = new FragmentShopping();
         return fragment;
     }
 

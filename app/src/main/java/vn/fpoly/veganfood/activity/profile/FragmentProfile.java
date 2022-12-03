@@ -1,6 +1,5 @@
 package vn.fpoly.veganfood.activity.profile;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -20,21 +19,21 @@ import vn.fpoly.veganfood.activity.login.ResetPassActivity;
 
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link ProfileFragment#newInstance} factory method to
+ * Use the {@link FragmentProfile#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class ProfileFragment extends Fragment {
+public class FragmentProfile extends Fragment {
 
     private ImageView ivAvatar;
     private ConstraintLayout user_info,change_pass,about_us,history,logout,signout;
     private TextView tv_profile;
 
-    public ProfileFragment() {
+    public FragmentProfile() {
         // Required empty public constructor
     }
 
-    public static ProfileFragment newInstance(String param1, String param2) {
-        ProfileFragment fragment = new ProfileFragment();
+    public static FragmentProfile newInstance(String param1, String param2) {
+        FragmentProfile fragment = new FragmentProfile();
         return fragment;
     }
 
@@ -60,10 +59,10 @@ public class ProfileFragment extends Fragment {
         history = view.findViewById(R.id.history);
         logout = view.findViewById(R.id.logout);
         signout = view.findViewById(R.id.signout);
-        AboutUsFragment aboutUsFragment = new AboutUsFragment();
-        UserInfoFragment userInfoFragment = new UserInfoFragment();
-        SignOutFragment signOutFragment = new SignOutFragment();
-        LogoutFragment logoutFragment = new LogoutFragment();
+        FragmentAboutUs aboutUsFragment = new FragmentAboutUs();
+        FragmentUserInfo fragmentUserInfo = new FragmentUserInfo();
+        FragmentSignOut fragmentSignOut = new FragmentSignOut();
+        FragmentLogout logoutFragment = new FragmentLogout();
         ivAvatar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -73,7 +72,7 @@ public class ProfileFragment extends Fragment {
         user_info.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.container,userInfoFragment).commit();
+                getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.container, fragmentUserInfo).commit();
             }
         });
         change_pass.setOnClickListener(new View.OnClickListener() {
@@ -103,7 +102,7 @@ public class ProfileFragment extends Fragment {
         signout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                getActivity().getSupportFragmentManager().beginTransaction().add(R.id.container,signOutFragment).commit();
+                getActivity().getSupportFragmentManager().beginTransaction().add(R.id.container, fragmentSignOut).commit();
             }
         });
     }

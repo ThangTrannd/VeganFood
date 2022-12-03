@@ -14,23 +14,20 @@ import vn.fpoly.veganfood.R;
 
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link LogoutFragment#newInstance} factory method to
+ * Use the {@link FragmentSignOut#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class LogoutFragment extends Fragment {
+public class FragmentSignOut extends Fragment {
 
     private AppCompatButton btnCancel;
     private AppCompatButton btnOK;
 
-
-
-
-    public LogoutFragment() {
+    public FragmentSignOut() {
         // Required empty public constructor
     }
 
-    public static LogoutFragment newInstance(String param1, String param2) {
-        LogoutFragment fragment = new LogoutFragment();
+    public static FragmentSignOut newInstance(String param1, String param2) {
+        FragmentSignOut fragment = new FragmentSignOut();
         return fragment;
     }
 
@@ -43,7 +40,7 @@ public class LogoutFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.logout_dialog, container, false);
+        return inflater.inflate(R.layout.signout_dialog, container, false);
     }
 
     @Override
@@ -51,11 +48,11 @@ public class LogoutFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
         btnCancel = view.findViewById(R.id.btnCancel);
         btnOK = view.findViewById(R.id.btnOK);
-        ProfileFragment profileFragment = new ProfileFragment();
+        FragmentProfile fragmentProfile = new FragmentProfile();
         btnCancel.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.container,profileFragment).commit();
+                getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.container, fragmentProfile).commit();
 
             }
         });

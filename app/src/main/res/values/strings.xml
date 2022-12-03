@@ -26,6 +26,12 @@
     <string name="quality">Chất lượng uy  nhanh chóng.Chỉ cần 3 bước đơn giản để có lối sống thời ,hãy tham gia ngay với VeganFood !</string>
     <string name="start">Bắt đầu</string>
     <string name="category">Thể loại</string>
+<<<<<<< Updated upstream
+=======
+    <string name="product">Sản phẩm</string>
+    <string name="search_hint">Mời bạn nhập</string>
+    <string name="buy_info">Thông tin đơn hàng</string>
+>>>>>>> Stashed changes
 
     <string name="tv1">Bánh bao chay thực dưỡng</string>
     <string name="tv2">20.000đ/250gr</string>

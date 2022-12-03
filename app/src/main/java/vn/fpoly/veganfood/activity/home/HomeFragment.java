@@ -11,6 +11,11 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 import vn.fpoly.veganfood.R;
+<<<<<<< Updated upstream:app/src/main/java/vn/fpoly/veganfood/activity/home/HomeFragment.java
+=======
+import vn.fpoly.veganfood.activity.profile.FragmentProfile;
+
+>>>>>>> Stashed changes:app/src/main/java/vn/fpoly/veganfood/activity/home/FragmentCategory.java
 /**
  * A simple {@link Fragment} subclass.
  * Use the {@link HomeFragment#newInstance} factory method to
@@ -49,9 +54,20 @@ public class HomeFragment extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+<<<<<<< Updated upstream:app/src/main/java/vn/fpoly/veganfood/activity/home/HomeFragment.java
 
         initUI(view);
         initListener();
+=======
+        ivBack = view.findViewById(R.id.iv_Back);
+        FragmentProfile fragmentProfile = new FragmentProfile();
+        ivBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.container, fragmentProfile).commit();
+            }
+        });
+>>>>>>> Stashed changes:app/src/main/java/vn/fpoly/veganfood/activity/home/FragmentCategory.java
     }
 
     private void initUI(View view) {
