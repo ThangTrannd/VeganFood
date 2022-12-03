@@ -11,7 +11,6 @@ import android.widget.TextView;
 
 import me.relex.circleindicator.CircleIndicator;
 import vn.fpoly.veganfood.R;
-import vn.fpoly.veganfood.activity.login.LoginActivity;
 import vn.fpoly.veganfood.activity.main.MainActivity;
 
 public class ActivitySplashNewBie extends AppCompatActivity {

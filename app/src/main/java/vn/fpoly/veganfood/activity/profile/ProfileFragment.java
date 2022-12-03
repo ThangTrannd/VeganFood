@@ -14,9 +14,6 @@ import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.fragment.app.Fragment;
 
 import vn.fpoly.veganfood.R;
-import vn.fpoly.veganfood.activity.login.CategoryActivity;
-import vn.fpoly.veganfood.activity.login.OrdelActivity;
-import vn.fpoly.veganfood.activity.login.ResetPassActivity;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -79,7 +76,7 @@ public class ProfileFragment extends Fragment {
         change_pass.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(getContext(), ResetPassActivity.class));
+                //startActivity(new Intent(getContext(), ResetPassActivity.class));
             }
         });
         about_us.setOnClickListener(new View.OnClickListener() {
@@ -91,7 +88,7 @@ public class ProfileFragment extends Fragment {
         history.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(getContext(), OrdelActivity.class));
+               // startActivity(new Intent(getContext(), OrdelActivity.class));
             }
         });
         logout.setOnClickListener(new View.OnClickListener() {

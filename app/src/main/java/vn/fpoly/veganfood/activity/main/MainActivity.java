@@ -12,7 +12,7 @@ import com.google.android.material.navigation.NavigationBarView;
 
 import vn.fpoly.veganfood.R;
 import vn.fpoly.veganfood.activity.favourite.FavouriteFragment;
-import vn.fpoly.veganfood.activity.home.HomeFragment;
+import vn.fpoly.veganfood.activity.home.FragmentHome;
 import vn.fpoly.veganfood.activity.profile.ProfileFragment;
 import vn.fpoly.veganfood.activity.shoppingcard.ShoppingFragment;
 
@@ -31,17 +31,17 @@ public class MainActivity extends AppCompatActivity{
         setUpBottomNavigation();
     }
     private void setUpBottomNavigation(){
-        HomeFragment homeFragment = new HomeFragment();
+        FragmentHome fragmentHome = new FragmentHome();
         FavouriteFragment favouriteFragment = new FavouriteFragment();
         ProfileFragment profileFragment = new ProfileFragment();
         ShoppingFragment shoppingFragment = new ShoppingFragment();
-        getSupportFragmentManager().beginTransaction().replace(R.id.container,homeFragment).commit();
+        getSupportFragmentManager().beginTransaction().replace(R.id.container, fragmentHome).commit();
         bottomNav.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 switch (item.getItemId()) {
                     case R.id.home:
-                        getSupportFragmentManager().beginTransaction().replace(R.id.container, homeFragment).commit();
+                        getSupportFragmentManager().beginTransaction().replace(R.id.container, fragmentHome).commit();
                         return true;
 
                     case R.id.favourite:
