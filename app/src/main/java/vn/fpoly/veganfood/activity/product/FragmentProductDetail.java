@@ -14,19 +14,19 @@ import vn.fpoly.veganfood.R;
 
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link FragmentBuyInfomation#newInstance} factory method to
+ * Use the {@link FragmentProductDetail#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class FragmentBuyInfomation extends Fragment {
+public class FragmentProductDetail extends Fragment {
 
     private AppCompatImageView ivBack;
 
-    public FragmentBuyInfomation() {
+    public FragmentProductDetail() {
         // Required empty public constructor
     }
 
-    public static FragmentBuyInfomation newInstance(String param1, String param2) {
-        FragmentBuyInfomation fragment = new FragmentBuyInfomation();
+    public static FragmentProductDetail newInstance(String param1, String param2) {
+        FragmentProductDetail fragment = new FragmentProductDetail();
         return fragment;
     }
 
@@ -39,7 +39,7 @@ public class FragmentBuyInfomation extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_buy_infomation, container, false);
+        return inflater.inflate(R.layout.fragment_product_details, container, false);
     }
 
     @Override

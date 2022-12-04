@@ -6,6 +6,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
+
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
@@ -19,6 +21,8 @@ import vn.fpoly.veganfood.R;
 import vn.fpoly.veganfood.activity.home.adapter.CategoryAdapter;
 import vn.fpoly.veganfood.activity.home.adapter.EndowAdapter;
 import vn.fpoly.veganfood.activity.home.adapter.ListProductAdapter;
+import vn.fpoly.veganfood.activity.product.FragmentProduct;
+import vn.fpoly.veganfood.activity.product.FragmentProductDetail;
 import vn.fpoly.veganfood.model.home.Category;
 import vn.fpoly.veganfood.model.home.Endow;
 import vn.fpoly.veganfood.model.product.Product;
@@ -33,7 +37,7 @@ public class FragmentHome extends Fragment {
     private ImageView ivSearch;
     private TextView tvShowCategory;
     private TextView tvShowEndow;
-    private TextView tvShowEndow1;
+    private TextView tvProducts;
     private RecyclerView rcvCategory;
     private RecyclerView rcvEndow;
     private RecyclerView rcvEndow1;
@@ -81,7 +85,7 @@ public class FragmentHome extends Fragment {
         ivSearch = view.findViewById(R.id.iv_search);
         tvShowCategory = view.findViewById(R.id.tv_showCategory);
         tvShowEndow = view.findViewById(R.id.tv_showEndow);
-        tvShowEndow1 = view.findViewById(R.id.tv_showEndow1);
+        tvProducts = view.findViewById(R.id.tv_showEndow1);
         rcvCategory = view.findViewById(R.id.rcv_category);
         rcvEndow = view.findViewById(R.id.rcv_endow);
         rcvEndow1 = view.findViewById(R.id.rcv_endow1);
@@ -111,10 +115,11 @@ public class FragmentHome extends Fragment {
                 //getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.container,aboutUsFragment).commit();
             }
         });
-        tvShowEndow1.setOnClickListener(new View.OnClickListener() {
+        tvProducts.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.container,aboutUsFragment).commit();
+                FragmentProduct fragmentProduct = new FragmentProduct();
+                getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.container,fragmentProduct).commit();
             }
         });
 
@@ -124,6 +129,27 @@ public class FragmentHome extends Fragment {
         rcvCategory.setAdapter(categoryAdapter);
         rcvEndow.setAdapter(endowAdapter);
         rcvEndow1.setAdapter(listProductAdapter);
+
+        categoryAdapter.setOnItemClickListener(new CategoryAdapter.OnItemClickListener() {
+            @Override
+            public void onItemClick(int position) {
+                FragmentProduct fragmentProduct = new FragmentProduct();
+                getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.container,fragmentProduct).commit();
+            }
+        });
+        listProductAdapter.setOnItemClickAddListener(new ListProductAdapter.OnItemClickAddListener() {
+            @Override
+            public void onItemClickAdd(int position) {
+                Toast.makeText(requireContext(), position, Toast.LENGTH_SHORT).show();
+            }
+        });
+        listProductAdapter.setOnItemClickListener(new ListProductAdapter.OnItemClickListener() {
+            @Override
+            public void onItemClick(int position) {
+                FragmentProductDetail fragmentProductDetail = new FragmentProductDetail();
+                getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.container,fragmentProductDetail).commit();
+            }
+        });
     }
     private List createListCate(){
         listCate.add(new Category(R.drawable.img_1,"Gà quay"));

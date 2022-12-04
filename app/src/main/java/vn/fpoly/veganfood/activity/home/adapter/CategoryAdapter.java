@@ -26,7 +26,7 @@ public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.ItemVi
     @Override
     public CategoryAdapter.ItemViewHodel onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_category, parent, false);
-        return new CategoryAdapter.ItemViewHodel(view);
+        return new CategoryAdapter.ItemViewHodel(view,mListener);
     }
 
     @Override
@@ -55,10 +55,29 @@ public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.ItemVi
         private TextView tv_cate;
 
 
-        public ItemViewHodel(@NonNull View itemView) {
+        public ItemViewHodel(@NonNull View itemView,CategoryAdapter.OnItemClickListener mListener) {
             super(itemView);
             iv_Veget = itemView.findViewById(R.id.iv_Veget);
             tv_cate = itemView.findViewById(R.id.tv_cate);
+            itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    if (mListener != null){
+                        int position = getLayoutPosition();
+                        if (position != RecyclerView.NO_POSITION){
+                            mListener.onItemClick(position);
+                        }
+                    }
+                }
+            });
         }
+    }
+
+    private CategoryAdapter.OnItemClickListener mListener;
+    public interface OnItemClickListener{
+        void onItemClick(int position);
+    }
+    public void setOnItemClickListener(CategoryAdapter.OnItemClickListener listener){
+        mListener = listener;
     }
 }
