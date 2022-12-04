@@ -12,7 +12,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import java.util.List;
 
 import vn.fpoly.veganfood.R;
-import vn.fpoly.veganfood.adapter.ProductAdapter;
+import vn.fpoly.veganfood.model.product.Product;
 
 public class ListProductAdapter extends RecyclerView.Adapter<ListProductAdapter.ItemViewHodel>{
 
@@ -57,10 +57,10 @@ public class ListProductAdapter extends RecyclerView.Adapter<ListProductAdapter.
 
         public ItemViewHodel(@NonNull View itemView) {
             super(itemView);
-            img = itemView.findViewById(R.id.image);
-            name = itemView.findViewById(R.id.name);
-            gam = itemView.findViewById(R.id.gam);
-            price = itemView.findViewById(R.id.price);
+            img = itemView.findViewById(R.id.ivProduct);
+            name = itemView.findViewById(R.id.tvTitle);
+            gam = itemView.findViewById(R.id.tvGR);
+            price = itemView.findViewById(R.id.tvPrice);
         }
     }
 }

@@ -1,4 +1,4 @@
-package vn.fpoly.veganfood.model;
+package vn.fpoly.veganfood.model.login;
 
 public class User {
     private String userName;

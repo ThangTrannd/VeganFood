@@ -11,10 +11,10 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
 
 import vn.fpoly.veganfood.R;
-import vn.fpoly.veganfood.activity.favourite.FavouriteFragment;
+import vn.fpoly.veganfood.activity.favourite.FragmentFavourite;
 import vn.fpoly.veganfood.activity.home.FragmentHome;
-import vn.fpoly.veganfood.activity.profile.ProfileFragment;
-import vn.fpoly.veganfood.activity.shoppingcard.ShoppingFragment;
+import vn.fpoly.veganfood.activity.profile.FragmentProfile;
+import vn.fpoly.veganfood.activity.shoppingcard.FragmentShopping;
 
 public class MainActivity extends AppCompatActivity{
     private BottomNavigationView bottomNav;
@@ -32,9 +32,9 @@ public class MainActivity extends AppCompatActivity{
     }
     private void setUpBottomNavigation(){
         FragmentHome fragmentHome = new FragmentHome();
-        FavouriteFragment favouriteFragment = new FavouriteFragment();
-        ProfileFragment profileFragment = new ProfileFragment();
-        ShoppingFragment shoppingFragment = new ShoppingFragment();
+        FragmentFavourite fragmentFavourite = new FragmentFavourite();
+        FragmentProfile fragmentProfile = new FragmentProfile();
+        FragmentShopping fragmentShopping = new FragmentShopping();
         getSupportFragmentManager().beginTransaction().replace(R.id.container, fragmentHome).commit();
         bottomNav.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
             @Override
@@ -45,15 +45,15 @@ public class MainActivity extends AppCompatActivity{
                         return true;
 
                     case R.id.favourite:
-                        getSupportFragmentManager().beginTransaction().replace(R.id.container, favouriteFragment).commit();
+                        getSupportFragmentManager().beginTransaction().replace(R.id.container, fragmentFavourite).commit();
                         return true;
 
                     case R.id.profile:
-                        getSupportFragmentManager().beginTransaction().replace(R.id.container, profileFragment).commit();
+                        getSupportFragmentManager().beginTransaction().replace(R.id.container, fragmentProfile).commit();
                         return true;
 
                     case R.id.shopping:
-                        getSupportFragmentManager().beginTransaction().replace(R.id.container, shoppingFragment).commit();
+                        getSupportFragmentManager().beginTransaction().replace(R.id.container, fragmentShopping).commit();
                         return true;
                 }
                 return false;

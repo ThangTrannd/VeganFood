@@ -11,7 +11,6 @@ import androidx.appcompat.widget.AppCompatImageView;
 import androidx.fragment.app.Fragment;
 
 import vn.fpoly.veganfood.R;
-import vn.fpoly.veganfood.activity.profile.ProfileFragment;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -47,11 +46,10 @@ public class FragmentCategory extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         ivBack = view.findViewById(R.id.iv_Back);
-        ProfileFragment profileFragment = new ProfileFragment();
         ivBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.container,profileFragment).commit();
+                //getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.container,profileFragment).commit();
             }
         });
     }

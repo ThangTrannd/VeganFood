@@ -16,29 +16,31 @@
         android:theme="@style/Theme.VeganFood"
         tools:targetApi="31">
         <activity
-            android:name=".activity.login.CategoryActivity"
-            android:exported="false" />
-        <activity
             android:name=".activity.splash.ActivitySplashNewBie"
             android:exported="true">
 
         </activity>
         <activity
-            android:name=".activity.login.ChangePass"
+            android:name=".activity.login.ActivityUpdatePass"
             android:exported="false" />
         <activity
-            android:name=".activity.login.ForgotPass"
+            android:name=".activity.login.ActivityForgotPass"
             android:exported="false" />
         <activity
-            android:name=".activity.login.RegisterActivity"
+            android:name=".activity.login.ActivityRegister"
             android:exported="true" />
         <activity
-            android:name=".activity.login.LoginActivity"
+            android:name=".activity.login.ActivityLogin"
             android:exported="true" >
 
         </activity>
         <activity
             android:name=".activity.splash.ActivitySplash"
+            android:exported="true" >
+
+        </activity>
+        <activity
+            android:name=".activity.main.MainActivity"
             android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -46,9 +48,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".activity.main.MainActivity"
-            android:exported="true" />
     </application>
 
 </manifest>

@@ -12,9 +12,10 @@ import androidx.recyclerview.widget.RecyclerView;
 import java.util.List;
 
 import vn.fpoly.veganfood.R;
+import vn.fpoly.veganfood.model.home.Category;
 
 
-public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.ItemViewHodel>{
+public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.ItemViewHodel> {
     private List<Category> mListItemCa;
 
     public CategoryAdapter(List<Category> mListItemCa) {
@@ -24,26 +25,26 @@ public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.ItemVi
     @NonNull
     @Override
     public CategoryAdapter.ItemViewHodel onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_category,parent, false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_category, parent, false);
         return new CategoryAdapter.ItemViewHodel(view);
     }
 
     @Override
     public void onBindViewHolder(@NonNull CategoryAdapter.ItemViewHodel holder, int position) {
         Category category = mListItemCa.get(position);
-        if(category == null) {
+        if (category == null) {
             return;
         }
 
         holder.iv_Veget.setImageResource(category.getImage());
-        holder.tv_cate.setText(""+category.getCatego());
-       
+        holder.tv_cate.setText("" + category.getCatego());
+
     }
 
 
     @Override
     public int getItemCount() {
-        if(mListItemCa != null) {
+        if (mListItemCa != null) {
             return mListItemCa.size();
         }
         return 0;
@@ -56,15 +57,8 @@ public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.ItemVi
 
         public ItemViewHodel(@NonNull View itemView) {
             super(itemView);
-            iv_Veget= itemView.findViewById(R.id.iv_Veget);
+            iv_Veget = itemView.findViewById(R.id.iv_Veget);
             tv_cate = itemView.findViewById(R.id.tv_cate);
-
         }
-    
-    
-}
-
-
-
-
+    }
 }

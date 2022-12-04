@@ -11,7 +11,6 @@ import androidx.appcompat.widget.AppCompatImageView;
 import androidx.fragment.app.Fragment;
 
 import vn.fpoly.veganfood.R;
-import vn.fpoly.veganfood.activity.profile.ProfileFragment;
 
 /**
  * A simple {@link Fragment} subclass.

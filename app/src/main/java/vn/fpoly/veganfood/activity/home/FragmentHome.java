@@ -9,9 +9,20 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import vn.fpoly.veganfood.R;
+import vn.fpoly.veganfood.activity.home.adapter.CategoryAdapter;
+import vn.fpoly.veganfood.activity.home.adapter.EndowAdapter;
+import vn.fpoly.veganfood.activity.home.adapter.ListProductAdapter;
+import vn.fpoly.veganfood.model.home.Category;
+import vn.fpoly.veganfood.model.home.Endow;
+import vn.fpoly.veganfood.model.product.Product;
+
 /**
  * A simple {@link Fragment} subclass.
  * Use the {@link FragmentHome#newInstance} factory method to
@@ -26,8 +37,12 @@ public class FragmentHome extends Fragment {
     private RecyclerView rcvCategory;
     private RecyclerView rcvEndow;
     private RecyclerView rcvEndow1;
-
-    
+    private CategoryAdapter categoryAdapter;
+    private EndowAdapter endowAdapter;
+    private ListProductAdapter listProductAdapter;
+    private List<Category> listCate = new ArrayList<>();
+    private List<Endow> listEndow = new ArrayList<>();
+    private List<Product> listProduct = new ArrayList<>();
 
     public FragmentHome() {
         // Required empty public constructor
@@ -55,12 +70,14 @@ public class FragmentHome extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-
         initUI(view);
         initListener();
     }
 
     private void initUI(View view) {
+        createListCate();
+        createListEndow();
+        createListProduct();
         ivSearch = view.findViewById(R.id.iv_search);
         tvShowCategory = view.findViewById(R.id.tv_showCategory);
         tvShowEndow = view.findViewById(R.id.tv_showEndow);
@@ -68,6 +85,9 @@ public class FragmentHome extends Fragment {
         rcvCategory = view.findViewById(R.id.rcv_category);
         rcvEndow = view.findViewById(R.id.rcv_endow);
         rcvEndow1 = view.findViewById(R.id.rcv_endow1);
+        categoryAdapter = new CategoryAdapter(listCate);
+        endowAdapter = new EndowAdapter(listEndow);
+        listProductAdapter = new ListProductAdapter(listProduct);
     }
 
     private void initListener() {
@@ -97,6 +117,38 @@ public class FragmentHome extends Fragment {
                 //getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.container,aboutUsFragment).commit();
             }
         });
+
+        rcvCategory.setLayoutManager(new LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false));
+        rcvEndow.setLayoutManager(new LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false));
+        rcvEndow1.setLayoutManager(new LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false));
+        rcvCategory.setAdapter(categoryAdapter);
+        rcvEndow.setAdapter(endowAdapter);
+        rcvEndow1.setAdapter(listProductAdapter);
+    }
+    private List createListCate(){
+        listCate.add(new Category(R.drawable.img_1,"Gà quay"));
+        listCate.add(new Category(R.drawable.img_1,"Gà quay"));
+        listCate.add(new Category(R.drawable.img_1,"Gà quay"));
+        listCate.add(new Category(R.drawable.img_1,"Gà quay"));
+        listCate.add(new Category(R.drawable.img_1,"Gà quay"));
+        return listCate;
+    }
+    private List createListEndow(){
+        listEndow.add(new Endow(R.drawable.img_3));
+        listEndow.add(new Endow(R.drawable.img_3));
+        listEndow.add(new Endow(R.drawable.img_3));
+        listEndow.add(new Endow(R.drawable.img_3));
+        listEndow.add(new Endow(R.drawable.img_3));
+        listEndow.add(new Endow(R.drawable.img_3));
+        return listEndow;
+    }
+    private List createListProduct(){
+        listProduct.add(new Product(R.drawable.img,"Gà quay",32,32000));
+        listProduct.add(new Product(R.drawable.img,"Gà quay",32,32000));
+        listProduct.add(new Product(R.drawable.img,"Gà quay",32,32000));
+        listProduct.add(new Product(R.drawable.img,"Gà quay",32,32000));
+        listProduct.add(new Product(R.drawable.img,"Gà quay",32,32000));
+        return listProduct;
     }
 
 }

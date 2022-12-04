@@ -12,7 +12,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import java.util.List;
 
 import vn.fpoly.veganfood.R;
-import vn.fpoly.veganfood.activity.home.adapter.Product;
+import vn.fpoly.veganfood.model.product.Product;
 
 public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.ItemViewHodel>{
 
