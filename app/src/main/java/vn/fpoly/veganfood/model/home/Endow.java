@@ -1,4 +1,4 @@
-package vn.fpoly.veganfood.activity.home.adapter;
+package vn.fpoly.veganfood.model.home;
 
 public class Endow {
     private int imageEndow;

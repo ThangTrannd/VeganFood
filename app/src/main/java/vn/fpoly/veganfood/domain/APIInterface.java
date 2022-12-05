@@ -6,8 +6,8 @@ import retrofit2.Call;
 import retrofit2.http.Body;
 import retrofit2.http.Headers;
 import retrofit2.http.POST;
-import vn.fpoly.veganfood.model.User;
-import vn.fpoly.veganfood.model.login.LoginResponse;
+import vn.fpoly.veganfood.model.login.LoginResponce;
+import vn.fpoly.veganfood.model.login.User;
 
 public interface APIInterface {
 
@@ -22,7 +22,7 @@ public interface APIInterface {
     );
 
     @POST("/users/login")
-    Call<LoginResponse> login(
+    Call<LoginResponce> login(
             @Body JsonObject jwt
     );
 
