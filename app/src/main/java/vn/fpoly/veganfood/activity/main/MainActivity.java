@@ -11,8 +11,8 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
 
 import vn.fpoly.veganfood.R;
-import vn.fpoly.veganfood.activity.favourite.FragmentFavourite;
 import vn.fpoly.veganfood.activity.home.FragmentHome;
+import vn.fpoly.veganfood.activity.product.FragmentProduct;
 import vn.fpoly.veganfood.activity.profile.FragmentProfile;
 import vn.fpoly.veganfood.activity.shoppingcard.FragmentShopping;
 
@@ -32,7 +32,7 @@ public class MainActivity extends AppCompatActivity{
     }
     private void setUpBottomNavigation(){
         FragmentHome fragmentHome = new FragmentHome();
-        FragmentFavourite fragmentFavourite = new FragmentFavourite();
+        FragmentProduct fragmentProduct = new FragmentProduct();
         FragmentProfile fragmentProfile = new FragmentProfile();
         FragmentShopping fragmentShopping = new FragmentShopping();
         getSupportFragmentManager().beginTransaction().replace(R.id.container, fragmentHome).commit();
@@ -45,7 +45,7 @@ public class MainActivity extends AppCompatActivity{
                         return true;
 
                     case R.id.favourite:
-                        getSupportFragmentManager().beginTransaction().replace(R.id.container, fragmentFavourite).commit();
+                        getSupportFragmentManager().beginTransaction().replace(R.id.container, fragmentProduct).commit();
                         return true;
 
                     case R.id.profile:
