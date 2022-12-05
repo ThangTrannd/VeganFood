@@ -235,12 +235,10 @@
                 android:layout_gravity="center"
                 />
         </LinearLayout>
-        <androidx.appcompat.widget.AppCompatImageView
+        <com.facebook.login.widget.LoginButton
             android:id="@+id/imgFb"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:src="@drawable/fb"
-            android:layout_gravity="start"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             app:layout_constraintStart_toStartOf="@id/constraint"
             app:layout_constraintTop_toBottomOf="@id/view"

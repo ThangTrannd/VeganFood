@@ -22,7 +22,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/buy_info"
+            android:text="Thông tin đơn hàng"
             android:textSize="@dimen/text_size_XXXL"
             android:textStyle="bold"
             app:layout_constraintTop_toTopOf="parent"
