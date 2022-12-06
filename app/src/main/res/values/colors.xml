@@ -8,4 +8,73 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="green">#68b510</color>
+
+    <color name="colorPrimary">#ff6637</color>
+    <color name="colorPrimaryDark">#EBEBEB</color>
+    <color name="colorAccent">#D81B60</color>
+    <color name="primary_dark_color">#000000</color>
+    <color name="bgBody">#edeffb</color>
+    <!-- Loading-->
+    <color name="bg_loading_color">#60000000</color>
+    <color name="stamp_stoke_grid_view">#b5b5b5</color>
+    <color name="text_description">#818181</color>
+    <color name="colorBlue">#3498DB</color>
+    <color name="colorBluePressed">#2980B9</color>
+    <color name="colorBackground">#333333</color>
+    <color name="search_menu">#EEEEEE</color>
+    <color name="text_color">#4F4F4F</color>
+    <color name="menu_item_border">#d9d9d9</color>
+    <color name="transparent">#00000000</color>
+    <color name="textColorPrimary">#212121</color>
+    <color name="textColorSecondary">#757575</color>
+    <color name="text_grey">#424242</color>
+    <color name="color_background">#1C1E2A</color>
+    <color name="mColorOnew">#151</color>
+    <color name="mColorTwo">#7891</color>
+    <color name="mColorThree">#df1</color>
+    <color name="red_500">#F44336</color>
+    <color name="tabcolor">#a2a2ef</color>
+    <color name="tabselect">#f40404</color>
+    <color name="orange_9E31">#FF9E31</color>
+    <color name="orange_D382">#FFD382</color>
+
+    <color name="bgMain">#F7F8F9</color>
+    <color name="gray3">#EEEEEE</color>
+    <color name="background_divider">#DBDBDB</color>
+    <color name="media_item_icon_playing">@color/colorAccent</color>
+    <color name="media_item_icon_not_playing">#ccc</color>
+    <color name="item_color">#BDBDBD</color>
+    <color name="bg_dialog">#00FFFFFF</color>
+    <!-- Background color for the Now PLaying Image -->
+    <color name="now_playing_color">#81030d</color>
+    <color name="colorFAB1">#2196F3</color>
+    <color name="seekbar_bg">#141414</color>
+    <color name="seekbar_progress">#a53130</color>
+    <color name="seekbar_sec_progress">#875e5e</color>
+    <color name="background_press">#d6ffb339</color>
+    <color name="gray">#e6e6e6</color>
+    <color name="gray_border">#c8c8c8</color>
+    <color name="item_selector">#10000000</color>
+    <color name="blue">#3598fe</color>
+    <color name="blue_900">#0D47A1</color>
+    <color name="blue_700">#1976D2</color>
+
+
+    <color name="grayText">#828282</color>
+    <color name="colorNew">#56ccf2</color>
+    <color name="yellow">#F2C94C</color>
+    <color name="grayBorder">#f2f2f2</color>
+
+    <color name="gray4">#BDBDBD</color>
+    <color name="bg">#f7f8f9</color>
+    <color name="txt_border">#f2f2f2</color>
+    <color name="txt_common">#1B304D</color>
+    <color name="color_line">#E0E0E0</color>
+    <color name="red">#E33806</color>
+    <color name="red_logout">#EB5757</color>
+    <color name="base_bg">#E5E5E5</color>
+    <color name="gray6">#F7F8F9</color>
+
+    <color name="orange">#F2994A</color>
+    <color name="green1">#219653</color>
 </resources>

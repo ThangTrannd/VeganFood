@@ -6,4 +6,6 @@
     <dimen name="text_size_XL">18sp</dimen>
     <dimen name="text_size_XXL">20sp</dimen>
     <dimen name="text_size_XXXL">25sp</dimen>
+    <dimen name="width10">10dp</dimen>
+    <dimen name="width5">5dp</dimen>
 </resources>
