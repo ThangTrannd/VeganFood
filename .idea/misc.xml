@@ -61,6 +61,7 @@
         <entry key="..\:/VeganFood/app/src/main/res/layout/activity_reset_pass.xml" value="0.21927083333333333" />
         <entry key="..\:/VeganFood/app/src/main/res/layout/activity_splash.xml" value="0.16041666666666668" />
         <entry key="..\:/VeganFood/app/src/main/res/layout/activity_splash1.xml" value="0.17074275362318841" />
+        <entry key="..\:/VeganFood/app/src/main/res/layout/activity_update_pass.xml" value="0.21927083333333333" />
         <entry key="..\:/VeganFood/app/src/main/res/layout/base_dialog.xml" value="0.2" />
         <entry key="..\:/VeganFood/app/src/main/res/layout/fragment_about_us.xml" value="0.176" />
         <entry key="..\:/VeganFood/app/src/main/res/layout/fragment_blank.xml" value="0.152" />
@@ -72,6 +73,7 @@
         <entry key="..\:/VeganFood/app/src/main/res/layout/fragment_home.xml" value="0.2" />
         <entry key="..\:/VeganFood/app/src/main/res/layout/fragment_midle.xml" value="0.176" />
         <entry key="..\:/VeganFood/app/src/main/res/layout/fragment_newbie.xml" value="0.1539855072463768" />
+        <entry key="..\:/VeganFood/app/src/main/res/layout/fragment_notify.xml" value="0.21927083333333333" />
         <entry key="..\:/VeganFood/app/src/main/res/layout/fragment_on_boarding.xml" value="0.1539855072463768" />
         <entry key="..\:/VeganFood/app/src/main/res/layout/fragment_product.xml" value="0.21927083333333333" />
         <entry key="..\:/VeganFood/app/src/main/res/layout/fragment_product_details.xml" value="0.2" />

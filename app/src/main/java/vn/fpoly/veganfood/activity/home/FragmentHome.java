@@ -21,6 +21,7 @@ import vn.fpoly.veganfood.R;
 import vn.fpoly.veganfood.activity.home.adapter.CategoryAdapter;
 import vn.fpoly.veganfood.activity.home.adapter.EndowAdapter;
 import vn.fpoly.veganfood.activity.home.adapter.ListProductAdapter;
+import vn.fpoly.veganfood.activity.notification.FragmentNotify;
 import vn.fpoly.veganfood.activity.product.FragmentProduct;
 import vn.fpoly.veganfood.activity.product.FragmentProductDetail;
 import vn.fpoly.veganfood.model.home.Category;
@@ -98,8 +99,8 @@ public class FragmentHome extends Fragment {
         ivSearch.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                FragmentSearch fragmentSearch = new FragmentSearch();
-                getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.container,fragmentSearch).commit();
+                FragmentNotify fragmentNotify = new FragmentNotify();
+                getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.container,fragmentNotify).commit();
             }
         });
         tvShowCategory.setOnClickListener(new View.OnClickListener() {
