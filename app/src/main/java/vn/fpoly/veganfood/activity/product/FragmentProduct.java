@@ -1,5 +1,7 @@
 package vn.fpoly.veganfood.activity.product;
 
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -17,10 +19,16 @@ import androidx.recyclerview.widget.RecyclerView;
 import java.util.ArrayList;
 import java.util.List;
 
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
+import retrofit2.Retrofit;
+import retrofit2.converter.gson.GsonConverterFactory;
 import vn.fpoly.veganfood.R;
 import vn.fpoly.veganfood.activity.home.FragmentHome;
 import vn.fpoly.veganfood.activity.home.adapter.CategoryAdapter;
 import vn.fpoly.veganfood.activity.home.adapter.ListProductAdapter;
+import vn.fpoly.veganfood.domain.APIInterface;
 import vn.fpoly.veganfood.model.home.Category;
 import vn.fpoly.veganfood.model.product.Product;
 
@@ -34,8 +42,10 @@ public class FragmentProduct extends Fragment {
     private ImageView ivBack;
     private ImageView ivSearch;
     private RecyclerView rcv;
-    private List<Product> listProduct = new ArrayList<>();
+    private List<Product> listProduct ;
     private ListProductAdapter listProductAdapter;
+    SharedPreferences shaPref;
+
 
     public FragmentProduct() {
         // Required empty public constructor
@@ -61,6 +71,8 @@ public class FragmentProduct extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+        listProduct = new ArrayList<>();
+        shaPref = requireContext().getSharedPreferences("Sharef", Context.MODE_PRIVATE);
         createListProduct();
         ivBack = view.findViewById(R.id.iv_back);
         ivSearch = view.findViewById(R.id.iv_search);
@@ -78,9 +90,8 @@ public class FragmentProduct extends Fragment {
                 System.out.println("Đang làm");
             }
         });
-        listProductAdapter = new ListProductAdapter(listProduct);
+        listProductAdapter = new ListProductAdapter(listProduct,getContext());
         rcv.setLayoutManager(new GridLayoutManager(requireContext(),2));
-        rcv.setAdapter(listProductAdapter);
 
         listProductAdapter.setOnItemClickAddListener(new ListProductAdapter.OnItemClickAddListener() {
             @Override
@@ -97,11 +108,34 @@ public class FragmentProduct extends Fragment {
         });
     }
     private List createListProduct(){
-        listProduct.add(new Product(R.drawable.img,"Gà quay",32,32000));
-        listProduct.add(new Product(R.drawable.img,"Gà quay",32,32000));
-        listProduct.add(new Product(R.drawable.img,"Gà quay",32,32000));
-        listProduct.add(new Product(R.drawable.img,"Gà quay",32,32000));
-        listProduct.add(new Product(R.drawable.img,"Gà quay",32,32000));
+        Retrofit retrofit = new Retrofit.Builder().baseUrl("https://demoapishop.up.railway.app")
+                .addConverterFactory(GsonConverterFactory.create()).build();
+        APIInterface jsonHolderApi = retrofit.create(APIInterface.class);
+        System.out.println("Thắng check token" + shaPref.getString("TOKEN",""));
+        Call<List<Product>> call = jsonHolderApi.getProducts("Bearer "+shaPref.getString("TOKEN",""));
+        call.enqueue(new Callback<List<Product>>() {
+            @Override
+            public void onResponse(Call<List<Product>> call, Response<List<Product>> response) {
+                System.out.println("Thắng \b" +response);
+                if (response.code() == 200){
+                    if (response.body() != null){
+                        for (int i = 0; i < response.body().size(); i++) {
+                            listProduct.add(response.body().get(i));
+                        }
+                        rcv.setAdapter(listProductAdapter);
+                    }
+                }
+                else {
+                    System.out.println("Thắng call Api home fail");
+                }
+
+            }
+
+            @Override
+            public void onFailure(Call<List<Product>> call, Throwable t) {
+                System.out.println(t);
+            }
+        });
         return listProduct;
     }
 }

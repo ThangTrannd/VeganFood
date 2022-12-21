@@ -24,10 +24,13 @@ import vn.fpoly.veganfood.R;
 import vn.fpoly.veganfood.activity.main.MainActivity;
 import vn.fpoly.veganfood.domain.APIInterface;
 import vn.fpoly.veganfood.model.login.LoginResponce;
+import vn.fpoly.veganfood.model.login.RegisterResponse;
 
 public class ActivityRegister extends AppCompatActivity{
     private EditText edtUserName;
     private EditText edtPassword;
+    private EditText edtPhone;
+    private EditText edtAddress;
     private ImageView showPas;
     private EditText edtEmail;
     private AppCompatButton btnResgister;
@@ -46,13 +49,16 @@ public class ActivityRegister extends AppCompatActivity{
         edtPassword = (EditText) findViewById(R.id.edtPassword);
         showPas = (ImageView) findViewById(R.id.show_pas);
         edtEmail = (EditText) findViewById(R.id.edtEmail);
+        edtPhone = (EditText) findViewById(R.id.edtPhone);
+        edtAddress = (EditText) findViewById(R.id.edtAddress);
         btnResgister = (AppCompatButton) findViewById(R.id.btnResgister);
     }
     private void initListener(){
         btnResgister.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (edtEmail.getText().toString().isEmpty() || edtPassword.getText().toString().isEmpty() || edtUserName.getText().toString().isEmpty()){
+                if (edtEmail.getText().toString().isEmpty() || edtPassword.getText().toString().isEmpty() || edtUserName.getText().toString().isEmpty()
+                    || edtPhone.getText().toString().isEmpty() || edtAddress.getText().toString().isEmpty()){
                     Toast.makeText(ActivityRegister.this, "Bạn cần nhập đầy đủ thông tin", Toast.LENGTH_SHORT).show();
                 }
                 else{
@@ -63,21 +69,19 @@ public class ActivityRegister extends AppCompatActivity{
                     jsonObject.addProperty("id", 1);
                     jsonObject.addProperty("username", edtUserName.getText().toString());
                     jsonObject.addProperty("password", edtPassword.getText().toString());
-                    jsonObject.addProperty("phone", passWord);
-                    jsonObject.addProperty("email", passWord);
-                    jsonObject.addProperty("avatar", passWord);
-                    jsonObject.addProperty("dateuser", passWord);
-                    jsonObject.addProperty("address", passWord);
-                    Call<LoginResponce> call = jsonHolderApi.login(jsonObject);
-                    call.enqueue(new Callback<LoginResponce>() {
+                    jsonObject.addProperty("phone", edtPhone.getText().toString());
+                    jsonObject.addProperty("email", edtEmail.getText().toString());
+                    jsonObject.addProperty("avatar", "");
+                    jsonObject.addProperty("dateuser", "");
+                    jsonObject.addProperty("address", edtAddress.getText().toString());
+                    Call<RegisterResponse> call = jsonHolderApi.register(jsonObject);
+                    call.enqueue(new Callback<RegisterResponse>() {
                         @Override
-                        public void onResponse(Call<LoginResponce> call, Response<LoginResponce> response) {
+                        public void onResponse(Call<RegisterResponse> call, Response<RegisterResponse> response) {
                             if (response.code() == 200){
-                                if (response.body().getToken() != null){
-                                    shaPref.edit().putString(String.valueOf(R.string.token),response.body().getToken());
-                                    startActivity(new Intent(ActivityRegister.this, MainActivity.class));
-                                    finish();
-                                }
+                                Toast.makeText(ActivityRegister.this, "Bạn đã đăng kí thành công", Toast.LENGTH_SHORT).show();
+                                startActivity(new Intent(ActivityRegister.this,ActivityLogin.class));
+                                finish();
                             }
                             else {
                                 Toast.makeText(ActivityRegister.this, "Bạn tạo tài khoản không thành công", Toast.LENGTH_SHORT).show();
@@ -86,7 +90,7 @@ public class ActivityRegister extends AppCompatActivity{
                         }
 
                         @Override
-                        public void onFailure(Call<LoginResponce> call, Throwable t) {
+                        public void onFailure(Call<RegisterResponse> call, Throwable t) {
                             System.out.println(t);
                         }
                     });

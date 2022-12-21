@@ -93,13 +93,13 @@ public class FragmentProfile extends Fragment {
         logout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                getActivity().getSupportFragmentManager().beginTransaction().add(R.id.container,logoutFragment).commit();
+                getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.container,logoutFragment).commit();
             }
         });
         signout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                getActivity().getSupportFragmentManager().beginTransaction().add(R.id.container, fragmentSignOut).commit();
+                getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.container, fragmentSignOut).commit();
             }
         });
     }

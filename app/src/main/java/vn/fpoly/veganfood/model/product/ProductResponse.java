@@ -2,17 +2,17 @@ package vn.fpoly.veganfood.model.product;
 
 import java.util.List;
 
-public class Product {
+public class ProductResponse {
     private ProductDetail productinformation;
     private List<String> imageProduct;
-    private String nameProduct;
+    private String name;
     private int price;
     private int idCategory;
 
-    public Product(ProductDetail productinformation, List<String> imageProduct, String nameProduct, int price, int idCategory) {
+    public ProductResponse(ProductDetail productinformation, List<String> imageProduct, String name, int price, int idCategory) {
         this.productinformation = productinformation;
         this.imageProduct = imageProduct;
-        this.nameProduct = nameProduct;
+        this.name = name;
         this.price = price;
         this.idCategory = idCategory;
     }
@@ -34,11 +34,11 @@ public class Product {
     }
 
     public String getName() {
-        return nameProduct;
+        return name;
     }
 
-    public void setName(String nameProduct) {
-        this.nameProduct = nameProduct;
+    public void setName(String name) {
+        this.name = name;
     }
 
     public int getPrice() {

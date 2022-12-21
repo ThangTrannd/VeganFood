@@ -1,5 +1,6 @@
 package vn.fpoly.veganfood.activity.home.adapter;
 
+import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -9,6 +10,8 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.squareup.picasso.Picasso;
+
 import java.util.List;
 
 import vn.fpoly.veganfood.R;
@@ -17,9 +20,11 @@ import vn.fpoly.veganfood.model.product.Product;
 public class ListProductAdapter extends RecyclerView.Adapter<ListProductAdapter.ItemViewHodel>{
 
     private List<Product> mListItem;
+    private Context context;
 
-    public ListProductAdapter(List<Product> mListItem) {
+    public ListProductAdapter(List<Product> mListItem, Context context) {
         this.mListItem = mListItem;
+        this.context = context;
     }
     @NonNull
     @Override
@@ -34,10 +39,9 @@ public class ListProductAdapter extends RecyclerView.Adapter<ListProductAdapter.
         if(product == null) {
             return;
         }
-
-        holder.img.setImageResource(product.getImage());
+        Picasso.with(context).load(product.getImageProduct().get(0)).into(holder.img);
         holder.name.setText("Name :"+product.getName());
-        holder.gam.setText("Gam :"+product.getGam());
+        holder.gam.setText("Gam : 123");
         holder.price.setText("Price :"+product.getPrice());
     }
 

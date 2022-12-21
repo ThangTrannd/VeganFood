@@ -1,20 +1,22 @@
 package vn.fpoly.veganfood.model.login;
 
-public class User {
+public class RegisterData {
     private String userName;
     private String password;
     private String email;
     private String avatar;
     private String address;
-    private String phoneNumber;
+    private String phone;
+    private String dateuser;
 
-    public User(String userName, String password, String email, String avatar, String address, String phoneNumber) {
+    public RegisterData(String userName, String password, String email, String avatar, String address, String phone, String dateuser) {
         this.userName = userName;
         this.password = password;
         this.email = email;
         this.avatar = avatar;
         this.address = address;
-        this.phoneNumber = phoneNumber;
+        this.phone = phone;
+        this.dateuser = dateuser;
     }
 
     public String getUserName() {
@@ -57,11 +59,19 @@ public class User {
         this.address = address;
     }
 
-    public String getPhoneNumber() {
-        return phoneNumber;
+    public String getPhone() {
+        return phone;
     }
 
-    public void setPhoneNumber(String phoneNumber) {
-        this.phoneNumber = phoneNumber;
+    public void setPhone(String phone) {
+        this.phone = phone;
+    }
+
+    public String getDateuser() {
+        return dateuser;
+    }
+
+    public void setDateuser(String dateuser) {
+        this.dateuser = dateuser;
     }
 }

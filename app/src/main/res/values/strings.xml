@@ -7,6 +7,7 @@
     <string name="username">Họ và tên</string>
     <string name="password">Mật khẩu</string>
     <string name="email">Email</string>
+    <string name="address">Địa chỉ</string>
     <string name="login">Đăng nhập</string>
     <string name="remember">Ghi nhớ</string>
     <string name="forgotPassword">Quên mật khẩu?</string>

@@ -1,5 +1,7 @@
 package vn.fpoly.veganfood.activity.home;
 
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -18,10 +20,16 @@ import androidx.recyclerview.widget.RecyclerView;
 import java.util.ArrayList;
 import java.util.List;
 
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
+import retrofit2.Retrofit;
+import retrofit2.converter.gson.GsonConverterFactory;
 import vn.fpoly.veganfood.R;
 import vn.fpoly.veganfood.activity.home.adapter.CategoryAdapter;
 import vn.fpoly.veganfood.activity.home.adapter.ListProductAdapter;
 import vn.fpoly.veganfood.activity.product.FragmentProduct;
+import vn.fpoly.veganfood.domain.APIInterface;
 import vn.fpoly.veganfood.model.home.Category;
 
 /**
@@ -36,6 +44,7 @@ public class FragmentCategory extends Fragment {
     private RecyclerView rcv;
     private List<Category> listCate = new ArrayList<>();
     private CategoryAdapter categoryAdapter;
+    SharedPreferences shaPref;
 
     public FragmentCategory() {
         // Required empty public constructor
@@ -61,6 +70,7 @@ public class FragmentCategory extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+        shaPref = requireContext().getSharedPreferences("Sharef", Context.MODE_PRIVATE);
         createListCate();
         ivBack = view.findViewById(R.id.iv_back);
         ivSearch = view.findViewById(R.id.iv_search);
@@ -78,7 +88,7 @@ public class FragmentCategory extends Fragment {
                 System.out.println("Đang làm");
             }
         });
-        categoryAdapter = new CategoryAdapter(listCate);
+        categoryAdapter = new CategoryAdapter(listCate,getContext());
         rcv.setLayoutManager(new GridLayoutManager(requireContext(),3));
         rcv.setAdapter(categoryAdapter);
         categoryAdapter.setOnItemClickListener(new CategoryAdapter.OnItemClickListener() {
@@ -90,11 +100,31 @@ public class FragmentCategory extends Fragment {
         });
     }
     private List createListCate(){
-        listCate.add(new Category(R.drawable.img_1,"Gà quay"));
-        listCate.add(new Category(R.drawable.img_1,"Gà quay"));
-        listCate.add(new Category(R.drawable.img_1,"Gà quay"));
-        listCate.add(new Category(R.drawable.img_1,"Gà quay"));
-        listCate.add(new Category(R.drawable.img_1,"Gà quay"));
+        Retrofit retrofit = new Retrofit.Builder().baseUrl("https://demoapishop.up.railway.app")
+                .addConverterFactory(GsonConverterFactory.create()).build();
+        APIInterface jsonHolderApi = retrofit.create(APIInterface.class);
+        System.out.println("Thắng check token" + shaPref.getString("TOKEN",""));
+        Call<List<Category>> call = jsonHolderApi.getCategory("Bearer "+shaPref.getString("TOKEN",""));
+        call.enqueue(new Callback<List<Category>>() {
+            @Override
+            public void onResponse(Call<List<Category>> call, Response<List<Category>> response) {
+                System.out.println("Thắng \b" +response.body());
+                if (response.code() == 200){
+                    if (response.body() != null){
+                        for (int i = 0; i < response.body().size(); i++) {
+                            listCate.add(response.body().get(i));
+                        }
+                    }
+                    rcv.setAdapter(categoryAdapter);
+                }
+
+            }
+
+            @Override
+            public void onFailure(Call<List<Category>> call, Throwable t) {
+                System.out.println(t);
+            }
+        });
         return listCate;
     }
 }

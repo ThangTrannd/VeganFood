@@ -11,6 +11,7 @@ import androidx.appcompat.widget.AppCompatButton;
 import androidx.fragment.app.Fragment;
 
 import vn.fpoly.veganfood.R;
+import vn.fpoly.veganfood.activity.home.FragmentHome;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -46,8 +47,8 @@ public class FragmentSignOut extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        btnCancel = view.findViewById(R.id.btnCancel);
-        btnOK = view.findViewById(R.id.btnOK);
+        btnCancel = view.findViewById(R.id.buttonNo);
+        btnOK = view.findViewById(R.id.buttonYes);
         FragmentProfile fragmentProfile = new FragmentProfile();
         btnCancel.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -59,7 +60,8 @@ public class FragmentSignOut extends Fragment {
         btnOK.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                getActivity().finish();
+                FragmentHome fragmentHome = new FragmentHome();
+                getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.container,fragmentHome).commit();
             }
         });
     }

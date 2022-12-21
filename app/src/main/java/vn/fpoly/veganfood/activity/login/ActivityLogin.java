@@ -110,11 +110,13 @@ public class ActivityLogin extends AppCompatActivity{
                     call.enqueue(new Callback<LoginResponce>() {
                         @Override
                         public void onResponse(Call<LoginResponce> call, Response<LoginResponce> response) {
+                            System.out.println("Thắng \b" + response);
                             if (response.code() == 200){
                                 if (response.body().getToken() != null){
-                                    shaPref.edit().putString(String.valueOf(R.string.token),response.body().getToken());
+                                    shaPref.edit().putString("TOKEN",response.body().getToken()).commit();
                                     startActivity(new Intent(ActivityLogin.this, MainActivity.class));
                                     finish();
+                                    System.out.println("Login thành công");
                                 }
                             }
                             else {

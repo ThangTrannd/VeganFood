@@ -1,5 +1,6 @@
 package vn.fpoly.veganfood.activity.home.adapter;
 
+import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -9,6 +10,8 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.squareup.picasso.Picasso;
+
 import java.util.List;
 
 import vn.fpoly.veganfood.R;
@@ -16,10 +19,13 @@ import vn.fpoly.veganfood.model.home.Category;
 
 
 public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.ItemViewHodel> {
-    private List<Category> mListItemCa;
 
-    public CategoryAdapter(List<Category> mListItemCa) {
+    private List<Category> mListItemCa;
+    private Context context;
+
+    public CategoryAdapter(List<Category> mListItemCa, Context context) {
         this.mListItemCa = mListItemCa;
+        this.context = context;
     }
 
     @NonNull
@@ -36,8 +42,8 @@ public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.ItemVi
             return;
         }
 
-        holder.iv_Veget.setImageResource(category.getImage());
-        holder.tv_cate.setText("" + category.getCatego());
+        Picasso.with(context).load(category.getImagecategory().get(0)).into(holder.iv_Veget);
+        holder.tv_cate.setText("" + category.getCategoryname());
 
     }
 

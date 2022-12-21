@@ -49,8 +49,8 @@ public class FragmentLogout extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        btnCancel = view.findViewById(R.id.btnCancel);
-        btnOK = view.findViewById(R.id.btnOK);
+        btnCancel = view.findViewById(R.id.buttonNo);
+        btnOK = view.findViewById(R.id.buttonYes);
         FragmentProfile fragmentProfile = new FragmentProfile();
         btnCancel.setOnClickListener(new View.OnClickListener() {
             @Override
