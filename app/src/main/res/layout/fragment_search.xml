@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingVertical="@dimen/dimen_8dp"
+        android:background="#00BCD4">
+        <ImageView
+            android:layout_gravity="center_vertical"
+            android:id="@+id/ic_back"
+            android:padding="@dimen/dimen_15dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_back_v4"/>
+        <RelativeLayout
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:id="@+id/btn_mota"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/dimen_16dp"
+            android:layout_marginRight="@dimen/dimen_10dp"
+            android:background="@drawable/border_item_new2">
+            <EditText
+                android:id="@+id/edtSearch"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:textSize="@dimen/text_size_15sp"
+                android:textColor="@color/color_44494D"
+                android:hint="Tìm kiếm"
+                android:background="@null"
+                />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvSearch"
+        android:layout_marginTop="@dimen/dimen_10dp"
+        android:layout_width="match_parent"
+        android:layout_marginHorizontal="@dimen/dimen_16dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        tools:listitem="@layout/item_list_tea"
+        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+        app:spanCount="2" />
+
+
+</androidx.appcompat.widget.LinearLayoutCompat>

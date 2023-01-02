@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".feature.account.activity.UpdateInforFragment">
+
+      <LinearLayout
+          android:id="@+id/linearLayout"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:background="@drawable/backgroundinfor"
+          app:layout_constraintBottom_toBottomOf="parent"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintHorizontal_bias="0.0"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toTopOf="parent"
+          app:layout_constraintVertical_bias="0.0">
+
+          <RelativeLayout
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content">
+
+              <ImageView
+                  android:id="@+id/backActivity"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_alignParentStart="true"
+                  android:layout_centerVertical="true"
+                  android:padding="@dimen/dimen_16dp"
+                  android:src="@drawable/arrow_right_white" />
+
+              <TextView
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_alignParentEnd="true"
+                  android:layout_centerVertical="true"
+                  android:padding="@dimen/dimen_16dp"
+                  android:text="Lưu"
+                  android:id="@+id/update"
+                  android:textColor="@color/white"
+                  android:textSize="@dimen/text_size_22sp"
+                  android:textStyle="bold" />
+          </RelativeLayout>
+
+      </LinearLayout>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/linearLayout2"
+        android:layout_width="@dimen/dimen_150dp"
+        android:layout_height="@dimen/dimen_150dp"
+        android:layout_marginTop="116dp"
+        android:background="@drawable/user"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:textSize="80sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="@+id/linearLayout"
+        app:layout_constraintTop_toTopOf="@+id/linearLayout" />
+
+    <View
+          android:id="@+id/view"
+          android:layout_width="@dimen/dimen_200dp"
+          android:layout_height="@dimen/dimen_5dp"
+          android:layout_marginStart="106dp"
+          android:layout_marginEnd="106dp"
+          android:background="@drawable/custom_line"
+          app:layout_constraintBottom_toBottomOf="parent"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintStart_toStartOf="parent" />
+      <LinearLayout
+          android:layout_width="0dp"
+          android:layout_height="0dp"
+          android:layout_marginStart="16dp"
+          android:layout_marginTop="16dp"
+          android:layout_marginEnd="16dp"
+          android:layout_marginBottom="16dp"
+          android:orientation="vertical"
+          app:layout_constraintBottom_toTopOf="@+id/view"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toBottomOf="@+id/linearLayout2">
+
+
+          <RelativeLayout
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_marginTop="@dimen/dimen_16dp">
+
+              <RelativeLayout
+                  android:id="@+id/icon1"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:background="@drawable/boder_orange">
+
+                  <ImageView
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:layout_centerInParent="true"
+                      android:src="@drawable/yourname" />
+              </RelativeLayout>
+
+              <LinearLayout
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_marginStart="@dimen/dimen_16dp"
+                  android:layout_toEndOf="@id/icon1"
+                  android:gravity="start"
+                  android:orientation="vertical">
+
+                  <TextView
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:layout_marginStart="@dimen/dimen_2dp"
+                      android:text="Tên bạn"
+                      android:textColor="@color/black" />
+
+                  <EditText
+                      android:id="@+id/name"
+                      android:inputType="text"
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:hint="Nhập tên đầy đủ của bạn" />
+              </LinearLayout>
+
+          </RelativeLayout>
+
+          <RelativeLayout
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_marginTop="@dimen/dimen_16dp">
+
+              <RelativeLayout
+                  android:id="@+id/icon4"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:background="@drawable/boder_orange">
+
+                  <ImageView
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:layout_centerInParent="true"
+                      android:src="@drawable/yourname" />
+              </RelativeLayout>
+
+              <LinearLayout
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_marginStart="@dimen/dimen_16dp"
+                  android:layout_toEndOf="@id/icon4"
+                  android:gravity="start"
+                  android:orientation="vertical">
+
+                  <TextView
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:layout_marginStart="@dimen/dimen_2dp"
+                      android:text="Username"
+                      android:textColor="@color/black" />
+
+                  <EditText
+                      android:id="@+id/username"
+                      android:inputType="text"
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:hint="Nhập username của bạn" />
+              </LinearLayout>
+
+          </RelativeLayout>
+
+          <RelativeLayout
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_marginTop="@dimen/dimen_16dp">
+
+              <RelativeLayout
+                  android:id="@+id/icon2"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:background="@drawable/boder_orange">
+
+                  <ImageView
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:layout_centerInParent="true"
+                      android:src="@drawable/email" />
+              </RelativeLayout>
+
+              <LinearLayout
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_marginStart="@dimen/dimen_16dp"
+                  android:layout_toEndOf="@id/icon2"
+                  android:gravity="start"
+                  android:orientation="vertical">
+
+                  <TextView
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:layout_marginStart="@dimen/dimen_2dp"
+                      android:text="Email"
+                      android:textColor="@color/black" />
+
+                  <EditText
+                      android:id="@+id/email"
+                      android:hint="Nhập email của bạn"
+                      android:enabled="false"
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:inputType="textEmailAddress" />
+              </LinearLayout>
+          </RelativeLayout>
+
+          <RelativeLayout
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_marginTop="@dimen/dimen_16dp">
+
+              <RelativeLayout
+                  android:id="@+id/icon5"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:background="@drawable/boder_orange">
+
+                  <ImageView
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:layout_centerInParent="true"
+                      android:src="@drawable/phone" />
+              </RelativeLayout>
+
+              <LinearLayout
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_marginStart="@dimen/dimen_16dp"
+                  android:layout_toEndOf="@id/icon5"
+                  android:gravity="start"
+                  android:orientation="vertical">
+
+                  <TextView
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:layout_marginStart="@dimen/dimen_2dp"
+                      android:text="Số điện thoại"
+                      android:textColor="@color/black" />
+
+                  <EditText
+                      android:id="@+id/sdt"
+                      android:enabled="false"
+                      android:inputType="number"
+                      android:hint="Nhập số điện thoại của bạn"
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content" />
+
+                  <TextView
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:textColor="@color/black"
+                      android:textSize="@dimen/dimen_13sp" />
+              </LinearLayout>
+          </RelativeLayout>
+      </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

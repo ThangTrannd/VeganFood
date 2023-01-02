@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="120dp"
+    android:layout_height="120dp"
+    >
+
+    <ImageView
+        android:layout_width="18dp"
+        android:layout_height="22dp"
+        android:src="@drawable/ic_milk_tea"
+        android:scaleType="centerCrop"
+        android:layout_centerInParent="true" />
+
+    <ImageView
+        android:id="@+id/loader_circle"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_centerInParent="true"
+        android:padding="2dp"
+        android:src="@drawable/bg_loading" />
+
+</RelativeLayout>

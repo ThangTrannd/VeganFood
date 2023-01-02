@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".feature.account.fragment.IntroductFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:paddingStart="@dimen/dp_8"
+        android:paddingEnd="@dimen/dp_8">
+
+        <ImageView
+            android:id="@+id/img_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_arrow_back_24" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="Giới thiệu về chúng tôi"
+            android:textColor="#FFA500"
+            android:textSize="@dimen/dimen_24dp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <TextView
+        android:layout_marginTop="@dimen/dimen_16dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="VeganFood - Chay vì cộng đồng"
+        android:textColor="#A586FF"
+        android:textSize="@dimen/text_size_22sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_marginTop="@dimen/dp_8"
+        android:layout_marginHorizontal="@dimen/dimen_16dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="@style/TextNormal2"
+        android:textColor="@color/black"
+        android:text="Ngày nay thói quen ăn chay đã dần trở nên phổ biến đối với tất cả mọi người. Ăn chay không còn giới hạn trong khái niệm tâm linh mà còn hiện diện trong các bữa ăn gia đình, trong các cuộc gặp mặt bạn bè, tiệc chiêu đãi thực khách sang trọng của giới doanh nhân…, người ta ăn chay vì sức khỏe và vì môi trường sống.Chính vì thế,VeganFood ra đời với sứ mệnh giúp mọi người hiểu rõ lợi ích và tác dụng của ăn chay với sức khỏe" />
+
+</LinearLayout>

@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".feature.account.fragment.ListStoreFragment">
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:paddingStart="@dimen/dp_8"
+        android:paddingEnd="@dimen/dp_8"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/img_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_arrow_back_24" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="Danh sách cửa hàng"
+            android:textColor="#FFA500"
+            android:textSize="@dimen/dimen_24dp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="8dp"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/relativeLayout2">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dimen_16dp"
+                android:layout_marginTop="@dimen/dimen_16dp"
+                android:text="Cửa hàng"
+                android:textColor="#FFA500"
+                android:textSize="@dimen/text_size_22sp"
+                android:textStyle="bold" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/dp_8"
+                android:layout_marginTop="50dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="STT"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/dimen_13sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="@dimen/dimen_100dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="CỬA HÀNG"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/dimen_13sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="ĐỊA CHỈ"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/dimen_13sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="@dimen/dimen_25dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:padding="3dp"
+                        android:text="1"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/dimen_13sp" />
+
+                    <TextView
+                        android:layout_width="@dimen/dimen_100dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:lines="2"
+                        android:padding="3dp"
+                        android:text="VeganFood326"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/dimen_13sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:lines="3"
+                        android:padding="3dp"
+                        android:text="Ngõ 326 Sơn Tây, Đống Đa , Hà Nội"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/dimen_13sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="@dimen/dimen_25dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:padding="3dp"
+                        android:text="2"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/dimen_13sp" />
+
+                    <TextView
+                        android:layout_width="@dimen/dimen_100dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:lines="2"
+                        android:padding="3dp"
+                        android:text="VeganFood002"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/dimen_13sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:lines="2"
+                        android:padding="3dp"
+                        android:text="Số 2 , Cầu Giấy , Hà Nội"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/dimen_13sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="@dimen/dimen_25dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:padding="3dp"
+                        android:text="3"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/dimen_13sp" />
+
+                    <TextView
+                        android:layout_width="@dimen/dimen_100dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:lines="3"
+                        android:padding="3dp"
+                        android:text="VeganFood208"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/dimen_13sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:lines="2"
+                        android:padding="3dp"
+                        android:text="Số 208 P. Nguyễn Hoàng, Mỹ Đình, Nam Từ Liêm, Hà Nội"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/dimen_13sp" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

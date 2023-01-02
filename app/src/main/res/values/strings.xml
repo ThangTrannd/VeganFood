@@ -1,58 +1,21 @@
 <resources>
-    <string name="app_name">Vegan Food</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="title_home">Recommended</string>
-    <string name="hello">Xin chào quý khách</string>
-    <string name="register">Đăng ký</string>
-    <string name="username">Họ và tên</string>
-    <string name="password">Mật khẩu</string>
-    <string name="email">Email</string>
-    <string name="address">Địa chỉ</string>
-    <string name="login">Đăng nhập</string>
-    <string name="remember">Ghi nhớ</string>
-    <string name="forgotPassword">Quên mật khẩu?</string>
-    <string name="forgot">Quên mật khẩu</string>
-    <string name="phone">Số điện thoại</string>
-    <string name="done">Xong</string>
-    <string name="changepas">Đổi mật khẩu</string>
-    <string name="code_ver">Mã xác minh</string>
-    <string name="new_pas">Mật khẩu mới</string>
-    <string name="enter_new">Nhập lại mật khẩu mới</string>
-    <string name="welcom_vegan">Chào mừng đến với VeganFood</string>
-    <string name="skip">Bỏ qua</string>
-    <string name="next">Tiếp</string>
-    <string name="nice_to_meet_you">Hân hạnh được gặp bạn,chúng tôi rất vui vì bạn ở đây,vì vậy hãy bắt đầu ngay bây giờ !</string>
-    <string name="shopping">Mua sắm trên VeganFood</string>
-    <string name="shopping_every">Mua sắm mọi lúc mọi nơi tiện,giao hàng nhanh chóng.</string>
-    <string name="quality">Chất lượng uy  nhanh chóng.Chỉ cần 3 bước đơn giản để có lối sống thời ,hãy tham gia ngay với VeganFood !</string>
-    <string name="start">Bắt đầu</string>
-    <string name="category">Thể loại</string>
-    <string name="search_hint">Mời bạn nhập</string>
-    <string name="buy_info">Thông tin đặt hàng</string>
-    <string name="product">Sản phẩm</string>
-
-    <string name="tv1">Bánh bao chay thực dưỡng</string>
-    <string name="tv2">20.000đ/250gr</string>
-    <string name="tv3">Bánh bao thực gáo lứt tốt cho sức khoẻ, giàu chất dinh dưỡng.  Với nguyên liệu làm vỏ bánh chủ yếu là gạo lứt kết hợp với nhân rau củ chứa nhiều vitamin nên rất tốt cho sức khoẻ. Vỏ bánh mềm,mịn.</string>
-    <string name="buy_now">Mua ngay</string>
-    <string name="tv4">20.000đ</string>
-    <string name="all">Tất cả</string>
-    <string name="endow">Ưu đãi dành cho bạn</string>
-    <string name="endow1">Ưu đãi phổ biến</string>
-    <string name="tv5">Ngày nay thói quen ăn chay  đã dần trở nên phổ biến đối với tất cả mọi người.</string>
-    <string name="tv6">Tọa lạc ngay trung tâm HN nhưng VeganFood lại có một không gian thanh tịnh và yên bình. Bàn ghế gỗ sạch sẽ...</string>
-    <string name="tv7">Đến với  VeganFood bạn sẽ có dịp thưởng thức hơn 100 món ăn chay với nhiều tên rất “mặn mà” như: lẩu thái...</string>
-    <string name="tv8">Điểm nổi bật
-Thực phẩm chay VeganFood là một trong những địa chỉ đi đầu về Top 5 website mua bán thực phẩm chay online. Chỉ cần bạn có thiết bị kết nối internet, thì những lúc bận rộn bạn cũng có thể lựa chọn cho gia đình mình những thực phẩm chay ngon, đảm bảo chất lượng..
-</string>
-    <string name="tv9">        Copyright © 2022 Bản quyền thuộc về Nhà hàng chay VeganFood
-                              Số 20 Trinh Van Bo , Q Nam Từ Liêm - HN
-                                    Design by ICSC Corporation</string>
-    <string name="tv10">Lựa chọn hình thức thanh toán</string>
-
-    <string name="domain">https://demofoods.herokuapp.com</string>
-    <string name="token">token</string>
+    <string name="app_name">VeganFood</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="giao_hang">Giao hàng</string>
+    <string name="mang_di">Mang đi</string>
+
+
+    <!-- Home -->
+    <string name="home_title_location">Vị trí của bạn</string>
+    <string name="home_search">Tìm Kiếm</string>
+    <string name="text_product_favorite">Sản phẩm yêu thích</string>
+    <string name="text_order_title">Đơn hàng</string>
+    <string name="preference_file_key">preference_file_key</string>
+    <string name="preference_key_token">token</string>
+    <string name="session_id">sessionId</string>
+    <string name="address">address</string>
+    <string name="fragment_favorite_null_account">Bạn chưa đăng nhập?</string>
+    <string name="fragment_favorite_login">Đăng nhập</string>
 
 </resources>

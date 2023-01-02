@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context=".feature.account.fragment.SupportFragment">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:paddingStart="@dimen/dp_8"
+        android:paddingEnd="@dimen/dp_8">
+
+        <ImageView
+            android:id="@+id/img_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_arrow_back_24" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="Phản hồi và hỗ trợ"
+            android:textColor="#FFA500"
+            android:textSize="@dimen/dimen_24dp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/dimen_16dp"
+        android:text="Cửa hàng thực phẩm chay VeganFood"
+        android:textColor="#A586FF"
+        android:textSize="@dimen/text_size_20sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/dimen_16dp"
+        android:layout_marginTop="@dimen/dp_8"
+        android:text="Ngõ 326 Sơn Tây, Đống Đa , Hà Nội"
+        android:textAppearance="@style/TextNormal2"
+        android:textColor="@color/black" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/dimen_16dp"
+        android:layout_marginTop="@dimen/dp_8"
+        android:text="1900.63.69.36"
+        android:textAppearance="@style/TextNormal2"
+        android:textColor="@color/black" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/dimen_16dp"
+        android:layout_marginTop="@dimen/dp_8"
+        android:text="Số ĐKKD: 0106341306.Ngày cấp:16/03/2017"
+        android:textAppearance="@style/TextNormal2"
+        android:textColor="@color/black" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/dimen_16dp"
+        android:layout_marginTop="@dimen/dp_8"
+        android:text="Nơi cấp: Sở kế hoạch và Đầu tư Thành Phố Hà Nội"
+        android:textAppearance="@style/TextNormal2"
+        android:textColor="@color/black" />
+</LinearLayout>
