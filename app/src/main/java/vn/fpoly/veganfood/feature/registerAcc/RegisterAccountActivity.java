@@ -1,8 +1,7 @@
 package vn.fpoly.veganfood.feature.registerAcc;
-
-import com.example.tocotoco.feature.base.TCCBaseActivity;
-import com.example.tocotoco.feature.login.LoginPresenter;
 import com.gemvietnam.base.viper.ViewFragment;
+
+import vn.fpoly.veganfood.feature.base.TCCBaseActivity;
 
 public class RegisterAccountActivity extends TCCBaseActivity {
     @Override

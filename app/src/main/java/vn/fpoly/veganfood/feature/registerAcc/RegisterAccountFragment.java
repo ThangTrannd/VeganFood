@@ -5,15 +5,6 @@ import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
-
-import com.example.tocotoco.R;
-import com.example.tocotoco.feature.login.LoginActivity;
-import com.example.tocotoco.feature.login.LoginContract;
-import com.example.tocotoco.feature.login.LoginFragment;
-import com.example.tocotoco.model.ProductsResult;
-import com.example.tocotoco.model.RegisterResult;
-import com.example.tocotoco.network.NetWorkController;
-import com.example.tocotoco.network.TCCCallback;
 import com.gemvietnam.base.viper.ViewFragment;
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.android.material.textfield.TextInputLayout;
@@ -21,6 +12,9 @@ import com.google.android.material.textfield.TextInputLayout;
 import butterknife.BindView;
 import retrofit2.Call;
 import retrofit2.Response;
+import vn.fpoly.veganfood.R;
+import vn.fpoly.veganfood.feature.login.LoginActivity;
+import vn.fpoly.veganfood.model.RegisterResult;
 
 public class RegisterAccountFragment extends ViewFragment<RegisterAccountContract.Presenter> implements RegisterAccountContract.View, View.OnClickListener{
 

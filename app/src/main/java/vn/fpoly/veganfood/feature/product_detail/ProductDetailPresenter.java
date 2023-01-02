@@ -3,20 +3,19 @@ package vn.fpoly.veganfood.feature.product_detail;
 import static android.content.Context.MODE_PRIVATE;
 
 import android.content.SharedPreferences;
-
-import com.example.tocotoco.R;
-import com.example.tocotoco.dialog.DialogUtils;
-import com.example.tocotoco.model.ProductResult;
-import com.example.tocotoco.model.ProductsSessionResult;
-import com.example.tocotoco.model.RegisterResult;
-import com.example.tocotoco.model.SessionIdResult;
-import com.example.tocotoco.network.NetWorkController;
-import com.example.tocotoco.network.TCCCallback;
 import com.gemvietnam.base.viper.Presenter;
 import com.gemvietnam.base.viper.interfaces.ContainerView;
 
 import retrofit2.Call;
 import retrofit2.Response;
+import vn.fpoly.veganfood.R;
+import vn.fpoly.veganfood.dialog.DialogUtils;
+import vn.fpoly.veganfood.model.ProductResult;
+import vn.fpoly.veganfood.model.ProductsSessionResult;
+import vn.fpoly.veganfood.model.RegisterResult;
+import vn.fpoly.veganfood.model.SessionIdResult;
+import vn.fpoly.veganfood.network.NetWorkController;
+import vn.fpoly.veganfood.network.TCCCallback;
 
 public class ProductDetailPresenter extends Presenter<ProductDetailContract.View, ProductDetailContract.Interactor>
         implements ProductDetailContract.Presenter{

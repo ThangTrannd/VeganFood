@@ -1,14 +1,12 @@
 package vn.fpoly.veganfood.feature.product_detail;
 
-import com.example.tocotoco.feature.login.LoginContract;
-import com.example.tocotoco.model.LoginResult;
-import com.example.tocotoco.model.ProductResult;
-import com.example.tocotoco.model.ProductsSessionResult;
-import com.example.tocotoco.model.RegisterResult;
-import com.example.tocotoco.model.SessionIdResult;
-import com.example.tocotoco.network.NetWorkController;
-import com.example.tocotoco.network.TCCCallback;
 import com.gemvietnam.base.viper.Interactor;
+import vn.fpoly.veganfood.model.ProductResult;
+import vn.fpoly.veganfood.model.ProductsSessionResult;
+import vn.fpoly.veganfood.model.RegisterResult;
+import vn.fpoly.veganfood.model.SessionIdResult;
+import vn.fpoly.veganfood.network.NetWorkController;
+import vn.fpoly.veganfood.network.TCCCallback;
 
 public class ProductDetailInteractor extends Interactor<ProductDetailContract.Presenter>
         implements ProductDetailContract.Interactor{
