@@ -79,7 +79,12 @@ class HomeFragment : BaseFragment(R.layout.fragment_home) {
     override fun onResume() {
         super.onResume()
         getUserInfo()
-        getLocation()
+        try {
+            getLocation()
+        }
+        catch (e:java.lang.IllegalStateException){
+            return
+        }
         setupClickListener()
         getCategoryList()
         binding.linearLayoutCompat.setOnClickListener {

@@ -79,36 +79,71 @@ public class RegisterAccountFragment extends ViewFragment<RegisterAccountContrac
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.btn_register:
-                String name = ed_name.getText().toString();
-                String phoneNumber = ed_phone_number.getText().toString();
-                String username = ed_username.getText().toString();
-                String pass = ed_pass.getText().toString();
-                String rePass = ed_repass.getText().toString();
-                String email = ed_email.getText().toString();
+                String name = ed_name.getText().toString().trim();
+                String phoneNumber = ed_phone_number.getText().toString().trim();
+                String username = ed_username.getText().toString().trim();
+                String pass = ed_pass.getText().toString().trim();
+                String rePass = ed_repass.getText().toString().trim();
+                String email = ed_email.getText().toString().trim();
+                String validNumber = "(84|0[3|5|7|8|9])+([0-9]{8})\\b";
+                String emailPattern = "[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+";
                 if(name.equals("")) {
                     lo_name.setError("Tên không được trống!");
                     return;
                 }
+                else if (!name.equals("")){
+                    lo_name.setError(null);
+                }
+
                 if(phoneNumber.equals("")) {
                     lo_phone_number.setError("Số điện thoại không được trống!");
                     return;
                 }
+                else if (!phoneNumber.matches(validNumber)){
+                    lo_phone_number.setError("Số điện thoại sai định dạng!");
+                    return;
+                }
+                else if (!phoneNumber.equals("")){
+                    lo_phone_number.setError(null);
+                }
+
+
                 if(email.equals("")) {
                     lo_email.setError("Email không được trống!");
                     return;
                 }
+                else if (!email.matches(emailPattern)){
+                    lo_email.setError("Email sai định dạng!");
+                    return;
+                }
+                else if (!email.equals("")){
+                    lo_email.setError(null);
+                }
+
                 if(username.equals("")) {
                     lo_username.setError("Tên đăng nhập không được trống!");
                     return;
                 }
+                else if (!username.equals("")){
+                    lo_username.setError(null);
+                }
+
                 if(pass.equals("")) {
                     lo_pass.setError("Mật khẩu không được trống!");
                     return;
                 }
+                else if (!pass.equals("")){
+                    lo_pass.setError(null);
+                }
+
                 if(rePass.equals("")) {
                     lo_repass.setError("Mật khẩu xác nhận không được trống!");
                     return;
                 }
+                else if (!rePass.equals("")){
+                    lo_repass.setError(null);
+                }
+
                 if(!pass.equals(rePass)) {
                     lo_repass.setError("Mật khẩu xác nhận không đúng!");
                     return;

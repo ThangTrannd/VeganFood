@@ -21,7 +21,7 @@
                 android:id="@+id/tv_name_product"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="@dimen/text_size_18sp"
+                android:textSize="@dimen/text_size_13sp"
 
                 android:textColor="@color/dark_gray"
                 android:fontFamily="@font/fs_pf_beau_sans_pro_bold"/>

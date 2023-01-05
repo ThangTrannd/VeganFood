@@ -122,9 +122,15 @@ public class LoginFragment extends ViewFragment<LoginContract.Presenter> impleme
                     lo_sdt.setError("Tên đăng nhập trống");
                     return;
                 }
+                else if (ed_sdt.getText().toString().length() != 0){
+                    lo_sdt.setError(null);
+                }
                 if (etPassword.getText().toString().length() == 0) {
                     etPasswordLayout.setError("Mật khẩu đăng nhập nhập trống");
                     return;
+                }
+                else if (etPassword.getText().toString().length() != 0){
+                    etPasswordLayout.setError(null);
                 }
                 String tokenDevice = list.get(0).getTokenDevice();
                 mPresenter.loginWithPass(ed_sdt.getText().toString(), etPassword.getText().toString(), "username", tokenDevice.isEmpty()? "" : tokenDevice);

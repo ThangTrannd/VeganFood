@@ -76,13 +76,15 @@ class OrderListFragment : BaseFragment(R.layout.fragment_order_list) {
                         response: Response<UserOrderResult>?
                     ) {
                         if (!response?.body()?.results.isNullOrEmpty()) {
+                            println("Thắng $response")
+                            println("Thắng ${response?.body()?.results} ${response?.body()?.isSuccess}")
                             listOrderAdapter.submitList(response?.body()?.results)
                             layoutNullProduct.isVisible = false
                             layoutProduct.isVisible = true
                         } else {
                             layoutProduct.isVisible = false
                             layoutNullProduct.isVisible = true
-                            tvDesc.text = "Không có danh sách sản phẩm yêu thích"
+                            tvDesc.text = "Không có sản phẩm nào trong giỏ hàng"
                             btnLogin.isVisible = false
                         }
                         DialogUtils.dismissProgressDialog()

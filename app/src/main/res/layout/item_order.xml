@@ -24,7 +24,7 @@
                 android:id="@+id/tv_name_product"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="@dimen/text_size_16sp"
+                android:textSize="@dimen/text_size_13sp"
                 android:text="1x Trà xanh"
                 android:textColor="@color/dark_gray"
                 android:fontFamily="@font/sf_pro_text_regular"/>
@@ -32,7 +32,7 @@
                 android:id="@+id/tv_size"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="@dimen/text_size_14sp"
+                android:textSize="@dimen/text_size_13sp"
                 android:text="Cỡ L"
                 android:fontFamily="@font/sf_pro_regular"/>
         </LinearLayout>
@@ -48,7 +48,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="20.000đ"
-            android:textSize="@dimen/text_size_14sp"
+            android:textSize="@dimen/text_size_13sp"
             android:textColor="@color/color_44494D"
             android:fontFamily="@font/sf_pro_text_regular"
             android:layout_centerVertical="true"
@@ -58,7 +58,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="25.000đ"
-            android:textSize="@dimen/text_size_14sp"
+            android:textSize="@dimen/text_size_13sp"
             android:textColor="@color/color_EE0033"
             android:fontFamily="@font/sf_pro_text_regular"
             android:layout_centerVertical="true"

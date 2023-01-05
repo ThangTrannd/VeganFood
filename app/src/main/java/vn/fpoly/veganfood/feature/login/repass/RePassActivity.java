@@ -41,9 +41,17 @@ public class RePassActivity extends AppCompatActivity {
         tv_re_pass.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                String emailPattern = "[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+";
                 if(ed_email.getText().toString().length() == 0) {
                     lo_email.setError("Email đang trống");
                     return;
+                }
+                else if (!ed_email.getText().toString().matches(emailPattern)){
+                    lo_email.setError("Email sai định dạng!");
+                    return;
+                }
+                else if (!ed_email.equals("")){
+                    lo_email.setError(null);
                 }
                 lo_email.setError("");
                 DialogUtils.showProgressDialog((Activity) context);

@@ -178,22 +178,43 @@ public class ActivityOrderDetail extends AppCompatActivity {
             @RequiresApi(api = Build.VERSION_CODES.O)
             @Override
             public void onResponse(Call<OrderDetail> call, Response<OrderDetail> response) {
-
+                System.out.println("Thắng");
+                System.out.println("Thắng 1113" + response);
+                System.out.println("Thắng 1112" + response.body());
+                System.out.println("Thắng 111.1" + response.body().getIsSuccess());
+                System.out.println("Thắng 111.2" + response.body().getErrorMessage());
+//                System.out.println("Thắng 111" + response.body().getResult().getCreateat());
                 if (response.body() == null) {
                     return;
                 }
-                OrderDetail orderDetail = response.body();
+                if (response.body().getIsSuccess() == false){
+//                    OrderDetail orderDetail = response.body();
 //                Date date = new Date(orderDetail.getResult().getCreateat());
 //                String ngay = format.format(date);
-                binding.tvTime.setText(orderDetail.getResult().getCreateat());
-                binding.tvAddress.setText(orderDetail.getResult().getAddress());
-                binding.btnOrderStatus.setText(orderDetail.getResult().getStatus());
-                binding.tvQuantity.setText("Tạm tính (" + orderDetail.getResult().getTotalProduct() + "món)");
-                binding.tvTotal.setText(currencyFormat.format(Integer.parseInt(orderDetail.getResult().getTotal())) + "đ");
-                binding.tvPayment.setText(currencyFormat.format(Integer.parseInt(orderDetail.getResult().getTotal())) + "đ" + "(" + orderDetail.getResult().getProvider() + ")");
-                method = orderDetail.getResult().getProvider();
-                totalPay = orderDetail.getResult().getTotal();
-                DialogUtils.dismissProgressDialog();
+//                    binding.tvTime.setText(orderDetail.getResult().getCreateat());
+//                    binding.tvAddress.setText(orderDetail.getResult().getAddress());
+//                    binding.btnOrderStatus.setText(orderDetail.getResult().getStatus());
+//                    binding.tvQuantity.setText("Tạm tính (" + orderDetail.getResult().getTotalProduct() + "món)");
+//                    binding.tvTotal.setText(currencyFormat.format(Integer.parseInt(orderDetail.getResult().getTotal())) + "đ");
+//                    binding.tvPayment.setText(currencyFormat.format(Integer.parseInt(orderDetail.getResult().getTotal())) + "đ" + "(" + orderDetail.getResult().getProvider() + ")");
+//                    method = orderDetail.getResult().getProvider();
+//                    totalPay = orderDetail.getResult().getTotal();
+//                    DialogUtils.dismissProgressDialog();
+                }
+                else {
+                    OrderDetail orderDetail = response.body();
+//                Date date = new Date(orderDetail.getResult().getCreateat());
+//                String ngay = format.format(date);
+                    binding.tvTime.setText(orderDetail.getResult().getCreateat());
+                    binding.tvAddress.setText(orderDetail.getResult().getAddress());
+                    binding.btnOrderStatus.setText(orderDetail.getResult().getStatus());
+                    binding.tvQuantity.setText("Tạm tính (" + orderDetail.getResult().getTotalProduct() + "món)");
+                    binding.tvTotal.setText(currencyFormat.format(Integer.parseInt(orderDetail.getResult().getTotal())) + "đ");
+                    binding.tvPayment.setText(currencyFormat.format(Integer.parseInt(orderDetail.getResult().getTotal())) + "đ" + "(" + orderDetail.getResult().getProvider() + ")");
+                    method = orderDetail.getResult().getProvider();
+                    totalPay = orderDetail.getResult().getTotal();
+                    DialogUtils.dismissProgressDialog();
+                }
             }
 
             @Override
