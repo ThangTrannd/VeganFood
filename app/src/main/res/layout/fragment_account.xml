@@ -57,7 +57,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Bạn"
-                        android:textColor="#5AE7F9"
+                        android:textColor="#4CAF50"
                         android:textSize="@dimen/text_size_26sp"
                         android:textStyle="bold" />
 
@@ -101,7 +101,7 @@
                         android:layout_marginStart="@dimen/dp_8"
                         android:layout_toEndOf="@id/infor"
                         android:text="Thông tin chung"
-                        android:textColor="#5AE7F9"
+                        android:textColor="#4CAF50"
                         android:textSize="@dimen/size_20sp"
                         android:textStyle="bold" />
                 </RelativeLayout>
@@ -182,7 +182,7 @@
                         android:layout_marginStart="@dimen/dp_8"
                         android:layout_toEndOf="@id/support"
                         android:text="Liên hệ"
-                        android:textColor="#5AE7F9"
+                        android:textColor="#4CAF50"
                         android:textSize="@dimen/size_20sp"
                         android:textStyle="bold" />
                 </RelativeLayout>
@@ -240,7 +240,7 @@
                         android:layout_marginStart="@dimen/dp_8"
                         android:layout_toEndOf="@id/other"
                         android:text="Khác"
-                        android:textColor="#5AE7F9"
+                        android:textColor="#4CAF50"
                         android:textSize="@dimen/size_20sp"
                         android:textStyle="bold" />
                 </RelativeLayout>
@@ -298,7 +298,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/dimen_16dp"
                 android:layout_marginEnd="@dimen/dp_8"
-                android:background="@color/line_large1"
+                android:background="@color/light_green2"
                 android:paddingVertical="@dimen/dimen_16dp">
 
                 <TextView
@@ -317,7 +317,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/dimen_16dp"
                 android:layout_marginEnd="@dimen/dp_8"
-                android:background="@color/line_large1"
+                android:background="@color/light_green2"
                 android:paddingVertical="@dimen/dimen_16dp">
 
                 <TextView

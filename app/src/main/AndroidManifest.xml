@@ -124,14 +124,14 @@
         -->
         <meta-data
             android:name="com.google.firebase.messaging.default_notification_icon"
-            android:resource="@drawable/logo_tocotoco" />
+            android:resource="@drawable/logo" />
         <!--
  Set color used with incoming notification messages. This is used when no color is set for the incoming
              notification message. See README(https://goo.gl/6BKBk7) for more.
         -->
         <meta-data
             android:name="com.google.firebase.messaging.default_notification_color"
-            android:resource="@color/color_default" />
+            android:resource="@color/color_default1" />
 
         <activity
             android:name=".feature.product_detail.ProductDetailActivity"

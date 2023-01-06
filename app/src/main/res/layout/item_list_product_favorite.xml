@@ -24,7 +24,7 @@
             android:layout_height="match_parent"
             android:scaleType="centerCrop"
             android:background="@drawable/bg_border_image"
-            app:srcCompat="@drawable/milk_tea" />
+            app:srcCompat="@drawable/traxanh" />
     </com.google.android.material.card.MaterialCardView>
 
     <androidx.appcompat.widget.AppCompatTextView
@@ -39,7 +39,7 @@
         android:layout_marginEnd="@dimen/dimen_16dp"
         app:layout_constraintStart_toEndOf="@+id/materialCardView"
         app:layout_constraintTop_toTopOf="@+id/materialCardView"
-        tools:text="Trà Sữa Trân Trâu Đường Đen" />
+        tools:text="Trà xanh" />
 
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/tvPrice"

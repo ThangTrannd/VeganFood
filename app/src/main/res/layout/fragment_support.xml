@@ -25,7 +25,7 @@
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
             android:text="Phản hồi và hỗ trợ"
-            android:textColor="#FFA500"
+            android:textColor="#e53935"
             android:textSize="@dimen/dimen_24dp"
             android:textStyle="bold" />
     </RelativeLayout>

@@ -27,7 +27,7 @@
             android:scaleType="centerCrop"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/img_tea" />
+            app:srcCompat="@drawable/traxanh" />
 
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/tvTitle"
@@ -41,7 +41,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/imgProduct"
-            tools:text="Sữa chua mận hạt sen" />
+            tools:text="Trà xanh" />
 
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/tvPrice"

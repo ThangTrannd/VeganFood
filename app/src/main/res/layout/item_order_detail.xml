@@ -23,7 +23,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/dp_8"
             android:layout_toEndOf="@id/sl_product"
-            android:text="Trà sữa chân trâu đường đen"
+            android:text="Trà xanh"
             android:textColor="@color/black"
             android:textSize="@dimen/dimen_16sp"
             android:textStyle="bold" />

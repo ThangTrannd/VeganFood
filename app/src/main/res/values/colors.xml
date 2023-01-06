@@ -26,6 +26,7 @@
     <color name="border_text">#FF0000</color>
     <color name="color_text_button">#F6D1A7</color>
     <color name="color_default">#68B510</color>
+    <color name="color_default1">#e53935</color>
     <color name="color_text_small">#867A7A</color>
     <color name="color_EE0033">#EE0033</color>
     <color name="green_light">#efece5</color>

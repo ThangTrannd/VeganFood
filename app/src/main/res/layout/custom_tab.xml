@@ -7,7 +7,7 @@
     android:layout_gravity="center"
     android:textStyle="bold"
     android:id="@android:id/text1"
-    tools:text="nhatthanh"
+    tools:text="VeganFood"
     android:padding="16dp"
     android:background="@drawable/tab_selected"
     android:textColor="@drawable/tab_text_selected"

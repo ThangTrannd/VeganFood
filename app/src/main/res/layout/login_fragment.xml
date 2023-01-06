@@ -38,7 +38,7 @@
         android:layout_gravity="center_horizontal"
         android:layout_width="@dimen/dimen_100dp"
         android:layout_height="@dimen/dimen_100dp"
-        android:src="@drawable/logo_tocotoco"/>
+        android:src="@drawable/logo"/>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

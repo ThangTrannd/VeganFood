@@ -68,7 +68,7 @@
                         android:background="@drawable/custom_textview"
                         android:gravity="center"
                         android:text="-"
-                        android:textColor="@color/radiobutton"
+                        android:textColor="@color/dark_grey"
                         android:textSize="@dimen/dimen_16dp"
                         android:textStyle="bold" />
 
@@ -92,7 +92,7 @@
                         android:background="@drawable/custom_textview"
                         android:gravity="center"
                         android:text="+"
-                        android:textColor="@color/radiobutton"
+                        android:textColor="@color/dark_grey"
                         android:textSize="@dimen/dimen_16dp"
                         android:textStyle="bold" />
 
@@ -214,7 +214,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/dimen_16dp"
-                    android:text="Trà sữa trân trâu đường đen "
+                    android:text="Trà xanh "
                     android:textColor="@color/black"
                     android:textSize="@dimen/dimen_20dp"
                     android:textStyle="bold" />

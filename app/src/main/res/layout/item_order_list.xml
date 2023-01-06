@@ -66,14 +66,14 @@
             android:scaleType="centerCrop"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tvStatus"
-            app:srcCompat="@drawable/img_tea" />
+            app:srcCompat="@drawable/traxanh" />
 
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/appCompatTextView5"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/dimen_8dp"
-            android:text="ToCoToCo - 102 Trần Duy Hưng"
+            android:text="VeganFood - 100 Trần Duy Hưng"
             android:textColor="@color/black"
             android:textSize="@dimen/dimen_18sp"
             android:textStyle="bold"
@@ -111,7 +111,7 @@
             android:layout_marginTop="@dimen/dimen_4dp"
             android:ellipsize="end"
             android:maxLines="2"
-            android:text="Địa chỉ giao: ToCoHưngToCoToCoHưngToCoToCoHưngToCoToCoHưngToCoToCoHưngToCoToCoHưngToCoToCo"
+            android:text="Địa chỉ giao: VeganFood Trần Duy Hưng"
             android:textColor="@color/black"
             android:textSize="@dimen/dimen_16sp"
             app:layout_constraintEnd_toEndOf="parent"

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/blue"
+    android:background="#68B510"
     android:fillViewport="true">
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -90,7 +90,7 @@
                 android:layout_marginStart="@dimen/dimen_8dp"
                 android:layout_weight="1"
                 android:text="Tìm kiếm"
-                android:textColor="@color/black"
+                android:textColor="@color/white"
                 android:textSize="@dimen/dimen_18sp" />
 
             <androidx.appcompat.widget.AppCompatImageView

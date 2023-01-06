@@ -74,5 +74,7 @@ dependencies {
     implementation files('../app/libs/zpdk_release_v3.1.aar')
 
     implementation 'me.relex:circleindicator:2.1.6'
+
+    implementation "com.airbnb.android:lottie:3.7.0"
 }
 apply plugin: 'com.google.gms.google-services'
