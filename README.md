@@ -1,2 +1,2 @@
 # VeganFood
-Ứng dụng bán đồ ăn chay
+Ứng dụng mua đồ ăn chay dành cho khách hàng
