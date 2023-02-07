@@ -213,6 +213,7 @@ public class ProductDetailFragment extends ViewFragment<ProductDetailContract.Pr
                     i.putExtra("idProductFromDetail", idProduct);
                     startActivity(i);
                 }else {
+                    System.out.println("Thắng 123 addItemToShoppingSession");
                     mPresenter.addItemToShoppingSession(token, idSession, productResult.body().getResults().getId(), quantity + 1, "M");
 //                    quantity ++;
 //                    tv_quantity.setText(String.valueOf(quantity));

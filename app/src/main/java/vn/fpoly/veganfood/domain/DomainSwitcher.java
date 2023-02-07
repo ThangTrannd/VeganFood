@@ -34,7 +34,7 @@ public class DomainSwitcher {
         return getApiClient(activeDomain, apiClientClass);
     }
     private String getActiveDomain() {
-        return "https://www.tocotea.software/api/";
+        return "https://veganfood.onrender.com/api/";
     }
 
     public <T> T getApiClient(String baseUrl, Class<T> apiClientClass) {

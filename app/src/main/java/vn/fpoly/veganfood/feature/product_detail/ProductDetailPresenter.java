@@ -133,10 +133,12 @@ public class ProductDetailPresenter extends Presenter<ProductDetailContract.View
     @Override
     public void addItemToShoppingSession(String token, int sessionId, int productId, int quantity, String size) {
         DialogUtils.showProgressDialog(getViewContext());
+        System.out.println("Thắng 123 check data input\b" + "\b" + sessionId + "\b"+ productId + "\b"+ quantity + "\b"+ size);
         mInteractor.addItemToShoppingSession(new TCCCallback<RegisterResult>() {
             @Override
             public void onTCTCSuccess(Call<RegisterResult> call, Response<RegisterResult> response) {
                 DialogUtils.dismissProgressDialog();
+                System.out.println("Thắng 123 check responce\b" + response.body());
                 itemsInShoppingSession(token, sessionIdJS, true);
                 mView.addItemToCartSuccess(response.body().getIsSuccess());
             }
@@ -144,6 +146,7 @@ public class ProductDetailPresenter extends Presenter<ProductDetailContract.View
             @Override
             public void onTCTCFailure(Call<RegisterResult> call) {
                 DialogUtils.dismissProgressDialog();
+                System.out.println("Thắng 123 failuar");
             }
         }, token, sessionId, productId, quantity, size);
     }
