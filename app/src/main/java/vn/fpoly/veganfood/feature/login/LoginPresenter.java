@@ -35,9 +35,11 @@ public class LoginPresenter extends Presenter<LoginContract.View, LoginContract.
     @Override
     public void loginWithPass(String username, String pass, String type, String token_device) {
         DialogUtils.showProgressDialog(getViewContext());
+        System.out.println("Thắng 123 \b" + username +"\b"+ pass +"\b"+  type +"\b"+ token_device);
         mInteractor.loginWithPass(new TCCCallback<LoginResult>() {
             @Override
             public void onTCTCSuccess(Call<LoginResult> call, Response<LoginResult> response) {
+                System.out.println("Thắng 123" + response.body().toString());
                 DialogUtils.dismissProgressDialog();
                 if(response.body().getIsSuccess()) {
                     mView.loginSuccess(response);

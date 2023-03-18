@@ -47,6 +47,12 @@ public class SimpleResult implements Parcelable{
         return "SimpleResult{" +
                 "errorCode=" + errorCode +
                 ", message='" + message + '\'' +
+                ", dataVersion=" + dataVersion +
+                ", hintMessage='" + hintMessage + '\'' +
+                ", needOTP='" + needOTP + '\'' +
+                ", isSuccess=" + isSuccess +
+                ", errorMessage='" + errorMessage + '\'' +
+                ", tranIdTracking='" + tranIdTracking + '\'' +
                 '}';
     }
 
