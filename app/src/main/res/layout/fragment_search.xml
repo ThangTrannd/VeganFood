@@ -12,7 +12,7 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:paddingVertical="@dimen/dimen_8dp"
-        android:background="#00BCD4">
+        android:background="@color/color_default">
         <ImageView
             android:layout_gravity="center_vertical"
             android:id="@+id/ic_back"
@@ -36,7 +36,7 @@
                 android:layout_centerVertical="true"
                 android:textSize="@dimen/text_size_15sp"
                 android:textColor="@color/color_44494D"
-                android:hint="Tìm kiếm"
+                android:hint="Hãy nhập tên món..."
                 android:background="@null"
                 />
         </RelativeLayout>

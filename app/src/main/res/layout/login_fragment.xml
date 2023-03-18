@@ -30,7 +30,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:textSize="@dimen/dimen_25dp"
-            android:textColor="@color/white"
+            android:textColor="@color/black"
             android:fontFamily="@font/fs_pf_beau_sans_pro_bold"
             android:text="Đăng nhập"/>
     </RelativeLayout>
@@ -49,17 +49,17 @@
             android:layout_marginTop="@dimen/dimen_20dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:boxStrokeColor="@color/color_default"
+            app:boxStrokeColor="@color/color_default2"
             app:boxStrokeWidthFocused="0dp"
             app:boxStrokeWidth="0dp"
-            app:hintTextColor="@color/color_default"
+            app:hintTextColor="@color/color_default2"
             >
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/ed_sdt"
                 app:boxStrokeWidthFocused="0dp"
                 app:boxStrokeWidth="0dp"
-                app:boxStrokeColor="@color/color_default"
+                app:boxStrokeColor="@color/color_default2"
                 android:layout_width="match_parent"
                 android:background="@drawable/border_default_app"
                 android:layout_height="wrap_content"
@@ -73,7 +73,7 @@
             app:passwordToggleEnabled="true"
             app:boxStrokeWidthFocused="0dp"
             app:boxStrokeWidth="0dp"
-            app:hintTextColor="@color/color_default"
+            app:hintTextColor="@color/color_default2"
             >
 
             <com.google.android.material.textfield.TextInputEditText
@@ -97,7 +97,7 @@
                 android:fontFamily="@font/sf_pro_regular"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textColor="@color/color_default"
+                android:textColor="@color/color_default2"
                 android:text="Quên mật khẩu?"/>
         </RelativeLayout>
 
@@ -109,7 +109,7 @@
             android:layout_height="45dp"
             android:text="Đăng nhập"
             android:textSize="@dimen/dimen_20dp"
-            android:textColor="@color/white"
+            android:textColor="@color/black"
             android:fontFamily="@font/fs_pf_beau_sans_pro_bold"
             android:background="@drawable/boder_button_new"/>
         <LinearLayout
@@ -127,7 +127,8 @@
                 android:id="@+id/tv_register"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textColor="@color/color_default"
+                android:layout_marginLeft="5dp"
+                android:textColor="@color/color_default2"
                 android:text="Đăng ký ngay"/>
         </LinearLayout>
     </LinearLayout>

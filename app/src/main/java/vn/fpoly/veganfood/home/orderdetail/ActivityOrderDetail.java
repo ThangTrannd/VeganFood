@@ -19,6 +19,7 @@ import android.view.View;
 import android.widget.Toast;
 
 import vn.fpoly.veganfood.R;
+import vn.fpoly.veganfood.basekotlin.Utils;
 import vn.fpoly.veganfood.databinding.ActivityOrderDetailBinding;
 import vn.fpoly.veganfood.dialog.DialogUtils;
 import vn.fpoly.veganfood.feature.order.ConfirmSuccessOrderActivty;
@@ -31,7 +32,6 @@ import vn.fpoly.veganfood.model.OrderItemDetailResult;
 import vn.fpoly.veganfood.model.RegisterResult;
 import vn.fpoly.veganfood.network.NetWorkController;
 import vn.fpoly.veganfood.network.TCCCallback;
-import vn.fpoly.veganfood.util.Utils;
 
 import org.json.JSONObject;
 
@@ -178,12 +178,6 @@ public class ActivityOrderDetail extends AppCompatActivity {
             @RequiresApi(api = Build.VERSION_CODES.O)
             @Override
             public void onResponse(Call<OrderDetail> call, Response<OrderDetail> response) {
-                System.out.println("Thắng");
-                System.out.println("Thắng 1113" + response);
-                System.out.println("Thắng 1112" + response.body());
-                System.out.println("Thắng 111.1" + response.body().getIsSuccess());
-                System.out.println("Thắng 111.2" + response.body().getErrorMessage());
-//                System.out.println("Thắng 111" + response.body().getResult().getCreateat());
                 if (response.body() == null) {
                     return;
                 }
@@ -205,7 +199,7 @@ public class ActivityOrderDetail extends AppCompatActivity {
                     OrderDetail orderDetail = response.body();
 //                Date date = new Date(orderDetail.getResult().getCreateat());
 //                String ngay = format.format(date);
-                    binding.tvTime.setText(orderDetail.getResult().getCreateat());
+                    binding.tvTime.setText(Utils.Companion.formatDay(orderDetail.getResult().getCreateat()));
                     binding.tvAddress.setText(orderDetail.getResult().getAddress());
                     binding.btnOrderStatus.setText(orderDetail.getResult().getStatus());
                     binding.tvQuantity.setText("Tạm tính (" + orderDetail.getResult().getTotalProduct() + "món)");

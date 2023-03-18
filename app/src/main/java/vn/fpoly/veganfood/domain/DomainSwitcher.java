@@ -34,7 +34,7 @@ public class DomainSwitcher {
         return getApiClient(activeDomain, apiClientClass);
     }
     private String getActiveDomain() {
-        return "https://veganfood.onrender.com/api/";
+        return "https://veganfood.pimob.me/api/";
     }
 
     public <T> T getApiClient(String baseUrl, Class<T> apiClientClass) {

@@ -26,7 +26,7 @@
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
             android:text="Đơn hàng"
-            android:textColor=" #e53935"
+            android:textColor="@color/black"
             android:textSize="@dimen/size_20sp"
             android:textStyle="bold" />
     </RelativeLayout>
@@ -50,6 +50,7 @@
             <TextView
                 android:textSize="@dimen/dimen_16sp"
                 android:text="time"
+                android:layout_alignParentTop="true"
                 android:layout_alignParentEnd="true"
                 android:id="@+id/tv_time"
                 android:layout_marginTop="@dimen/dp_8"
@@ -166,7 +167,7 @@
             android:background="@drawable/border_item_button_add"
             android:text="Đặt lại"
             android:textAllCaps="false"
-            android:textColor="@color/white"
+            android:textColor="@color/black"
             android:textStyle="bold"
             android:textSize="@dimen/dimen_16dp"
             app:backgroundTint="@null" />

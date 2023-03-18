@@ -32,9 +32,9 @@
         android:background="@drawable/border_item_button_add"
         android:text="Theo dõi đơn"
         android:textAllCaps="false"
-        android:textColor="@color/white"
+        android:textColor="@color/black"
         android:textStyle="bold"
-        android:textSize="@dimen/dimen_16dp"
+        android:textSize="@dimen/dimen_18dp"
         app:backgroundTint="@null" />
     <Button
         android:id="@+id/btn_back_home"
@@ -47,7 +47,7 @@
         android:textAllCaps="false"
         android:textColor="@color/white"
         android:textStyle="bold"
-        android:textSize="@dimen/dimen_16dp"
+        android:textSize="@dimen/dimen_18dp"
         app:backgroundTint="@null" />
 
 </LinearLayout>

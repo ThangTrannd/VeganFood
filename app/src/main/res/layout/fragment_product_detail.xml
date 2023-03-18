@@ -28,7 +28,7 @@
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
             android:text="Chi tiết"
-            android:textColor="@color/white"
+            android:textColor="@color/black"
             android:textSize="@dimen/dimen_20dp"
             android:fontFamily="@font/sf_pro_text_medium"
              />
@@ -234,10 +234,19 @@
                         android:id="@+id/tv_show_price"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
                         android:textColor="@color/color_EE0033"
                         android:textSize="@dimen/dimen_16dp"
                         android:fontFamily="@font/sf_pro_regular" />
                 </LinearLayout>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="HSD :"
+                    android:textStyle="bold"
+                    android:textSize="18sp"
+                    android:textColor="@color/orange"
+                    android:id="@+id/tv_hsd"/>
 
                 <View
                     android:layout_width="match_parent"
@@ -306,7 +315,7 @@
 
                         <View
                             android:layout_width="match_parent"
-                            android:layout_height="5dp"
+                            android:layout_height="1dp"
                             android:layout_alignParentBottom="true"
                             android:background="@color/line_small" />
 

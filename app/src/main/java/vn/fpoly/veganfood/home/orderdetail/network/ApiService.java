@@ -12,7 +12,7 @@ import retrofit2.http.POST;
 
 public interface ApiService {
     ApiService API_SERVICE = new Retrofit.Builder()
-            .baseUrl("https://tocotea.software/api/")
+            .baseUrl("https://veganfood.pimob.me/api/")
             .addConverterFactory(GsonConverterFactory.create())
             .build()
             .create(ApiService.class);

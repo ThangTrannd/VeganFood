@@ -92,7 +92,7 @@ public class RegisterAccountFragment extends ViewFragment<RegisterAccountContrac
                     return;
                 }
                 else if (!name.equals("")){
-                    lo_name.setError(null);
+                    lo_name.setErrorEnabled(false);
                 }
 
                 if(phoneNumber.equals("")) {
@@ -104,7 +104,7 @@ public class RegisterAccountFragment extends ViewFragment<RegisterAccountContrac
                     return;
                 }
                 else if (!phoneNumber.equals("")){
-                    lo_phone_number.setError(null);
+                    lo_phone_number.setErrorEnabled(false);
                 }
 
 
@@ -117,7 +117,7 @@ public class RegisterAccountFragment extends ViewFragment<RegisterAccountContrac
                     return;
                 }
                 else if (!email.equals("")){
-                    lo_email.setError(null);
+                    lo_email.setErrorEnabled(false);
                 }
 
                 if(username.equals("")) {
@@ -125,7 +125,7 @@ public class RegisterAccountFragment extends ViewFragment<RegisterAccountContrac
                     return;
                 }
                 else if (!username.equals("")){
-                    lo_username.setError(null);
+                    lo_username.setErrorEnabled(false);
                 }
 
                 if(pass.equals("")) {
@@ -133,7 +133,7 @@ public class RegisterAccountFragment extends ViewFragment<RegisterAccountContrac
                     return;
                 }
                 else if (!pass.equals("")){
-                    lo_pass.setError(null);
+                    lo_pass.setErrorEnabled(false);
                 }
 
                 if(rePass.equals("")) {
@@ -141,7 +141,7 @@ public class RegisterAccountFragment extends ViewFragment<RegisterAccountContrac
                     return;
                 }
                 else if (!rePass.equals("")){
-                    lo_repass.setError(null);
+                    lo_repass.setErrorEnabled(false);
                 }
 
                 if(!pass.equals(rePass)) {

@@ -32,7 +32,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:textSize="@dimen/dimen_25dp"
-                android:textColor="@color/color_default"
+                android:textColor="@color/black"
                 android:fontFamily="@font/fs_pf_beau_sans_pro_bold"
                 android:text="Thông báo"/>
         </RelativeLayout>
@@ -45,14 +45,15 @@
            android:id="@+id/tv_title_notifi"
            android:layout_marginTop="@dimen/dimen_10dp"
            android:textSize="@dimen/text_size_18sp"
-           android:textColor="@color/color_44494D"
+           android:textColor="@color/black"
            android:fontFamily="@font/fs_pf_beau_sans_pro_bold"
            android:layout_width="wrap_content"
            android:layout_height="wrap_content"
            android:text="Ưu đãi hôm nay"/>
        <ImageView
            android:layout_width="match_parent"
-           android:layout_height="wrap_content"
+           android:layout_height="300dp"
+           android:scaleType="fitXY"
            android:id="@+id/img_notifi"/>
        <TextView
            android:layout_width="wrap_content"

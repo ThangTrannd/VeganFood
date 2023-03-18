@@ -390,7 +390,7 @@
                 android:layout_centerHorizontal="true"
                 android:layout_centerVertical="true"
                 android:layout_width="wrap_content"
-                android:textColor="@color/white"
+                android:textColor="@color/black"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:textSize="@dimen/dimen_20dp"
@@ -445,7 +445,7 @@
                     android:background="@drawable/bg_btn_cskh"
                     android:text="Liên hệ cửa hàng"
                     android:textAllCaps="false"
-                    android:textColor="@color/color_default"
+                    android:textColor="@color/blue2"
                     android:textStyle="bold"
                     android:textSize="@dimen/dimen_16dp"
                     app:backgroundTint="@null" />

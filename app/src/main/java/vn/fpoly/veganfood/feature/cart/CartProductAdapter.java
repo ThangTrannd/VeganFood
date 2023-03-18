@@ -30,11 +30,12 @@ public class CartProductAdapter extends RecyclerView.Adapter<CartProductAdapter.
     ChangeItemListener changeItemListener;
 //    private TranferClickListener tranferClickListener;
     DecimalFormat formatter = new DecimalFormat("#,###,###");
-
-    public CartProductAdapter(Context context, List<ProductSessionModel> data, ChangeItemListener changeItemListener) {
+    int check;
+    public CartProductAdapter(Context context, List<ProductSessionModel> data, ChangeItemListener changeItemListener,int check) {
         this.context = context;
         this.data = data;
         this.changeItemListener = changeItemListener;
+        this.check = check;
     }
 
     @Override

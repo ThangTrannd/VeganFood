@@ -29,7 +29,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:textSize="@dimen/dimen_25dp"
-            android:textColor="#e53935"
+            android:textColor="@color/black"
             android:fontFamily="@font/fs_pf_beau_sans_pro_bold"
             android:text="Quên mật khẩu"/>
     </RelativeLayout>
@@ -80,7 +80,7 @@
                 android:layout_height="45dp"
                 android:text="Tiếp tục"
                 android:textSize="@dimen/dimen_20dp"
-                android:textColor="@color/white"
+                android:textColor="@color/black"
                 android:fontFamily="@font/fs_pf_beau_sans_pro_bold"
                 android:background="@drawable/boder_button_new"/>
         </LinearLayout>

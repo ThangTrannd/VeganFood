@@ -64,7 +64,7 @@ public class CartFragment extends ViewFragment<CartContract.Presenter> implement
     CartProductAdapter cartProductAdapter;
     List<ProductSessionModel> list;
     DecimalFormat formatter = new DecimalFormat("#,###,###");
-
+    int check;
     @Override
     public void initLayout() {
         super.initLayout();
@@ -155,7 +155,7 @@ public class CartFragment extends ViewFragment<CartContract.Presenter> implement
     @Override
     public void initViewDetail(Response<ProductsSessionResult> data) {
         list = data.body().getResults();
-        cartProductAdapter = new CartProductAdapter(getViewContext(), list, this);
+        cartProductAdapter = new CartProductAdapter(getViewContext(), list, this,check);
         rcv_order.setAdapter(cartProductAdapter);
         rcv_order.setLayoutManager(new LinearLayoutManager(getViewContext()));
     }

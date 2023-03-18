@@ -2,6 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="@dimen/dimen_95dp"
+    android:background="@drawable/bg_item_product_favorite"
     android:padding="@dimen/dimen_10dp">
     <LinearLayout
         android:layout_width="wrap_content"
@@ -52,7 +53,7 @@
         </LinearLayout>
     </LinearLayout>
     <LinearLayout
-        android:layout_centerVertical="true"
+        android:layout_alignParentBottom="true"
         android:layout_alignParentRight="true"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -90,10 +91,5 @@
             android:textSize="@dimen/dimen_16dp"
             android:textStyle="bold" />
     </LinearLayout>
-    <View
-        android:layout_alignParentBottom="true"
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/dimen_1dp"
-        android:background="#c4c4c4"/>
 
 </RelativeLayout>
