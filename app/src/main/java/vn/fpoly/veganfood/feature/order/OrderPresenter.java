@@ -128,6 +128,7 @@ public class OrderPresenter extends Presenter<OrderContract.View, OrderContract.
             @Override
             public void onTCTCSuccess(Call<RegisterResult> call, Response<RegisterResult> response) {
                 DialogUtils.dismissProgressDialog();
+                System.out.println("Thắng check OrderPresenter : "+ response.body());
                 if(response.body().getIsSuccess()) {
                     getCartInfo(token, sessionId);
 //                    itemsInShoppingSession(token, sessionId);

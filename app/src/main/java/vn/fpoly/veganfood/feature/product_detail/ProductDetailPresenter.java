@@ -3,6 +3,8 @@ package vn.fpoly.veganfood.feature.product_detail;
 import static android.content.Context.MODE_PRIVATE;
 
 import android.content.SharedPreferences;
+import android.widget.Toast;
+
 import com.gemvietnam.base.viper.Presenter;
 import com.gemvietnam.base.viper.interfaces.ContainerView;
 
@@ -133,12 +135,13 @@ public class ProductDetailPresenter extends Presenter<ProductDetailContract.View
     @Override
     public void addItemToShoppingSession(String token, int sessionId, int productId, int quantity, String size) {
         DialogUtils.showProgressDialog(getViewContext());
-        System.out.println("Thắng 123 check data input\b" + "\b" + sessionId + "\b"+ productId + "\b"+ quantity + "\b"+ size);
         mInteractor.addItemToShoppingSession(new TCCCallback<RegisterResult>() {
             @Override
             public void onTCTCSuccess(Call<RegisterResult> call, Response<RegisterResult> response) {
                 DialogUtils.dismissProgressDialog();
-                System.out.println("Thắng 123 check responce\b" + response.body());
+                if (response.body().getErrorCode() == -100){
+                    Toast.makeText(getViewContext(), "Số lượng trong kho không đủ", Toast.LENGTH_SHORT).show();
+                }
                 itemsInShoppingSession(token, sessionIdJS, true);
                 mView.addItemToCartSuccess(response.body().getIsSuccess());
             }
@@ -146,7 +149,6 @@ public class ProductDetailPresenter extends Presenter<ProductDetailContract.View
             @Override
             public void onTCTCFailure(Call<RegisterResult> call) {
                 DialogUtils.dismissProgressDialog();
-                System.out.println("Thắng 123 failuar");
             }
         }, token, sessionId, productId, quantity, size);
     }

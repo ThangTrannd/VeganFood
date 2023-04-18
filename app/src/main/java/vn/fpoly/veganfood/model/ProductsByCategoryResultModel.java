@@ -25,6 +25,8 @@ public class ProductsByCategoryResultModel {
     int discountid;
     @SerializedName("displayImage")
     String displayimage;
+    @SerializedName("enddate")
+    String enddate;
     @SerializedName("size")
     String size;
     @SerializedName("active")
@@ -132,5 +134,13 @@ public class ProductsByCategoryResultModel {
 
     public void setSize(String size) {
         this.size = size;
+    }
+
+    public String getEnddate() {
+        return enddate;
+    }
+
+    public void setEnddate(String enddate) {
+        this.enddate = enddate;
     }
 }

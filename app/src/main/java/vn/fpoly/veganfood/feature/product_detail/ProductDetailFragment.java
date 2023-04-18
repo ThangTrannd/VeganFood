@@ -254,6 +254,8 @@ public class ProductDetailFragment extends ViewFragment<ProductDetailContract.Pr
 //            tv_price.setText(formatter.format(Integer.parseInt(data.body().getResults().getPrice())) + "đ");
             tv_show_price_old.setText(formatter.format(Integer.parseInt(data.body().getResults().getPrice())) + "đ");
             tv_show_price_old.setPaintFlags(tv_price_old.getPaintFlags() | Paint.STRIKE_THRU_TEXT_FLAG);
+            tv_hsd.setText("HSD :" +data.body().getResults().getEnddate());
+            System.out.println("HSD :" +data.body().getResults().getEnddate());
             tv_show_price.setText(formatter.format(Integer.parseInt(data.body().getResults().getPriceAfterDiscount())) + "đ");
             priceOneItem = Integer.parseInt(data.body().getResults().getPriceAfterDiscount());
             priceOneItemOld = Integer.parseInt(data.body().getResults().getPrice());

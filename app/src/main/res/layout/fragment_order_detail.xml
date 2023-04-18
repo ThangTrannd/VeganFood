@@ -194,7 +194,7 @@
                                 android:layout_marginBottom="@dimen/dp_8"
                                 android:checked="true"
                                 android:theme="@style/RadioButtonStyle"
-                                android:text="   Thanh toán bằng tiền mặt"
+                                android:text="Thanh toán bằng tiền mặt"
                                 android:drawableLeft="@drawable/img_tien_mat"
                                 />
 

@@ -244,7 +244,7 @@
                     android:layout_height="wrap_content"
                     android:text="HSD :"
                     android:textStyle="bold"
-                    android:textSize="18sp"
+                    android:textSize="15sp"
                     android:textColor="@color/orange"
                     android:id="@+id/tv_hsd"/>
 
