@@ -3,6 +3,7 @@ package vn.fpoly.veganfood.home.homefragment.productfragment
 import android.annotation.SuppressLint
 import android.graphics.Paint
 import android.view.LayoutInflater
+import android.view.View
 import android.view.ViewGroup
 import androidx.core.view.isVisible
 import androidx.recyclerview.widget.DiffUtil
@@ -56,6 +57,11 @@ class ListProductAdapter(
         @SuppressLint("SetTextI18n")
         fun bind(item: ProductsByCategoryResultModel) = binding.run {
             tvTitle.text = item.productName
+            if (item.quantity == 0){
+                tagSoldOut.visibility = View.VISIBLE
+            }else {
+                tagSoldOut.visibility = View.GONE
+            }
             if(item.priceAfterDiscount != null) {
                 tvPrice.text = "${item.priceAfterDiscount.toInt().decimalFormatted()} đ"
             }
